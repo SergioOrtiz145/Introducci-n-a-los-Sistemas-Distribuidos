@@ -7,7 +7,7 @@ Aquí encontrarás todo el material trabajado durante la materia **Introducción
 
 ## 📂 Contenido del repositorio
 
-- **[Laboratorios](./laboratorios/)**  
+- **[Laboratorios](https://github.com/SergioOrtiz145/Introducci-n-a-los-Sistemas-Distribuidos/tree/main/Laboratorios)**  
   En esta carpeta se encuentran los diferentes **laboratorios prácticos** realizados a lo largo del curso.  
   Cada laboratorio incluye su propio `README.md` con la explicación, código fuente y resultados.  
 
