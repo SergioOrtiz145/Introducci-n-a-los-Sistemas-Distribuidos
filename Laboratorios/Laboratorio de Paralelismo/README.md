@@ -47,7 +47,7 @@ Brindando beneficios como comparaciones más limpias, balance de carga perfecto 
 Se eligió 30 ejecuciones de cada matriz D con cada hilo porque se busca aplicar el Teorema Central del Límite, la media de los tiempos se aproxima a una distribución normal.
 Esto nos ayuda a la normalización de datos, la seguridad de comparar promedios entre hilos y reduce el sesgo por ruidos y cargas alternas de SO, brindando resultados más estables.**
 
-**Luego de realizar las pruebas con los anteriores parámetros, cada uno de los resultados de cada matriz D por hilo fue guardado dentro de un archivo .dat, que se encontrarán dentro de la carpeta Datos.**
+**Luego de realizar las pruebas con los anteriores parámetros, cada uno de los resultados de cada matriz D por hilo fue guardado dentro de un archivo .dat, que se encontrarán dentro de la carpeta [Datos](https://github.com/SergioOrtiz145/Introducci-n-a-los-Sistemas-Distribuidos/tree/main/Laboratorios/Laboratorio%20de%20Paralelismo/Datos).**
 
 ---
 
