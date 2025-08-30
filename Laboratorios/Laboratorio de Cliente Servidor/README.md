@@ -56,7 +56,7 @@ java TCPClient
 4. Conectar clientes remotos
    
 Para ejecutar otro cliente pero desde otro PC de la red, se debe modificar el archivo TCPClient.java para cambiar
-la IP 127.0.0.1 por la IP del servidor.
+la IP default por la IP del servidor.
 ```java
 Socket socket = new Socket("192.321.4.55", 8888);
 ```
