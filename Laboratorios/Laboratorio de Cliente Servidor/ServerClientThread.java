@@ -1,3 +1,14 @@
+/*
+--------------------------------------------------------
+Universidad: Pontificia Universidad Javeriana
+Carrera: Ingeniería de Sistemas
+Asignatura: Introducción a los sistemas distribuidos
+Laboratorio: Cliente-Servidor con Sockets TCP
+Estudiantes: Sergio Ortiz, Isabella Palacio, Ana Sofia Grass y Sebastian Vargas
+Profesor: John Corredor
+Fecha: 29/08/2025
+--------------------------------------------------------
+*/
 
 import java.net.*;
 import java.io.*;
