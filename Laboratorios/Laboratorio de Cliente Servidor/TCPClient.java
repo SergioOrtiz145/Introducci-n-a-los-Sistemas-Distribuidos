@@ -38,6 +38,8 @@ public class TCPClient {
     outStream.close();
     inStream.close();
     socket.close();
+  }catch (EOFException e) {
+    System.out.println("Conexión finalizada por el servidor.");
   }catch(Exception e){
     // Captura cualquier error y lo imprime
     System.out.println(e);

@@ -41,6 +41,10 @@ public class ServerClientThread extends Thread {
         //Lee el mensaje enviado por el cliente
         clientMessage=inStream.readUTF();
         System.out.println("From Client-" +clientNo+ ": Number is :"+clientMessage);
+            // Verifica si el cliente quiere salir
+        if (clientMessage.equals("bye")) {
+          break; // rompe el bucle y cierra la conexión
+        }
         //Calcula el cuadrado del número recibido
         squre = Integer.parseInt(clientMessage) * Integer.parseInt(clientMessage);
         serverMessage="From Server to Client-" + clientNo + " Square of " + clientMessage + " is " +squre;
