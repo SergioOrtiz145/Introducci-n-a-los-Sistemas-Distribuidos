@@ -1,9 +1,12 @@
 import java.io.*;
 import java.util.*;
-
+//Clase para gestionar el archivo de la base de datos de la biblioteca.
+//Se encarga de leer y escribir la información de los libros en un
+//archivo de texto plano ('libros.txt').
 public class GestorArchivo {
+  //Nombre del archivo
   private static final String ARCHIVO = "libros.txt"; // CSV: isbn,titulo,cantidad
-
+  //Lee los libros desde el archivo de texto
   public static List<Libro> leerLibros() {
     List<Libro> out = new ArrayList<>();
     File f = new File(ARCHIVO);
@@ -16,11 +19,11 @@ public class GestorArchivo {
         bw.write("978-0321356680,Java Concurrency in Practice,1\n");
       } catch (IOException e) { e.printStackTrace(); }
     }
-
+    // Leer el archivo línea por línea
     try (BufferedReader br = new BufferedReader(new FileReader(ARCHIVO))) {
       String linea;
       while ((linea = br.readLine()) != null) {
-        if (linea.trim().isEmpty()) continue;
+        if (linea.trim().isEmpty()) continue; // saltar líneas vacias
         String[] a = linea.split(",");
         if (a.length >= 3) {
           String isbn = a[0].trim();
@@ -33,6 +36,7 @@ public class GestorArchivo {
     return out;
   }
 
+  //Guarda en el archivo de texto la lista de libro actualizada.
   public static void guardarLibros(List<Libro> libros) {
     try (BufferedWriter bw = new BufferedWriter(new FileWriter(ARCHIVO))) {
       for (Libro l : libros) {
