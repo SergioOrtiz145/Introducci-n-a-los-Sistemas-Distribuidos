@@ -1,4 +1,4 @@
-# Taller RMI – Biblioteca 📚
+# Taller RMI – Biblioteca 
 
 
 ## 1. Descripción
@@ -130,7 +130,7 @@ Archivo `libros.txt` actualizado en servidor:
 
 ---
 
-## 7. Video de entrega 🎥
+## 7. Video de entrega 
 
 El video muestra:
 1. Estado inicial de `libros.txt`.
@@ -143,7 +143,7 @@ El video muestra:
 
 ---
 
-## LINK YOTUBE VIDEO 🎥
+## LINK YOTUBE VIDEO 
 
 www.youtube.com/watch?v=pKW4iqJt7OY&feature=youtu.be
 
