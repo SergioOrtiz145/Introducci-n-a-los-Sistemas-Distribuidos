@@ -107,11 +107,15 @@ El cliente imprime las operaciones de prueba: consulta, préstamo, devolución.
 
 Cliente:
 ```
-Título: Effective Java | Cantidad: 3
-Préstamo exitoso. Fecha de devolución: 2025-09-07
-Título: Effective Java | Cantidad: 2
-Devuelto
-Préstamo exitoso. Fecha de devolución: 2025-09-07
+===== MENÚ BIBLIOTECA =====
+1. Consultar libro por ISBN
+2. Prestar libro por ISBN
+3. Prestar libro por Título
+4. Devolver libro por ISBN
+5. Salir
+Elija una opción: 1
+Ingrese ISBN: 978-0134685991
+ISBN 978-0134685991: disponibles=0
 ```
 
 Servidor:
