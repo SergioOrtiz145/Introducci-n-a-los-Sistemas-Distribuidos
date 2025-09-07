@@ -1,4 +1,4 @@
-# Taller RMI – Biblioteca 📚
+# Taller RMI – Biblioteca 
 
 
 ## 1. Descripción
@@ -107,11 +107,15 @@ El cliente imprime las operaciones de prueba: consulta, préstamo, devolución.
 
 Cliente:
 ```
-Título: Effective Java | Cantidad: 3
-Préstamo exitoso. Fecha de devolución: 2025-09-07
-Título: Effective Java | Cantidad: 2
-Devuelto
-Préstamo exitoso. Fecha de devolución: 2025-09-07
+===== MENÚ BIBLIOTECA =====
+1. Consultar libro por ISBN
+2. Prestar libro por ISBN
+3. Prestar libro por Título
+4. Devolver libro por ISBN
+5. Salir
+Elija una opción: 1
+Ingrese ISBN: 978-0134685991
+ISBN 978-0134685991: disponibles=0
 ```
 
 Servidor:
@@ -130,7 +134,7 @@ Archivo `libros.txt` actualizado en servidor:
 
 ---
 
-## 7. Video de entrega 🎥
+## 7. Video de entrega 
 
 El video muestra:
 1. Estado inicial de `libros.txt`.
@@ -143,9 +147,17 @@ El video muestra:
 
 ---
 
-## LINK YOTUBE VIDEO 🎥
+## LINK YOTUBE VIDEO 
 
-https://youtu.be/L91R6vrasVE
+www.youtube.com/watch?v=pKW4iqJt7OY&feature=youtu.be
 
 ---
+
+## 8. Conclusiones - Observaciones
+
+1. El taller permitió entender cómo funciona la invocación de métodos remotos en Java, estableciendo la comunicación entre cliente y servidor de manera transparente, como si fueran llamadas locales.
+2. Se demostró la importancia de separar responsabilidades: el servidor gestiona la lógica de negocio y la persistencia, mientras que el cliente únicamente consume los servicios publicados.
+3. Se validó que varios clientes pueden interactuar al mismo tiempo con el servidor sin pérdida de datos, lo cual es esencial en aplicaciones distribuidas.
+4. La estructura del proyecto (interfaz remota, implementación, clases modelo, gestor de archivos) permitió aplicar principios de modularidad, reutilización y claridad en el diseño.
+
 
