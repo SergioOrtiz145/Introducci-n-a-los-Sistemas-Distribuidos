@@ -1,3 +1,8 @@
+/*
+Taller 3
+Clase: Sistemas distribuidos
+Autores: Ana Sofía Grass, Sebastián Vargas, Sergio Ortiz, Isabela Palacio
+*/
 import java.net.*;
 import java.io.*;
 // crea la clase socketudpser con su clase principal 
