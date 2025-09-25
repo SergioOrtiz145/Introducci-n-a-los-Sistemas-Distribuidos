@@ -1,9 +1,7 @@
 package com.proyecto;
 import org.zeromq.SocketType;
 import org.zeromq.ZMQ.Socket;
-
-import zmq.ZMQ;
-
+import org.zeromq.ZMQ;
 import org.zeromq.ZContext;
 
 public class ActorPrestamo {
