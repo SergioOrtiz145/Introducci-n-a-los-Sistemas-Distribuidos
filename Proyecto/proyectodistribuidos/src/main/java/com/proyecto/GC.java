@@ -1,3 +1,11 @@
+/**
+ * ============================================================
+ * Título: GC
+ * Autores: Ana Sofia Grass, Sergio Ortiz, Isabella Palacio, Sebastián Vargas
+ * Fecha: 2025-10-10
+ * ============================================================
+ * GC actúa como gestor central, coordinando las solicitudes de préstamo, devolución y renovación entre los clientes y los actores correspondientes usando ZeroMQ.
+ */
 package com.proyecto;
 
 import org.zeromq.SocketType;
@@ -15,7 +23,7 @@ public class GC {
 
             // Socket con el actor prestamo
             Socket socketPrestamo = context.createSocket(SocketType.REQ);
-            socketPrestamo.connect("tcp://*:5556");
+            socketPrestamo.connect("tcp://127.0.0.1:5556");
 
             // Socket con el actor devolver
             Socket socketDevolver = context.createSocket(SocketType.PUB);
@@ -26,7 +34,9 @@ public class GC {
             socketRenovar.bind("tcp://*:5558");
 
             while (!Thread.currentThread().isInterrupted()) {
+                System.out.println("Esperando mensaje desde PS...");
                 byte[] reply = socketPS.recv();
+                System.out.println("Mensaje recibido.");
                 String solicitud = new String(reply, ZMQ.CHARSET);
                 System.out.println("Mensaje: " + solicitud);
                 String[] partes = solicitud.split(",");
