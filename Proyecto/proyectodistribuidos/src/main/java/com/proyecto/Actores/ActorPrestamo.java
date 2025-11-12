@@ -7,7 +7,7 @@
  * ActorPrestamo recibe solicitudes de préstamo usando un socket ZeroMQ REP.
  * Responde a cada solicitud con un mensaje de confirmación.
  */
-package com.proyecto;
+package com.proyecto.Actores;
 import org.zeromq.SocketType;
 import org.zeromq.ZMQ.Socket;
 import org.zeromq.ZMQ;

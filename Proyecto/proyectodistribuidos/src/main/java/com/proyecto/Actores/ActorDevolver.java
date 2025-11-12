@@ -7,7 +7,7 @@
  * ActorDevolver escucha mensajes en el tópico "DEVOLVER" usando ZeroMQ SUB socket.
  * Imprime los mensajes recibidos en consola.
  */
-package com.proyecto;
+package com.proyecto.Actores;
 
 import org.zeromq.SocketType;
 import org.zeromq.ZMQ.Socket;
