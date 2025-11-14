@@ -6,7 +6,7 @@
  * ============================================================
  * GC actúa como gestor central, coordinando las solicitudes de préstamo, devolución y renovación entre los clientes y los actores correspondientes usando ZeroMQ.
  */
-package com.proyecto;
+package com.proyecto.Gestores;
 
 import org.zeromq.SocketType;
 import org.zeromq.ZMQ.Socket;

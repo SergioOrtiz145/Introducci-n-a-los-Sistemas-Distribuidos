@@ -20,10 +20,22 @@ public class Prestamo {
         this.sede = sede;
     }
 
-    public String toCSV() {
-        return String.format("%s,%s,%s,%s,%s,%s",
-                idPrestamo, isbn, usuario, fechaPrestamo,
-                fechaDevolucion != null ? fechaDevolucion : "", sede);
+    // Constructor para cargar desde CSV
+    public Prestamo(String idPrestamo, String isbn, String usuario,
+            String fechaPrestamoStr, int numRenovaciones, boolean prestamoActivo, String sede) {
+        this.idPrestamo = idPrestamo;
+        this.isbn = isbn;
+        this.usuario = usuario;
+        this.sede = sede;
+        this.numRenovaciones = numRenovaciones;
+        this.prestamoActivo = prestamoActivo;
+
+        // Parsear fecha
+        try {
+            this.fechaPrestamo = LocalDateTime.parse(fechaPrestamoStr);
+        } catch (Exception e) {
+            this.fechaPrestamo = LocalDateTime.now();
+        }
     }
 
     public boolean puedeRenovarse() {
@@ -93,6 +105,15 @@ public class Prestamo {
     public void setNumRenovaciones(int numRenovaciones) {
         this.numRenovaciones = numRenovaciones;
     }
-    
+
+    public String toCSV() {
+        return String.format("%s,%s,%s,%s,%d,%s",
+                idPrestamo,
+                isbn,
+                usuario,
+                fechaPrestamo,
+                numRenovaciones,
+                prestamoActivo ? "true" : "false");
+    }
 
 }

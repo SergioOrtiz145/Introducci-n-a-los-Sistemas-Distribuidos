@@ -15,7 +15,7 @@ public class BaseDatos {
     private final Map<String, Prestamo> prestamos;
     private final Object lockArchivo = new Object();
     private final String sede;
-    
+
     public BaseDatos(String rutaBase, String sede) {
         this.sede = sede;
         this.rutaLibros = rutaBase + "/libros_" + sede + ".txt";
@@ -25,14 +25,14 @@ public class BaseDatos {
         inicializarArchivos();
         cargarDatos();
     }
-    
+
     private void inicializarArchivos() {
         try {
             Path directorio = Paths.get(rutaLibros).getParent();
             if (directorio != null && !Files.exists(directorio)) {
                 Files.createDirectories(directorio);
             }
-            
+
             if (!Files.exists(Paths.get(rutaLibros))) {
                 Files.createFile(Paths.get(rutaLibros));
             }
@@ -43,28 +43,42 @@ public class BaseDatos {
             System.err.println("Error inicializando archivos: " + e.getMessage());
         }
     }
-    
+
     private void cargarDatos() {
         cargarLibros();
         cargarPrestamos();
-        System.out.println("BD " + sede + " cargada: " + libros.size() + " libros, " 
-                          + prestamos.size() + " préstamos");
+        System.out.println("BD " + sede + " cargada: " + libros.size() + " libros, "
+                + prestamos.size() + " préstamos");
     }
-    
+
     private void cargarLibros() {
         try {
             List<String> lineas = Files.readAllLines(Paths.get(rutaLibros));
             for (String linea : lineas) {
-                if (linea.trim().isEmpty()) continue;
-                
+                if (linea.trim().isEmpty())
+                    continue;
+
                 String[] datos = linea.split(",");
-                if (datos.length >= 5) {
-                    Libro libro = new Libro(
-                        datos[0].trim(), 
-                        datos[1].trim(), 
-                        datos[2].trim(), 
-                        Integer.parseInt(datos[3].trim())
-                    );
+                if (datos.length >= 4) {
+                    Libro libro;
+
+                    if (datos.length >= 5) {
+                        // Archivo con ejemplares prestados
+                        libro = new Libro(
+                                datos[0].trim(),
+                                datos[1].trim(),
+                                datos[2].trim(),
+                                Integer.parseInt(datos[3].trim()),
+                                Integer.parseInt(datos[4].trim()));
+                    } else {
+                        // Archivo sin ejemplares prestados (todos disponibles)
+                        libro = new Libro(
+                                datos[0].trim(),
+                                datos[1].trim(),
+                                datos[2].trim(),
+                                Integer.parseInt(datos[3].trim()));
+                    }
+
                     libros.put(libro.getIsbn(), libro);
                 }
             }
@@ -72,21 +86,49 @@ public class BaseDatos {
             System.err.println("Error cargando libros: " + e.getMessage());
         }
     }
-    
+
     private void cargarPrestamos() {
         try {
             List<String> lineas = Files.readAllLines(Paths.get(rutaPrestamos));
             for (String linea : lineas) {
-                if (linea.trim().isEmpty()) continue;
-                
+                if (linea.trim().isEmpty())
+                    continue;
+
                 String[] datos = linea.split(",");
                 if (datos.length >= 6) {
-                    Prestamo prestamo = new Prestamo(
-                        datos[0].trim(), 
-                        datos[1].trim(), 
-                        datos[2].trim(), 
-                        datos[5].trim()
-                    );
+                    String idPrestamo = datos[0].trim();
+                    String isbn = datos[1].trim();
+                    String usuario = datos[2].trim();
+                    String fechaStr = datos[3].trim();
+
+                    // Parsear renovaciones (puede estar vacío)
+                    int renovaciones = 0;
+                    if (!datos[4].trim().isEmpty()) {
+                        try {
+                            renovaciones = Integer.parseInt(datos[4].trim());
+                        } catch (NumberFormatException e) {
+                            renovaciones = 0;
+                        }
+                    }
+
+                    // Parsear prestamoActivo
+                    boolean activo = true;
+                    if (!datos[5].trim().isEmpty()) {
+                        activo = Boolean.parseBoolean(datos[5].trim());
+                    }
+
+                    // Crear préstamo
+                    Prestamo prestamo = new Prestamo(idPrestamo, isbn, usuario, sede);
+                    prestamo.setNumRenovaciones(renovaciones);
+                    prestamo.setPrestamoActivo(activo);
+
+                    // Parsear y setear fecha
+                    try {
+                        prestamo.setFechaPrestamo(LocalDateTime.parse(fechaStr));
+                    } catch (Exception e) {
+                        // Si falla el parseo, usar fecha actual
+                    }
+
                     prestamos.put(prestamo.getIdPrestamo(), prestamo);
                 }
             }
@@ -94,8 +136,8 @@ public class BaseDatos {
             System.err.println("Error cargando préstamos: " + e.getMessage());
         }
     }
-    
-    public synchronized boolean realizarPrestamo(String isbn, String usuario) {
+
+    public synchronized String realizarPrestamo(String isbn, String usuario) {
         Libro libro = libros.get(isbn);
         if (libro != null && libro.prestar()) {
             String idPrestamo = UUID.randomUUID().toString();
@@ -103,11 +145,24 @@ public class BaseDatos {
             prestamos.put(idPrestamo, prestamo);
             persistirCambios();
             System.out.println("Préstamo realizado: " + idPrestamo + " - " + libro.getTitulo());
-            return true;
+            return idPrestamo;
         }
-        return false;
+        return null;
     }
-    
+
+    public synchronized String realizarPrestamoReplica(String isbn, String usuario, String idPre) {
+        Libro libro = libros.get(isbn);
+        if (libro != null && libro.prestar()) {
+            String idPrestamo = idPre;
+            Prestamo prestamo = new Prestamo(idPrestamo, isbn, usuario, sede);
+            prestamos.put(idPrestamo, prestamo);
+            persistirCambios();
+            System.out.println("Préstamo realizado: " + idPrestamo + " - " + libro.getTitulo());
+            return idPrestamo;
+        }
+        return null;
+    }
+
     public synchronized boolean realizarDevolucion(String idPrestamo) {
         Prestamo prestamo = prestamos.get(idPrestamo);
         if (prestamo != null && prestamo.isPrestamoActivo()) {
@@ -124,20 +179,20 @@ public class BaseDatos {
         }
         return false;
     }
-    
+
     public synchronized boolean realizarRenovacion(String idPrestamo) {
         Prestamo prestamo = prestamos.get(idPrestamo);
         if (prestamo != null && prestamo.puedeRenovarse()) {
             prestamo.setNumRenovaciones(prestamo.getNumRenovaciones() + 1);
             prestamo.setFechaPrestamo(LocalDateTime.now());
             persistirCambios();
-            System.out.println("Renovación realizada: " + idPrestamo + 
-                             " (Renovación #" + prestamo.getNumRenovaciones() + ")");
+            System.out.println("Renovación realizada: " + idPrestamo +
+                    " (Renovación #" + prestamo.getNumRenovaciones() + ")");
             return true;
         }
         return false;
     }
-    
+
     private void persistirCambios() {
         synchronized (lockArchivo) {
             try {
@@ -146,52 +201,51 @@ public class BaseDatos {
                 for (Libro libro : libros.values()) {
                     lineasLibros.add(libro.toCSV());
                 }
-                Files.write(Paths.get(rutaLibros), lineasLibros, 
-                           StandardOpenOption.TRUNCATE_EXISTING);
-                
+                Files.write(Paths.get(rutaLibros), lineasLibros,
+                        StandardOpenOption.TRUNCATE_EXISTING);
+
                 // Guardar préstamos activos
                 List<String> lineasPrestamos = new ArrayList<>();
                 for (Prestamo prestamo : prestamos.values()) {
                     lineasPrestamos.add(prestamo.toCSV());
                 }
-                Files.write(Paths.get(rutaPrestamos), lineasPrestamos, 
-                           StandardOpenOption.TRUNCATE_EXISTING);
-                
+                Files.write(Paths.get(rutaPrestamos), lineasPrestamos,
+                        StandardOpenOption.TRUNCATE_EXISTING);
+
             } catch (IOException e) {
                 System.err.println("Error persistiendo datos: " + e.getMessage());
                 throw new RuntimeException("Fallo crítico en persistencia", e);
             }
         }
     }
-    
+
     public Map<String, Libro> getLibros() {
         return new HashMap<>(libros);
     }
-    
+
     public Map<String, Prestamo> getPrestamos() {
         return new HashMap<>(prestamos);
     }
-    
+
     public Libro consultarLibro(String isbn) {
         return libros.get(isbn);
     }
-    
+
     public Prestamo consultarPrestamo(String idPrestamo) {
         return prestamos.get(idPrestamo);
     }
-    
+
     public boolean verificarDisponibilidad() {
         try {
-            return Files.exists(Paths.get(rutaLibros)) && 
-                   Files.isReadable(Paths.get(rutaLibros)) &&
-                   Files.isWritable(Paths.get(rutaLibros));
+            return Files.exists(Paths.get(rutaLibros)) &&
+                    Files.isReadable(Paths.get(rutaLibros)) &&
+                    Files.isWritable(Paths.get(rutaLibros));
         } catch (Exception e) {
             return false;
         }
     }
-    
+
     public String getSede() {
         return sede;
     }
 }
-
