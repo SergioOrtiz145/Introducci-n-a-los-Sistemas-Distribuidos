@@ -12,14 +12,16 @@ public class GA {
     private final String sede;
     private final String puertoServicio;
     private final String puertoHealthCheck;
-    private final String direccionReplicaRemota;
+    private final String puertoReplicacionLocal;  // Puerto donde ESTE GA publica réplicas
+    private final String direccionReplicaRemota;   // Dirección donde escucha el OTRO GA
     private final boolean esPrimario;
     private final String rutaBD;
 
     private ZContext context;
     private ZMQ.Socket socketServicio;
     private ZMQ.Socket socketHealthCheck;
-    private ZMQ.Socket socketReplicacion;
+    private ZMQ.Socket socketReplicacionPub;  // Para publicar réplicas
+    private ZMQ.Socket socketReplicacionSub;  // Para recibir réplicas
     private final Gson gson;
 
     private volatile boolean activo = true;
@@ -29,12 +31,14 @@ public class GA {
     public GA(String sede, String rutaBD,
             String puertoServicio,
             String puertoHealthCheck,
+            String puertoReplicacionLocal,
             String direccionReplicaRemota,
             boolean esPrimario) {
         this.sede = sede;
         this.rutaBD = rutaBD;
         this.puertoServicio = puertoServicio;
         this.puertoHealthCheck = puertoHealthCheck;
+        this.puertoReplicacionLocal = puertoReplicacionLocal;
         this.direccionReplicaRemota = direccionReplicaRemota;
         this.esPrimario = esPrimario;
         this.gson = new Gson();
@@ -69,22 +73,26 @@ public class GA {
         socketHealthCheck.bind("tcp://*:" + puertoHealthCheck);
         System.out.println("GA " + sede + " - Socket health check en puerto " + puertoHealthCheck);
 
-        // Socket PUB para replicación asíncrona (solo si es primario)
-        if (esPrimario && direccionReplicaRemota != null) {
-            socketReplicacion = context.createSocket(SocketType.PUB);
-            int puertoReplicacion = Integer.parseInt(puertoServicio) + 100;
-            socketReplicacion.bind("tcp://*:" + puertoReplicacion);
-            System.out.println("GA " + sede + " - Socket replicación en puerto " + puertoReplicacion);
-        }
-        if (!esPrimario && direccionReplicaRemota != null) {
-            // GA secundario recibe réplicas del primario
+        // ==========================================
+        // CAMBIO 1: Ambos GA publican réplicas
+        // ==========================================
+        socketReplicacionPub = context.createSocket(SocketType.PUB);
+        socketReplicacionPub.bind("tcp://*:" + puertoReplicacionLocal);
+        System.out.println("GA " + sede + " - Socket PUB replicación en puerto " + puertoReplicacionLocal);
+
+        // ==========================================
+        // CAMBIO 2: Ambos GA reciben réplicas
+        // ==========================================
+        if (direccionReplicaRemota != null && !direccionReplicaRemota.isEmpty()) {
             iniciarReceptorReplicas();
         }
+
         System.out.println("GA " + sede + " iniciado como " + (esPrimario ? "PRIMARIO" : "SECUNDARIO"));
+        System.out.println("  → Publica réplicas en puerto: " + puertoReplicacionLocal);
+        System.out.println("  → Escucha réplicas desde: " + direccionReplicaRemota);
     }
 
     private void iniciarMonitoreoSalud() {
-        // Verificar salud de la BD cada 5 segundos
         schedulerHealth.scheduleAtFixedRate(() -> {
             verificarSaludBD();
         }, 5, 5, TimeUnit.SECONDS);
@@ -95,12 +103,10 @@ public class GA {
             boolean disponibleAhora = bdLocal.verificarDisponibilidad();
 
             if (!disponibleAhora && bdDisponible) {
-                // La BD acaba de fallar
                 System.err.println("¡ALERTA! BD " + sede + " NO DISPONIBLE");
                 bdDisponible = false;
                 intentarRecuperacionBD();
             } else if (disponibleAhora && !bdDisponible) {
-                // La BD se recuperó
                 System.out.println("BD " + sede + " RECUPERADA");
                 bdDisponible = true;
             }
@@ -113,7 +119,6 @@ public class GA {
     private void intentarRecuperacionBD() {
         System.out.println("Intentando recuperar BD " + sede + "...");
         try {
-            // Intentar reinicializar la BD
             Thread.sleep(2000);
             this.bdDisponible = bdLocal.verificarDisponibilidad();
 
@@ -130,53 +135,94 @@ public class GA {
 
     private void iniciarReceptorReplicas() {
         Thread hiloReceptor = new Thread(() -> {
-            ZMQ.Socket socketSub = context.createSocket(SocketType.SUB);
-            socketSub.connect(direccionReplicaRemota);
-            socketSub.subscribe("".getBytes());
+            socketReplicacionSub = context.createSocket(SocketType.SUB);
+            socketReplicacionSub.connect(direccionReplicaRemota);
+            socketReplicacionSub.subscribe("".getBytes());
 
-            System.out.println("GA " + sede + " escuchando réplicas de primario...");
+            System.out.println("GA " + sede + " escuchando réplicas desde: " + direccionReplicaRemota);
 
             while (activo) {
                 try {
-                    String mensajeJson = socketSub.recvStr();
-                    System.out.println(mensajeJson);
+                    String mensajeJson = socketReplicacionSub.recvStr();
+                    
                     if (mensajeJson != null) {
                         Map<String, Object> operacion = gson.fromJson(mensajeJson,
-                                new TypeToken<Map<String, Object>>() {
-                                }.getType());
-                        aplicarReplicacion(operacion);
+                                new TypeToken<Map<String, Object>>() {}.getType());
+                        
+                        // ==========================================
+                        // CAMBIO 3: Verificar que no sea réplica propia
+                        // ==========================================
+                        String sedeOrigen = (String) operacion.get("sedeOrigen");
+                        if (!sede.equals(sedeOrigen)) {
+                            System.out.println("📩 [" + sede + "] Réplica recibida desde " + sedeOrigen);
+                            aplicarReplicacion(operacion);
+                        }
                     }
                 } catch (Exception e) {
-                    System.err.println("Error recibiendo réplica: " + e.getMessage());
+                    if (activo) {
+                        System.err.println("Error recibiendo réplica: " + e.getMessage());
+                    }
                 }
             }
-            socketSub.close();
+            
+            if (socketReplicacionSub != null) {
+                socketReplicacionSub.close();
+            }
         });
+        hiloReceptor.setName("ReceptorReplicas-" + sede);
         hiloReceptor.start();
     }
 
     private void aplicarReplicacion(Map<String, Object> operacion) {
         String tipo = (String) operacion.get("operacion");
-        System.out.println("Aplicando réplica: " + tipo);
+        System.out.println("  → Aplicando réplica: " + tipo);
 
-        switch (tipo) {
-            case "PRESTAMO":
-                bdLocal.realizarPrestamoReplica(
-                        (String) operacion.get("isbn"),
-                        (String) operacion.get("usuario"),
-                        (String) operacion.get("idPrestamo"));
-                break;
-            case "DEVOLUCION":
-                bdLocal.realizarDevolucion((String) operacion.get("idPrestamo"));
-                break;
-            case "RENOVACION":
-                bdLocal.realizarRenovacion((String) operacion.get("idPrestamo"));
-                break;
+        try {
+            switch (tipo) {
+                case "PRESTAMO":
+                    String isbn = (String) operacion.get("isbn");
+                    String usuario = (String) operacion.get("usuario");
+                    String idPrestamo = (String) operacion.get("idPrestamo");
+                    
+                    System.out.println("    Datos: ISBN=" + isbn + ", Usuario=" + usuario + ", ID=" + idPrestamo);
+                    
+                    String resultado = bdLocal.realizarPrestamoReplica(isbn, usuario, idPrestamo);
+                    
+                    if (resultado != null) {
+                        System.out.println("  ✓ Réplica de préstamo aplicada: " + resultado);
+                    } else {
+                        System.err.println("  ✗ ERROR: No se pudo aplicar réplica de préstamo");
+                    }
+                    break;
+                    
+                case "DEVOLUCION":
+                    boolean exitoDevolucion = bdLocal.realizarDevolucion((String) operacion.get("idPrestamo"));
+                    if (exitoDevolucion) {
+                        System.out.println("  ✓ Réplica de devolución aplicada");
+                    } else {
+                        System.err.println("  ✗ ERROR: No se pudo aplicar réplica de devolución");
+                    }
+                    break;
+                    
+                case "RENOVACION":
+                    boolean exitoRenovacion = bdLocal.realizarRenovacion((String) operacion.get("idPrestamo"));
+                    if (exitoRenovacion) {
+                        System.out.println("  ✓ Réplica de renovación aplicada");
+                    } else {
+                        System.err.println("  ✗ ERROR: No se pudo aplicar réplica de renovación");
+                    }
+                    break;
+                    
+                default:
+                    System.err.println("  ✗ Tipo de réplica desconocido: " + tipo);
+            }
+        } catch (Exception e) {
+            System.err.println("  ✗ Error aplicando réplica: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
     public void ejecutar() {
-        // Poller para manejar múltiples sockets
         ZMQ.Poller poller = context.createPoller(2);
         poller.register(socketServicio, ZMQ.Poller.POLLIN);
         poller.register(socketHealthCheck, ZMQ.Poller.POLLIN);
@@ -185,14 +231,12 @@ public class GA {
 
         while (activo && !Thread.currentThread().isInterrupted()) {
             try {
-                poller.poll(1000); // Timeout de 1 segundo
+                poller.poll(1000);
 
-                // Procesar solicitudes de servicio
                 if (poller.pollin(0)) {
                     procesarSolicitudServicio();
                 }
 
-                // Procesar health checks
                 if (poller.pollin(1)) {
                     procesarHealthCheck();
                 }
@@ -211,11 +255,9 @@ public class GA {
             System.out.println(
                     "→ Solicitud recibida: " + mensajeJson.substring(0, Math.min(50, mensajeJson.length())) + "...");
 
-            Map<String, Object> solicitud = gson.fromJson(mensajeJson, new TypeToken<Map<String, Object>>() {
-            }.getType());
+            Map<String, Object> solicitud = gson.fromJson(mensajeJson, new TypeToken<Map<String, Object>>() {}.getType());
             Map<String, Object> respuesta = new HashMap<>();
 
-            // Verificar si la BD está disponible
             if (!bdDisponible) {
                 respuesta.put("exito", false);
                 respuesta.put("mensaje", "BD no disponible. Usar réplica secundaria.");
@@ -264,15 +306,23 @@ public class GA {
         String idPrestamo = bdLocal.realizarPrestamo(isbn, usuario);
 
         Boolean exitoPrestamo = idPrestamo != null;
-        if (exitoPrestamo) {
-            solicitud.put("idPrestamo", idPrestamo); 
-        }
+        
         respuesta.put("exito", exitoPrestamo);
         respuesta.put("mensaje", exitoPrestamo ? "Préstamo realizado exitosamente" : "Libro no disponible");
         respuesta.put("operacion", "PRESTAMO");
 
-        if (exitoPrestamo && esPrimario) {
-            replicarOperacion(solicitud);
+        // ==========================================
+        // CAMBIO 4: Ambos GA replican sus cambios
+        // ==========================================
+        if (exitoPrestamo) {
+            // Crear objeto de réplica con el ID del préstamo
+            Map<String, Object> datosReplicacion = new HashMap<>();
+            datosReplicacion.put("operacion", "PRESTAMO");
+            datosReplicacion.put("isbn", isbn);
+            datosReplicacion.put("usuario", usuario);
+            datosReplicacion.put("idPrestamo", idPrestamo);
+            
+            replicarOperacion(datosReplicacion);
         }
     }
 
@@ -284,8 +334,15 @@ public class GA {
         respuesta.put("mensaje", exitoDevolucion ? "Devolución registrada exitosamente" : "Préstamo no encontrado");
         respuesta.put("operacion", "DEVOLUCION");
 
-        if (exitoDevolucion && esPrimario) {
-            replicarOperacion(solicitud);
+        // ==========================================
+        // CAMBIO 4: Ambos GA replican sus cambios
+        // ==========================================
+        if (exitoDevolucion) {
+            Map<String, Object> datosReplicacion = new HashMap<>();
+            datosReplicacion.put("operacion", "DEVOLUCION");
+            datosReplicacion.put("idPrestamo", idPrestamo);
+            
+            replicarOperacion(datosReplicacion);
         }
     }
 
@@ -297,14 +354,20 @@ public class GA {
         respuesta.put("mensaje", exitoRenovacion ? "Renovación realizada exitosamente" : "No se puede renovar");
         respuesta.put("operacion", "RENOVACION");
 
-        if (exitoRenovacion && esPrimario) {
-            replicarOperacion(solicitud);
+        // ==========================================
+        // CAMBIO 4: Ambos GA replican sus cambios
+        // ==========================================
+        if (exitoRenovacion) {
+            Map<String, Object> datosReplicacion = new HashMap<>();
+            datosReplicacion.put("operacion", "RENOVACION");
+            datosReplicacion.put("idPrestamo", idPrestamo);
+            
+            replicarOperacion(datosReplicacion);
         }
     }
 
     private void procesarHealthCheck() {
         try {
-
             Map<String, Object> health = new HashMap<>();
             health.put("estado", activo ? "OK" : "FALLANDO");
             health.put("sede", sede);
@@ -320,14 +383,15 @@ public class GA {
     }
 
     private void replicarOperacion(Map<String, Object> operacion) {
-        if (socketReplicacion != null) {
+        if (socketReplicacionPub != null) {
             try {
                 operacion.put("timestamp", System.currentTimeMillis());
                 operacion.put("sedeOrigen", sede);
                 String mensaje = gson.toJson(operacion);
-                System.out.println(mensaje);
-                socketReplicacion.send(mensaje, ZMQ.DONTWAIT);
-                System.out.println("Operación replicada a secundario");
+                
+                socketReplicacionPub.send(mensaje, ZMQ.DONTWAIT);
+                System.out.println("📤 [" + sede + "] Réplica enviada: " + operacion.get("operacion"));
+                
             } catch (Exception e) {
                 System.err.println("Error replicando operación: " + e.getMessage());
             }
@@ -345,23 +409,26 @@ public class GA {
     }
 
     public static void main(String[] args) {
-        if (args.length < 6) {
-            System.out.println("Uso: java GA <sede> <rutaBD> " +
-                    "<puertoServicio> <puertoHealthCheck> <direccionReplica> <esPrimario>");
-            System.out.println("Ejemplo: java GA SEDE1 ./datos 5555 5556 tcp://192.168.1.101:5655 true");
+        if (args.length < 7) {
+            System.out.println("Uso: java GA <sede> <rutaBD> <puertoServicio> " +
+                    "<puertoHealthCheck> <puertoReplicacionLocal> <direccionReplicaRemota> <esPrimario>");
+            System.out.println("\nEjemplo SEDE1:");
+            System.out.println("  java GA SEDE1 ./datos/sede1 5555 5556 5655 tcp://localhost:6655 true");
+            System.out.println("\nEjemplo SEDE2:");
+            System.out.println("  java GA SEDE2 ./datos/sede2 6555 6556 6655 tcp://localhost:5655 false");
             return;
         }
 
         GA ga = new GA(
                 args[0], // sede: "SEDE1" o "SEDE2"
-                args[1], // rutaBD: "./datos"
+                args[1], // rutaBD: "./datos/sede1"
                 args[2], // puertoServicio: "5555"
                 args[3], // puertoHealthCheck: "5556"
-                args[4], // direccionReplica: "tcp://192.168.1.101:5655"
-                Boolean.parseBoolean(args[5]) // esPrimario: true/false
+                args[4], // puertoReplicacionLocal: "5655" (donde ESTE GA publica)
+                args[5], // direccionReplicaRemota: "tcp://localhost:6655" (de donde escucha)
+                Boolean.parseBoolean(args[6]) // esPrimario: true/false
         );
 
-        // Shutdown hook para cerrar limpiamente
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             ga.cerrar();
         }));

@@ -483,10 +483,10 @@ ISBN0016,El Señor de los Anillos Vol.7,Miguel de Cervantes,1,0
 ISBN0251,Los Miserables Vol.2,Isabel Allende,3,0
 ISBN0493,Crónica de una Muerte Anunciada Vol.4,George Orwell,1,0
 ISBN0252,Cien Años de Soledad Vol.3,Victor Hugo,1,0
-ISBN0010,Ulises Vol.1,Albert Camus,1,1
+ISBN0010,Ulises Vol.1,Albert Camus,1,0
 ISBN0494,Guerra y Paz Vol.5,Miguel de Cervantes,5,0
 ISBN0253,Madame Bovary Vol.4,León Tolstói,4,0
-ISBN0011,Lolita Vol.2,F. Scott Fitzgerald,2,1
+ISBN0011,Lolita Vol.2,F. Scott Fitzgerald,2,0
 ISBN0495,La Metamorfosis Vol.6,William Gibson,1,0
 ISBN0254,Don Quijote de la Mancha Vol.5,Gabriel García Márquez,4,0
 ISBN0012,El Aleph Vol.3,Ernesto Sabato,3,0
@@ -623,7 +623,7 @@ ISBN0849,La Metamorfosis Vol.10,James Joyce,5,1
 ISBN0622,Dune Vol.3,Vladimir Nabokov,5,2
 ISBN0864,Ficciones Vol.5,J.R.R. Tolkien,1,0
 ISBN0623,El Aleph Vol.4,F. Scott Fitzgerald,2,0
-ISBN0865,Fundación Vol.6,Jane Austen,3,0
+ISBN0865,Fundación Vol.6,Jane Austen,3,1
 ISBN0624,1984 Vol.5,Frank Herbert,5,0
 ISBN0866,El Aleph Vol.7,George Orwell,3,0
 ISBN0625,Cien Años de Soledad Vol.6,Miguel de Cervantes,1,0
@@ -717,10 +717,10 @@ ISBN0249,Ficciones Vol.10,Virginia Woolf,1,0
 ISBN0008,Crónica de una Muerte Anunciada Vol.9,Julio Cortázar,7,0
 ISBN0009,La Metamorfosis Vol.10,Vladimir Nabokov,1,0
 ISBN0244,La Metamorfosis Vol.5,Gabriel García Márquez,5,0
-ISBN0002,El Aleph Vol.3,William Gibson,1,1
+ISBN0002,El Aleph Vol.3,William Gibson,1,0
 ISBN0486,Ulises Vol.7,Frank Herbert,4,1
 ISBN0245,El Señor de los Anillos Vol.6,Fiódor Dostoyevski,1,0
-ISBN0003,Ulises Vol.4,Gabriel García Márquez,7,1
+ISBN0003,Ulises Vol.4,Gabriel García Márquez,7,0
 ISBN0487,El Extranjero Vol.8,Jane Austen,1,0
 ISBN0246,El Hobbit Vol.7,J.K. Rowling,3,0
 ISBN0004,1984 Vol.5,Isabel Allende,1,0

@@ -63,7 +63,6 @@ public class BaseDatos {
                     Libro libro;
 
                     if (datos.length >= 5) {
-                        // Archivo con ejemplares prestados
                         libro = new Libro(
                                 datos[0].trim(),
                                 datos[1].trim(),
@@ -71,7 +70,6 @@ public class BaseDatos {
                                 Integer.parseInt(datos[3].trim()),
                                 Integer.parseInt(datos[4].trim()));
                     } else {
-                        // Archivo sin ejemplares prestados (todos disponibles)
                         libro = new Libro(
                                 datos[0].trim(),
                                 datos[1].trim(),
@@ -101,7 +99,6 @@ public class BaseDatos {
                     String usuario = datos[2].trim();
                     String fechaStr = datos[3].trim();
 
-                    // Parsear renovaciones (puede estar vacío)
                     int renovaciones = 0;
                     if (!datos[4].trim().isEmpty()) {
                         try {
@@ -111,18 +108,15 @@ public class BaseDatos {
                         }
                     }
 
-                    // Parsear prestamoActivo
                     boolean activo = true;
                     if (!datos[5].trim().isEmpty()) {
                         activo = Boolean.parseBoolean(datos[5].trim());
                     }
 
-                    // Crear préstamo
                     Prestamo prestamo = new Prestamo(idPrestamo, isbn, usuario, sede);
                     prestamo.setNumRenovaciones(renovaciones);
                     prestamo.setPrestamoActivo(activo);
 
-                    // Parsear y setear fecha
                     try {
                         prestamo.setFechaPrestamo(LocalDateTime.parse(fechaStr));
                     } catch (Exception e) {
@@ -150,17 +144,35 @@ public class BaseDatos {
         return null;
     }
 
-    public synchronized String realizarPrestamoReplica(String isbn, String usuario, String idPre) {
-        Libro libro = libros.get(isbn);
-        if (libro != null && libro.prestar()) {
-            String idPrestamo = idPre;
-            Prestamo prestamo = new Prestamo(idPrestamo, isbn, usuario, sede);
-            prestamos.put(idPrestamo, prestamo);
-            persistirCambios();
-            System.out.println("Préstamo realizado: " + idPrestamo + " - " + libro.getTitulo());
+    /**
+     * CLAVE: Este método NO verifica disponibilidad.
+     * Solo registra el préstamo tal como viene en la réplica.
+     */
+    public synchronized String realizarPrestamoReplica(String isbn, String usuario, String idPrestamo) {
+        // Verificar que el préstamo no exista ya (evitar duplicados)
+        if (prestamos.containsKey(idPrestamo)) {
+            System.out.println("⚠️  Préstamo " + idPrestamo + " ya existe, ignorando réplica");
             return idPrestamo;
         }
-        return null;
+        
+        Libro libro = libros.get(isbn);
+        if (libro == null) {
+            System.err.println("ERROR: Libro " + isbn + " no existe en BD " + sede);
+            return null;
+        }
+
+        // NO verificamos disponibilidad, solo registramos el préstamo
+        // El préstamo ya fue validado en la sede origen
+        Prestamo prestamo = new Prestamo(idPrestamo, isbn, usuario, sede);
+        prestamos.put(idPrestamo, prestamo);
+        
+        // Descontar el ejemplar (sin verificar si hay disponibles)
+        // Esto puede llevar a negativos temporalmente, pero se sincronizará
+        libro.prestar();
+        
+        persistirCambios();
+        System.out.println("✓ Préstamo replicado: " + idPrestamo + " - " + libro.getTitulo());
+        return idPrestamo;
     }
 
     public synchronized boolean realizarDevolucion(String idPrestamo) {

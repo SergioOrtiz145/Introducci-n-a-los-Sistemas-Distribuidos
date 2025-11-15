@@ -506,7 +506,7 @@ ISBN0026,La Casa de los Espíritus Vol.7,Fiódor Dostoyevski,3,0
 ISBN0027,Crónica de una Muerte Anunciada Vol.8,Jorge Luis Borges,3,0
 ISBN0269,Orgullo y Prejuicio Vol.10,Vladimir Nabokov,5,0
 ISBN0262,Guerra y Paz Vol.3,F. Scott Fitzgerald,4,0
-ISBN0020,En Busca del Tiempo Perdido Vol.1,Miguel de Cervantes,2,0
+ISBN0020,En Busca del Tiempo Perdido Vol.1,Miguel de Cervantes,2,1
 ISBN0263,El Túnel Vol.4,F. Scott Fitzgerald,2,0
 ISBN0021,Pedro Páramo Vol.2,William Gibson,5,0
 ISBN0264,Crimen y Castigo Vol.5,Gabriel García Márquez,2,0
@@ -717,10 +717,10 @@ ISBN0249,Ficciones Vol.10,Virginia Woolf,1,0
 ISBN0008,Crónica de una Muerte Anunciada Vol.9,Julio Cortázar,7,0
 ISBN0009,La Metamorfosis Vol.10,Vladimir Nabokov,1,0
 ISBN0244,La Metamorfosis Vol.5,Gabriel García Márquez,5,0
-ISBN0002,El Aleph Vol.3,William Gibson,1,1
+ISBN0002,El Aleph Vol.3,William Gibson,1,0
 ISBN0486,Ulises Vol.7,Frank Herbert,4,0
 ISBN0245,El Señor de los Anillos Vol.6,Fiódor Dostoyevski,1,0
-ISBN0003,Ulises Vol.4,Gabriel García Márquez,7,1
+ISBN0003,Ulises Vol.4,Gabriel García Márquez,7,0
 ISBN0487,El Extranjero Vol.8,Jane Austen,1,0
 ISBN0246,El Hobbit Vol.7,J.K. Rowling,3,0
 ISBN0004,1984 Vol.5,Isabel Allende,1,0

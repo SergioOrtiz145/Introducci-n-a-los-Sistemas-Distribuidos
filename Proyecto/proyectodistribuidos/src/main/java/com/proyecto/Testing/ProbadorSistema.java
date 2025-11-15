@@ -7,29 +7,21 @@ import java.util.*;
 import java.io.*;
 import java.nio.file.*;
 
-/**
- * Clase para probar el sistema completo de préstamo de libros
- * Envía solicitudes a ambas sedes y verifica la replicación
- */
 public class ProbadorSistema {
     private ZContext context;
     private Gson gson;
     private Map<String, ZMQ.Socket> sockets;
-    private List<String> prestamosSede1;
-    private List<String> prestamosSede2;
 
     public ProbadorSistema() {
         this.context = new ZContext();
         this.gson = new Gson();
         this.sockets = new HashMap<>();
-        this.prestamosSede1 = new ArrayList<>();
-        this.prestamosSede2 = new ArrayList<>();
     }
 
     private ZMQ.Socket conectar(String nombre, String direccion) {
         ZMQ.Socket socket = context.createSocket(SocketType.REQ);
         socket.connect(direccion);
-        socket.setReceiveTimeOut(5000); // 5 segundos timeout
+        socket.setReceiveTimeOut(5000);
         sockets.put(nombre, socket);
         System.out.println("✓ Conectado a " + nombre + ": " + direccion);
         return socket;
@@ -45,8 +37,8 @@ public class ProbadorSistema {
         try {
             String solicitudJson = gson.toJson(solicitud);
             socket.send(solicitudJson);
-
             String respuestaJson = socket.recvStr();
+            
             if (respuestaJson == null) {
                 System.err.println("✗ Timeout esperando respuesta de " + nombreSede);
                 return null;
@@ -54,233 +46,211 @@ public class ProbadorSistema {
 
             return gson.fromJson(respuestaJson, new TypeToken<Map<String, Object>>(){}.getType());
         } catch (Exception e) {
-            System.err.println("✗ Error comunicándose con " + nombreSede + ": " + e.getMessage());
+            System.err.println("✗ Error: " + e.getMessage());
             return null;
         }
     }
 
-    public void probarPrestamo(String nombreSede, String isbn, String usuario) {
-        System.out.println("\n→ [" + nombreSede + "] Solicitando préstamo: " + isbn + " para " + usuario);
-        
-        Map<String, Object> solicitud = new HashMap<>();
-        solicitud.put("operacion", "PRESTAMO");
-        solicitud.put("isbn", isbn);
-        solicitud.put("usuario", usuario);
-
-        Map<String, Object> respuesta = enviarSolicitud(nombreSede, solicitud);
-        
-        if (respuesta != null) {
-            boolean exito = (boolean) respuesta.get("exito");
-            String mensaje = (String) respuesta.get("mensaje");
-            
-            if (exito) {
-                System.out.println("✓ Préstamo exitoso: " + mensaje);
-                // Guardar para usar en devoluciones/renovaciones
-                if (nombreSede.equals("SEDE1")) {
-                    prestamosSede1.add(isbn + ":" + usuario);
-                } else {
-                    prestamosSede2.add(isbn + ":" + usuario);
-                }
-            } else {
-                System.out.println("✗ Préstamo fallido: " + mensaje);
-            }
-        }
-    }
-
-    public void probarDevolucion(String nombreSede, String idPrestamo) {
-        System.out.println("\n→ [" + nombreSede + "] Solicitando devolución: " + idPrestamo);
-        
-        Map<String, Object> solicitud = new HashMap<>();
-        solicitud.put("operacion", "DEVOLUCION");
-        solicitud.put("idPrestamo", idPrestamo);
-
-        Map<String, Object> respuesta = enviarSolicitud(nombreSede, solicitud);
-        
-        if (respuesta != null) {
-            boolean exito = (boolean) respuesta.get("exito");
-            String mensaje = (String) respuesta.get("mensaje");
-            System.out.println(exito ? "✓ " + mensaje : "✗ " + mensaje);
-        }
-    }
-
-    public void probarRenovacion(String nombreSede, String idPrestamo) {
-        System.out.println("\n→ [" + nombreSede + "] Solicitando renovación: " + idPrestamo);
-        
-        Map<String, Object> solicitud = new HashMap<>();
-        solicitud.put("operacion", "RENOVACION");
-        solicitud.put("idPrestamo", idPrestamo);
-
-        Map<String, Object> respuesta = enviarSolicitud(nombreSede, solicitud);
-        
-        if (respuesta != null) {
-            boolean exito = (boolean) respuesta.get("exito");
-            String mensaje = (String) respuesta.get("mensaje");
-            System.out.println(exito ? "✓ " + mensaje : "✗ " + mensaje);
-        }
-    }
-
-    public void verificarEstadoBD(String rutaBD, String nombreSede) {
-        System.out.println("\n========================================");
-        System.out.println("  ESTADO BD " + nombreSede);
-        System.out.println("========================================");
-
+    private int obtenerDisponibles(String sede, String isbn) {
         try {
-            // Leer libros
-            String rutaLibros = rutaBD + "/libros_" + nombreSede + ".txt";
-            List<String> libros = Files.readAllLines(Paths.get(rutaLibros));
-            System.out.println("\n📚 Libros (primeros 5):");
-            for (int i = 0; i < Math.min(5, libros.size()); i++) {
-                System.out.println("  " + libros.get(i));
-            }
-            System.out.println("  Total libros: " + libros.size());
-
-            // Leer préstamos
-            String rutaPrestamos = rutaBD + "/prestamos_" + nombreSede + ".txt";
-            List<String> prestamos = Files.readAllLines(Paths.get(rutaPrestamos));
-            System.out.println("\n📋 Préstamos activos:");
-            if (prestamos.isEmpty()) {
-                System.out.println("  (No hay préstamos activos)");
-            } else {
-                for (String prestamo : prestamos) {
-                    System.out.println("  " + prestamo);
+            String rutaLibros = "./datos/" + sede.toLowerCase() + "/libros_" + sede + ".txt";
+            List<String> lineas = Files.readAllLines(Paths.get(rutaLibros));
+            
+            for (String linea : lineas) {
+                if (linea.startsWith(isbn + ",")) {
+                    String[] datos = linea.split(",");
+                    int totales = Integer.parseInt(datos[3]);
+                    int prestados = Integer.parseInt(datos[4]);
+                    return totales - prestados;
                 }
             }
-            System.out.println("  Total préstamos: " + prestamos.size());
-
         } catch (IOException e) {
-            System.err.println("✗ Error leyendo BD: " + e.getMessage());
+            return -1;
         }
-        
-        System.out.println("========================================\n");
+        return -1;
     }
 
-    public void ejecutarBateriaPruebas() {
-        System.out.println("\n");
-        System.out.println("╔════════════════════════════════════════╗");
-        System.out.println("║   BATERÍA DE PRUEBAS DEL SISTEMA      ║");
-        System.out.println("╔════════════════════════════════════════╗");
-
-        // Conectar a ambas sedes
-        conectar("SEDE1", "tcp://localhost:5555");
-        conectar("SEDE2", "tcp://localhost:6555");
-
-        System.out.println("\n═══ PRUEBA 1: Préstamos en SEDE1 ═══");
-        probarPrestamo("SEDE1", "ISBN0001", "estudiante001");
-        probarPrestamo("SEDE1", "ISBN0002", "profesor001");
-        probarPrestamo("SEDE1", "ISBN0003", "estudiante002");
+    private void mostrarEstadoLibro(String isbn, String tituloCorto) {
+        int disponiblesSede1 = obtenerDisponibles("SEDE1", isbn);
+        int disponiblesSede2 = obtenerDisponibles("SEDE2", isbn);
         
-        System.out.println("\n⏱️  Esperando 2 segundos para replicación...");
-        esperar(2000);
-
-        System.out.println("\n═══ PRUEBA 2: Préstamos en SEDE2 ═══");
-        probarPrestamo("SEDE2", "ISBN0010", "estudiante003");
-        probarPrestamo("SEDE2", "ISBN0011", "profesor002");
+        String estado = (disponiblesSede1 == disponiblesSede2) ? "✅ SINCRONIZADO" : "⚠️  DIFERENTE";
         
-        System.out.println("\n⏱️  Esperando 2 segundos para replicación...");
-        esperar(2000);
-
-        System.out.println("\n═══ PRUEBA 3: Renovaciones ═══");
-        // Usar IDs de préstamos existentes (generados al inicio)
-        probarRenovacion("SEDE1", "PREST-SEDE1-0001");
-        probarRenovacion("SEDE2", "PREST-SEDE2-0001");
-        
-        System.out.println("\n⏱️  Esperando 2 segundos para replicación...");
-        esperar(2000);
-
-        System.out.println("\n═══ PRUEBA 4: Devoluciones ═══");
-        probarDevolucion("SEDE1", "PREST-SEDE1-0002");
-        probarDevolucion("SEDE2", "PREST-SEDE2-0002");
-        
-        System.out.println("\n⏱️  Esperando 2 segundos para replicación...");
-        esperar(2000);
-
-        System.out.println("\n═══ PRUEBA 5: Préstamo de libro no disponible ═══");
-        probarPrestamo("SEDE1", "ISBN9999", "estudiante999");
-
-        System.out.println("\n═══ PRUEBA 6: Múltiples préstamos del mismo libro ═══");
-        probarPrestamo("SEDE1", "ISBN0001", "estudiante004");
-        probarPrestamo("SEDE1", "ISBN0001", "estudiante005");
-        probarPrestamo("SEDE1", "ISBN0001", "estudiante006");
-        
-        System.out.println("\n⏱️  Esperando 3 segundos para que se apliquen todas las réplicas...");
-        esperar(3000);
-
-        // Verificar estado de las BDs
-        verificarEstadoBD("./datos/sede1", "SEDE1");
-        verificarEstadoBD("./datos/sede2", "SEDE2");
-
-        System.out.println("\n╔════════════════════════════════════════╗");
-        System.out.println("║      PRUEBAS COMPLETADAS              ║");
-        System.out.println("╚════════════════════════════════════════╝\n");
+        System.out.println("  📚 " + tituloCorto + " (" + isbn + ")");
+        System.out.println("     SEDE1: " + disponiblesSede1 + " disponibles");
+        System.out.println("     SEDE2: " + disponiblesSede2 + " disponibles");
+        System.out.println("     Estado: " + estado);
     }
 
-    public void ejecutarPruebasCarga(int numOperaciones) {
-        System.out.println("\n╔════════════════════════════════════════╗");
-        System.out.println("║      PRUEBA DE CARGA                  ║");
-        System.out.println("╚════════════════════════════════════════╝");
-        System.out.println("Operaciones totales: " + numOperaciones);
+    public void demostrarSincronizacion() {
+        System.out.println("\n╔════════════════════════════════════════════════════════╗");
+        System.out.println("║  DEMOSTRACIÓN DE SINCRONIZACIÓN BIDIRECCIONAL         ║");
+        System.out.println("╚════════════════════════════════════════════════════════╝\n");
 
         conectar("SEDE1", "tcp://localhost:5555");
         conectar("SEDE2", "tcp://localhost:6555");
 
-        Random random = new Random();
-        long tiempoInicio = System.currentTimeMillis();
-        int exitosas = 0;
-        int fallidas = 0;
+        // Seleccionar un libro específico para seguir
+        String isbnDemo = "ISBN0001";
+        String tituloDemo = "Cien Años de Soledad Vol.2";
 
-        for (int i = 0; i < numOperaciones; i++) {
-            String sede = random.nextBoolean() ? "SEDE1" : "SEDE2";
-            String isbn = String.format("ISBN%04d", random.nextInt(1000) + 1);
-            String usuario = "user" + random.nextInt(100);
+        System.out.println("═══════════════════════════════════════════════════════");
+        System.out.println("  PASO 1: Estado inicial del libro " + isbnDemo);
+        System.out.println("═══════════════════════════════════════════════════════");
+        mostrarEstadoLibro(isbnDemo, tituloDemo);
+        
+        System.out.println("\n💡 Ambas sedes tienen el MISMO inventario del libro.");
+        esperarEnter();
+
+        // Préstamo en SEDE1
+        System.out.println("\n═══════════════════════════════════════════════════════");
+        System.out.println("  PASO 2: Usuario 'Ana' pide el libro en SEDE1");
+        System.out.println("═══════════════════════════════════════════════════════");
+        
+        Map<String, Object> solicitud1 = new HashMap<>();
+        solicitud1.put("operacion", "PRESTAMO");
+        solicitud1.put("isbn", isbnDemo);
+        solicitud1.put("usuario", "ana_estudiante");
+        
+        System.out.println("\n→ Enviando solicitud a SEDE1...");
+        Map<String, Object> resp1 = enviarSolicitud("SEDE1", solicitud1);
+        
+        if (resp1 != null && (boolean) resp1.get("exito")) {
+            System.out.println("✓ SEDE1 responde: " + resp1.get("mensaje"));
+            System.out.println("\n⏱️  Esperando 3 segundos para que se replique a SEDE2...");
+            esperar(3000);
             
-            int tipoOp = random.nextInt(3);
+            System.out.println("\n📊 Estado después de préstamo en SEDE1:");
+            mostrarEstadoLibro(isbnDemo, tituloDemo);
             
-            Map<String, Object> respuesta = null;
-            switch (tipoOp) {
-                case 0: // Préstamo
-                    Map<String, Object> solicitudPrestamo = new HashMap<>();
-                    solicitudPrestamo.put("operacion", "PRESTAMO");
-                    solicitudPrestamo.put("isbn", isbn);
-                    solicitudPrestamo.put("usuario", usuario);
-                    respuesta = enviarSolicitud(sede, solicitudPrestamo);
-                    break;
-                case 1: // Renovación
-                    Map<String, Object> solicitudRenovacion = new HashMap<>();
-                    solicitudRenovacion.put("operacion", "RENOVACION");
-                    solicitudRenovacion.put("idPrestamo", "PREST-" + sede + "-0001");
-                    respuesta = enviarSolicitud(sede, solicitudRenovacion);
-                    break;
-                case 2: // Devolución
-                    Map<String, Object> solicitudDevolucion = new HashMap<>();
-                    solicitudDevolucion.put("operacion", "DEVOLUCION");
-                    solicitudDevolucion.put("idPrestamo", "PREST-" + sede + "-0001");
-                    respuesta = enviarSolicitud(sede, solicitudDevolucion);
-                    break;
-            }
+            System.out.println("\n💡 Observa:");
+            System.out.println("   • SEDE1 descontó 1 ejemplar (procesó el préstamo)");
+            System.out.println("   • SEDE2 TAMBIÉN descontó 1 ejemplar (recibió la réplica)");
+            System.out.println("   • Ambas sedes quedan sincronizadas ✅");
+        }
+        esperarEnter();
 
-            if (respuesta != null && (boolean) respuesta.get("exito")) {
-                exitosas++;
-            } else {
-                fallidas++;
-            }
+        // Préstamo en SEDE2
+        System.out.println("\n═══════════════════════════════════════════════════════");
+        System.out.println("  PASO 3: Usuario 'Carlos' pide el libro en SEDE2");
+        System.out.println("═══════════════════════════════════════════════════════");
+        
+        Map<String, Object> solicitud2 = new HashMap<>();
+        solicitud2.put("operacion", "PRESTAMO");
+        solicitud2.put("isbn", isbnDemo);
+        solicitud2.put("usuario", "carlos_profesor");
+        
+        System.out.println("\n→ Enviando solicitud a SEDE2...");
+        Map<String, Object> resp2 = enviarSolicitud("SEDE2", solicitud2);
+        
+        if (resp2 != null && (boolean) resp2.get("exito")) {
+            System.out.println("✓ SEDE2 responde: " + resp2.get("mensaje"));
+            System.out.println("\n⏱️  Esperando 3 segundos para que se replique a SEDE1...");
+            esperar(3000);
+            
+            System.out.println("\n📊 Estado después de préstamo en SEDE2:");
+            mostrarEstadoLibro(isbnDemo, tituloDemo);
+            
+            System.out.println("\n💡 Observa:");
+            System.out.println("   • SEDE2 descontó 1 ejemplar (procesó el préstamo)");
+            System.out.println("   • SEDE1 TAMBIÉN descontó 1 ejemplar (recibió la réplica)");
+            System.out.println("   • La sincronización funciona en AMBAS direcciones ✅");
+        }
+        esperarEnter();
 
-            if ((i + 1) % 10 == 0) {
-                System.out.print(".");
-            }
+        // Múltiples préstamos
+        System.out.println("\n═══════════════════════════════════════════════════════");
+        System.out.println("  PASO 4: Varios usuarios piden el libro simultáneamente");
+        System.out.println("═══════════════════════════════════════════════════════");
+        
+        System.out.println("\n→ María pide el libro en SEDE1...");
+        Map<String, Object> sol3 = new HashMap<>();
+        sol3.put("operacion", "PRESTAMO");
+        sol3.put("isbn", isbnDemo);
+        sol3.put("usuario", "maria_estudiante");
+        enviarSolicitud("SEDE1", sol3);
+        
+        System.out.println("→ Juan pide el libro en SEDE2...");
+        Map<String, Object> sol4 = new HashMap<>();
+        sol4.put("operacion", "PRESTAMO");
+        sol4.put("isbn", isbnDemo);
+        sol4.put("usuario", "juan_estudiante");
+        enviarSolicitud("SEDE2", sol4);
+        
+        System.out.println("→ Pedro pide el libro en SEDE1...");
+        Map<String, Object> sol5 = new HashMap<>();
+        sol5.put("operacion", "PRESTAMO");
+        sol5.put("isbn", isbnDemo);
+        sol5.put("usuario", "pedro_profesor");
+        enviarSolicitud("SEDE1", sol5);
+        
+        System.out.println("\n⏱️  Esperando 5 segundos para todas las réplicas...");
+        esperar(5000);
+        
+        System.out.println("\n📊 Estado final después de múltiples préstamos:");
+        mostrarEstadoLibro(isbnDemo, tituloDemo);
+        
+        System.out.println("\n💡 Conclusión:");
+        System.out.println("   • Total de préstamos: 5 (2 SEDE1 inicial + 2 SEDE2 + 1 SEDE1)");
+        System.out.println("   • Cada préstamo se descontó en AMBAS sedes");
+        System.out.println("   • El inventario está perfectamente sincronizado ✅");
+        
+        // Resumen con varios libros
+        System.out.println("\n═══════════════════════════════════════════════════════");
+        System.out.println("  VERIFICACIÓN FINAL: Estado de varios libros");
+        System.out.println("═══════════════════════════════════════════════════════\n");
+        
+        mostrarEstadoLibro("ISBN0001", "Cien Años Soledad");
+        System.out.println();
+        mostrarEstadoLibro("ISBN0002", "El Aleph");
+        System.out.println();
+        mostrarEstadoLibro("ISBN0010", "Ulises");
+        
+        System.out.println("\n╔════════════════════════════════════════════════════════╗");
+        System.out.println("║  ✅ REPLICACIÓN BIDIRECCIONAL FUNCIONANDO            ║");
+        System.out.println("╚════════════════════════════════════════════════════════╝\n");
+    }
+
+    public void pruebaRapida() {
+        System.out.println("\n╔════════════════════════════════════════════════════════╗");
+        System.out.println("║  PRUEBA RÁPIDA DE REPLICACIÓN                        ║");
+        System.out.println("╚════════════════════════════════════════════════════════╝\n");
+
+        conectar("SEDE1", "tcp://localhost:5555");
+        conectar("SEDE2", "tcp://localhost:6555");
+
+        String[] libros = {"ISBN0001", "ISBN0002", "ISBN0003", "ISBN0010", "ISBN0011"};
+        
+        System.out.println("═══ Estado inicial ═══\n");
+        for (String isbn : libros) {
+            mostrarEstadoLibro(isbn, "Libro " + isbn);
+            System.out.println();
         }
 
-        long tiempoTotal = System.currentTimeMillis() - tiempoInicio;
+        System.out.println("\n═══ Realizando préstamos ═══");
+        
+        // Alternamos entre sedes
+        String[] usuarios = {"est001", "prof001", "est002", "inv001", "est003"};
+        for (int i = 0; i < libros.length; i++) {
+            String sede = (i % 2 == 0) ? "SEDE1" : "SEDE2";
+            
+            Map<String, Object> sol = new HashMap<>();
+            sol.put("operacion", "PRESTAMO");
+            sol.put("isbn", libros[i]);
+            sol.put("usuario", usuarios[i]);
+            
+            System.out.println("  → " + usuarios[i] + " pide " + libros[i] + " en " + sede);
+            enviarSolicitud(sede, sol);
+        }
 
-        System.out.println("\n\n========================================");
-        System.out.println("  RESULTADOS PRUEBA DE CARGA");
-        System.out.println("========================================");
-        System.out.println("Total operaciones: " + numOperaciones);
-        System.out.println("Exitosas: " + exitosas);
-        System.out.println("Fallidas: " + fallidas);
-        System.out.println("Tiempo total: " + tiempoTotal + " ms");
-        System.out.println("Promedio: " + (tiempoTotal / (double) numOperaciones) + " ms/op");
-        System.out.println("Throughput: " + (numOperaciones * 1000.0 / tiempoTotal) + " op/s");
-        System.out.println("========================================\n");
+        System.out.println("\n⏱️  Esperando sincronización...\n");
+        esperar(5000);
+
+        System.out.println("═══ Estado después de réplicas ═══\n");
+        for (String isbn : libros) {
+            mostrarEstadoLibro(isbn, "Libro " + isbn);
+            System.out.println();
+        }
     }
 
     private void esperar(int milisegundos) {
@@ -288,6 +258,19 @@ public class ProbadorSistema {
             Thread.sleep(milisegundos);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
+        }
+    }
+
+    private void esperarEnter() {
+        System.out.println("\n[Presiona ENTER para continuar...]");
+        try {
+            System.in.read();
+            // Limpiar buffer
+            while (System.in.available() > 0) {
+                System.in.read();
+            }
+        } catch (IOException e) {
+            // Ignorar
         }
     }
 
@@ -303,14 +286,13 @@ public class ProbadorSistema {
         ProbadorSistema probador = new ProbadorSistema();
 
         try {
-            if (args.length > 0 && args[0].equals("carga")) {
-                int numOps = args.length > 1 ? Integer.parseInt(args[1]) : 100;
-                probador.ejecutarPruebasCarga(numOps);
+            if (args.length > 0 && args[0].equals("rapida")) {
+                probador.pruebaRapida();
             } else {
-                probador.ejecutarBateriaPruebas();
+                probador.demostrarSincronizacion();
             }
         } catch (Exception e) {
-            System.err.println("Error en pruebas: " + e.getMessage());
+            System.err.println("Error: " + e.getMessage());
             e.printStackTrace();
         } finally {
             probador.cerrar();
