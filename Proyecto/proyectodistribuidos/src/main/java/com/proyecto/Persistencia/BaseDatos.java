@@ -12,7 +12,7 @@ public class BaseDatos {
     private final String rutaLibros;
     private final String rutaPrestamos;
     private final Map<String, Libro> libros;
-    private final Map<String, Prestamo> prestamos;
+    private final Map<String, Prestamo> prestamos; // Incluye locales Y remotos
     private final Object lockArchivo = new Object();
     private final String sede;
 
@@ -48,7 +48,7 @@ public class BaseDatos {
         cargarLibros();
         cargarPrestamos();
         System.out.println("BD " + sede + " cargada: " + libros.size() + " libros, "
-                + prestamos.size() + " préstamos");
+                + prestamos.size() + " préstamos (locales + remotos)");
     }
 
     private void cargarLibros() {
@@ -113,7 +113,13 @@ public class BaseDatos {
                         activo = Boolean.parseBoolean(datos[5].trim());
                     }
 
-                    Prestamo prestamo = new Prestamo(idPrestamo, isbn, usuario, sede);
+                    // Detectar si es préstamo local o remoto por el formato del ID
+                    String sedeOrigen = sede; // Por defecto, asumimos que es local
+                    if (datos.length >= 7) {
+                        sedeOrigen = datos[6].trim(); // Si hay 7ª columna, indica la sede origen
+                    }
+
+                    Prestamo prestamo = new Prestamo(idPrestamo, isbn, usuario, sedeOrigen);
                     prestamo.setNumRenovaciones(renovaciones);
                     prestamo.setPrestamoActivo(activo);
 
@@ -131,6 +137,9 @@ public class BaseDatos {
         }
     }
 
+    // NUEVO: Cargar operaciones remotas (ya no se usa, se eliminó)
+    // Los préstamos remotos ahora se cargan en cargarPrestamos()
+
     public synchronized String realizarPrestamo(String isbn, String usuario) {
         Libro libro = libros.get(isbn);
         if (libro != null && libro.prestar()) {
@@ -138,45 +147,37 @@ public class BaseDatos {
             Prestamo prestamo = new Prestamo(idPrestamo, isbn, usuario, sede);
             prestamos.put(idPrestamo, prestamo);
             persistirCambios();
-            System.out.println("Préstamo realizado: " + idPrestamo + " - " + libro.getTitulo());
+            System.out.println("✓ Préstamo LOCAL realizado: " + idPrestamo + " - " + libro.getTitulo());
             return idPrestamo;
         }
+        System.out.println("✗ Libro " + isbn + " no disponible");
         return null;
     }
 
     /**
-     * CLAVE: Este método NO verifica disponibilidad.
-     * Solo registra el préstamo tal como viene en la réplica.
+     * CLAVE: Este método SOLO registra la operación remota
+     * NO modifica el inventario local de libros
      */
-    public synchronized String realizarPrestamoReplica(String isbn, String usuario, String idPrestamo) {
-        // Verificar que el préstamo no exista ya (evitar duplicados)
+    public synchronized String realizarPrestamoReplica(String isbn, String usuario, String idPrestamo, String sedeOrigen) {
+        // Verificar que la operación no exista ya
         if (prestamos.containsKey(idPrestamo)) {
-            System.out.println("⚠️  Préstamo " + idPrestamo + " ya existe, ignorando réplica");
+            System.out.println("⚠️  Operación remota " + idPrestamo + " ya registrada, ignorando");
             return idPrestamo;
         }
         
-        Libro libro = libros.get(isbn);
-        if (libro == null) {
-            System.err.println("ERROR: Libro " + isbn + " no existe en BD " + sede);
-            return null;
-        }
-
-        // NO verificamos disponibilidad, solo registramos el préstamo
-        // El préstamo ya fue validado en la sede origen
-        Prestamo prestamo = new Prestamo(idPrestamo, isbn, usuario, sede);
-        prestamos.put(idPrestamo, prestamo);
-        
-        // Descontar el ejemplar (sin verificar si hay disponibles)
-        // Esto puede llevar a negativos temporalmente, pero se sincronizará
-        libro.prestar();
+        // Solo registrar la operación, NO modificar inventario
+        Prestamo prestamoRemoto = new Prestamo(idPrestamo, isbn, usuario, sedeOrigen);
+        prestamos.put(idPrestamo, prestamoRemoto);
         
         persistirCambios();
-        System.out.println("✓ Préstamo replicado: " + idPrestamo + " - " + libro.getTitulo());
+        System.out.println("📝 Operación remota REGISTRADA (sin modificar inventario): " + idPrestamo);
         return idPrestamo;
     }
 
     public synchronized boolean realizarDevolucion(String idPrestamo) {
+        // Buscar en préstamos locales
         Prestamo prestamo = prestamos.get(idPrestamo);
+        
         if (prestamo != null && prestamo.isPrestamoActivo()) {
             Libro libro = libros.get(prestamo.getIsbn());
             if (libro != null) {
@@ -185,30 +186,69 @@ public class BaseDatos {
                 prestamo.setFechaDevolucion(LocalDateTime.now());
                 prestamos.remove(idPrestamo);
                 persistirCambios();
-                System.out.println("Devolución realizada: " + idPrestamo);
+                System.out.println("✓ Devolución LOCAL realizada: " + idPrestamo);
                 return true;
             }
         }
+        
+        return false;
+    }
+
+    /**
+     * NUEVO: Registrar devolución remota (sin modificar inventario)
+     */
+    public synchronized boolean realizarDevolucionReplica(String idPrestamo) {
+        Prestamo prestamo = prestamos.get(idPrestamo);
+        
+        if (prestamo != null && prestamo.isPrestamoActivo()) {
+            // Solo marcar como inactivo, NO devolver al inventario
+            prestamo.setPrestamoActivo(false);
+            prestamo.setFechaDevolucion(LocalDateTime.now());
+            prestamos.remove(idPrestamo);
+            persistirCambios();
+            System.out.println("📝 Devolución remota REGISTRADA (sin modificar inventario): " + idPrestamo);
+            return true;
+        }
+        
         return false;
     }
 
     public synchronized boolean realizarRenovacion(String idPrestamo) {
         Prestamo prestamo = prestamos.get(idPrestamo);
+        
         if (prestamo != null && prestamo.puedeRenovarse()) {
             prestamo.setNumRenovaciones(prestamo.getNumRenovaciones() + 1);
             prestamo.setFechaPrestamo(LocalDateTime.now());
             persistirCambios();
-            System.out.println("Renovación realizada: " + idPrestamo +
+            System.out.println("✓ Renovación LOCAL realizada: " + idPrestamo +
                     " (Renovación #" + prestamo.getNumRenovaciones() + ")");
             return true;
         }
+        
+        return false;
+    }
+
+    /**
+     * NUEVO: Registrar renovación remota (sin modificar inventario)
+     */
+    public synchronized boolean realizarRenovacionReplica(String idPrestamo) {
+        Prestamo prestamo = prestamos.get(idPrestamo);
+        
+        if (prestamo != null && prestamo.puedeRenovarse()) {
+            prestamo.setNumRenovaciones(prestamo.getNumRenovaciones() + 1);
+            prestamo.setFechaPrestamo(LocalDateTime.now());
+            persistirCambios();
+            System.out.println("📝 Renovación remota REGISTRADA: " + idPrestamo);
+            return true;
+        }
+        
         return false;
     }
 
     private void persistirCambios() {
         synchronized (lockArchivo) {
             try {
-                // Guardar libros
+                // Guardar libros (inventario local)
                 List<String> lineasLibros = new ArrayList<>();
                 for (Libro libro : libros.values()) {
                     lineasLibros.add(libro.toCSV());
@@ -216,10 +256,11 @@ public class BaseDatos {
                 Files.write(Paths.get(rutaLibros), lineasLibros,
                         StandardOpenOption.TRUNCATE_EXISTING);
 
-                // Guardar préstamos activos
+                // Guardar TODOS los préstamos (locales + remotos) con sede origen
                 List<String> lineasPrestamos = new ArrayList<>();
                 for (Prestamo prestamo : prestamos.values()) {
-                    lineasPrestamos.add(prestamo.toCSV());
+                    // Agregar la sede origen como 7ª columna
+                    lineasPrestamos.add(prestamo.toCSV() + "," + prestamo.getSede());
                 }
                 Files.write(Paths.get(rutaPrestamos), lineasPrestamos,
                         StandardOpenOption.TRUNCATE_EXISTING);
@@ -230,6 +271,9 @@ public class BaseDatos {
             }
         }
     }
+
+    // ELIMINADO: método persistirOperacionesRemotas()
+    // Ya no es necesario, todo se guarda en persistirCambios()
 
     public Map<String, Libro> getLibros() {
         return new HashMap<>(libros);

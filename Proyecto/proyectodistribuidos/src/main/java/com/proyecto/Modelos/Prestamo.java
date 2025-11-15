@@ -113,7 +113,8 @@ public class Prestamo {
                 usuario,
                 fechaPrestamo,
                 numRenovaciones,
-                prestamoActivo ? "true" : "false");
+                prestamoActivo ? "true" : "false",
+                sede);
     }
 
 }

@@ -735,7 +735,7 @@ ISBN0483,Ulises Vol.4,Miguel de Cervantes,5,0
 ISBN0242,Rayuela Vol.3,F. Scott Fitzgerald,1,0
 ISBN0484,Lolita Vol.5,Octavio Paz,5,0
 ISBN0243,Neuromante Vol.4,Fiódor Dostoyevski,4,0
-ISBN0001,Cien Años de Soledad Vol.2,León Tolstói,6,5
+ISBN0001,Cien Años de Soledad Vol.2,León Tolstói,6,1
 ISBN0485,El Señor de los Anillos Vol.6,Isaac Asimov,4,0
 ISBN0480,El Señor de los Anillos Vol.1,Isaac Asimov,1,0
 ISBN0481,Ficciones Vol.2,Juan Rulfo,1,0
