@@ -92,7 +92,7 @@ ISBN0740,Don Quijote de la Mancha Vol.1,Fiódor Dostoyevski,9,0
 ISBN0982,Mrs. Dalloway Vol.3,Juan Rulfo,2,0
 ISBN0741,Pedro Páramo Vol.2,William Gibson,4,0
 ISBN0983,La Metamorfosis Vol.4,George Orwell,2,0
-ISBN0500,Crimen y Castigo Vol.1,James Joyce,1,0
+ISBN0500,Crimen y Castigo Vol.1,James Joyce,1,1
 ISBN0742,El Aleph Vol.3,Isabel Allende,4,0
 ISBN0984,Fundación Vol.5,James Joyce,5,0
 ISBN0980,El Extranjero Vol.1,Isaac Asimov,2,0
@@ -269,7 +269,7 @@ ISBN0582,Ficciones Vol.3,Isaac Asimov,3,0
 ISBN0341,Mrs. Dalloway Vol.2,Vladimir Nabokov,1,0
 ISBN0583,Guerra y Paz Vol.4,Gustave Flaubert,2,0
 ISBN0342,La Odisea Vol.3,Fiódor Dostoyevski,5,0
-ISBN0100,Crimen y Castigo Vol.1,León Tolstói,5,0
+ISBN0100,Crimen y Castigo Vol.1,León Tolstói,5,1
 ISBN0584,Hamlet Vol.5,Homero,5,0
 ISBN0580,Orgullo y Prejuicio Vol.1,Isabel Allende,4,0
 ISBN0556,Ficciones Vol.7,Octavio Paz,3,0
@@ -361,7 +361,7 @@ ISBN0306,El Aleph Vol.7,Vladimir Nabokov,4,0
 ISBN0541,Crimen y Castigo Vol.2,Jane Austen,2,0
 ISBN0783,Pedro Páramo Vol.4,J.K. Rowling,1,0
 ISBN0542,La Metamorfosis Vol.3,Ernesto Sabato,2,0
-ISBN0300,La Metamorfosis Vol.1,William Gibson,3,0
+ISBN0300,La Metamorfosis Vol.1,William Gibson,3,1
 ISBN0784,El Hobbit Vol.5,Gustave Flaubert,9,0
 ISBN0543,Crónica de una Muerte Anunciada Vol.4,Albert Camus,3,0
 ISBN0301,Lolita Vol.2,Octavio Paz,5,0
@@ -483,7 +483,7 @@ ISBN0016,El Señor de los Anillos Vol.7,Miguel de Cervantes,1,0
 ISBN0251,Los Miserables Vol.2,Isabel Allende,3,0
 ISBN0493,Crónica de una Muerte Anunciada Vol.4,George Orwell,1,0
 ISBN0252,Cien Años de Soledad Vol.3,Victor Hugo,1,0
-ISBN0010,Ulises Vol.1,Albert Camus,1,1
+ISBN0010,Ulises Vol.1,Albert Camus,1,0
 ISBN0494,Guerra y Paz Vol.5,Miguel de Cervantes,5,0
 ISBN0253,Madame Bovary Vol.4,León Tolstói,4,0
 ISBN0011,Lolita Vol.2,F. Scott Fitzgerald,2,0
@@ -587,7 +587,7 @@ ISBN0882,Los Miserables Vol.3,Ernesto Sabato,3,0
 ISBN0641,Guerra y Paz Vol.2,William Shakespeare,1,0
 ISBN0883,El Túnel Vol.4,Franz Kafka,4,0
 ISBN0642,Lolita Vol.3,Miguel de Cervantes,3,0
-ISBN0400,El Gran Gatsby Vol.1,George Orwell,3,0
+ISBN0400,El Gran Gatsby Vol.1,George Orwell,3,1
 ISBN0884,Guerra y Paz Vol.5,Homero,2,0
 ISBN0643,Orgullo y Prejuicio Vol.4,Marcel Proust,3,0
 ISBN0401,Fundación Vol.2,James Joyce,2,0
@@ -735,7 +735,7 @@ ISBN0483,Ulises Vol.4,Miguel de Cervantes,5,0
 ISBN0242,Rayuela Vol.3,F. Scott Fitzgerald,1,0
 ISBN0484,Lolita Vol.5,Octavio Paz,5,0
 ISBN0243,Neuromante Vol.4,Fiódor Dostoyevski,4,0
-ISBN0001,Cien Años de Soledad Vol.2,León Tolstói,6,1
+ISBN0001,Cien Años de Soledad Vol.2,León Tolstói,6,0
 ISBN0485,El Señor de los Anillos Vol.6,Isaac Asimov,4,0
 ISBN0480,El Señor de los Anillos Vol.1,Isaac Asimov,1,0
 ISBN0481,Ficciones Vol.2,Juan Rulfo,1,0
@@ -823,7 +823,7 @@ ISBN0206,El Señor de los Anillos Vol.7,Fiódor Dostoyevski,1,0
 ISBN0207,Madame Bovary Vol.8,Vladimir Nabokov,2,0
 ISBN0449,Harry Potter Vol.10,Marcel Proust,4,0
 ISBN0442,El Hobbit Vol.3,Homero,1,0
-ISBN0200,Lolita Vol.1,Virginia Woolf,1,0
+ISBN0200,Lolita Vol.1,Virginia Woolf,1,1
 ISBN0684,Orgullo y Prejuicio Vol.5,Victor Hugo,7,1
 ISBN0443,La Odisea Vol.4,Gabriel García Márquez,3,0
 ISBN0201,Neuromante Vol.2,J.R.R. Tolkien,3,0

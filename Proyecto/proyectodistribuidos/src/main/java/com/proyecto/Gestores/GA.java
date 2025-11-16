@@ -136,11 +136,12 @@ public class GA {
             while (activo) {
                 try {
                     String mensajeJson = socketReplicacionSub.recvStr();
-                    
+
                     if (mensajeJson != null) {
                         Map<String, Object> operacion = gson.fromJson(mensajeJson,
-                                new TypeToken<Map<String, Object>>() {}.getType());
-                        
+                                new TypeToken<Map<String, Object>>() {
+                                }.getType());
+
                         String sedeOrigen = (String) operacion.get("sedeOrigen");
                         if (!sede.equals(sedeOrigen)) {
                             System.out.println("[" + sede + "] Replica recibida desde " + sedeOrigen);
@@ -153,7 +154,7 @@ public class GA {
                     }
                 }
             }
-            
+
             if (socketReplicacionSub != null) {
                 socketReplicacionSub.close();
             }
@@ -173,18 +174,18 @@ public class GA {
                     String isbn = (String) operacion.get("isbn");
                     String usuario = (String) operacion.get("usuario");
                     String idPrestamo = (String) operacion.get("idPrestamo");
-                    
+
                     System.out.println("    Datos: ISBN=" + isbn + ", Usuario=" + usuario + ", ID=" + idPrestamo);
-                    
+
                     String resultado = bdLocal.realizarPrestamoReplica(isbn, usuario, idPrestamo, sedeOrigen);
-                    
+
                     if (resultado != null) {
                         System.out.println("Operacion remota registrada");
                     } else {
                         System.err.println("ERROR: No se pudo registrar operación remota");
                     }
                     break;
-                    
+
                 case "DEVOLUCION":
                     boolean exitoDevolucion = bdLocal.realizarDevolucionReplica((String) operacion.get("idPrestamo"));
                     if (exitoDevolucion) {
@@ -193,7 +194,7 @@ public class GA {
                         System.err.println("ERROR: No se pudo registrar devolución remota");
                     }
                     break;
-                    
+
                 case "RENOVACION":
                     // CAMBIO: Usar método específico para réplicas
                     boolean exitoRenovacion = bdLocal.realizarRenovacionReplica((String) operacion.get("idPrestamo"));
@@ -203,7 +204,7 @@ public class GA {
                         System.err.println("ERROR: No se pudo registrar renovación remota");
                     }
                     break;
-                    
+
                 default:
                     System.err.println("Tipo de replica desconocido: " + tipo);
             }
@@ -246,7 +247,8 @@ public class GA {
             System.out.println(
                     "Solicitud recibida: " + mensajeJson);
 
-            Map<String, Object> solicitud = gson.fromJson(mensajeJson, new TypeToken<Map<String, Object>>() {}.getType());
+            Map<String, Object> solicitud = gson.fromJson(mensajeJson, new TypeToken<Map<String, Object>>() {
+            }.getType());
             Map<String, Object> respuesta = new HashMap<>();
 
             if (!bdDisponible) {
@@ -297,7 +299,7 @@ public class GA {
         String idPrestamo = bdLocal.realizarPrestamo(isbn, usuario);
 
         Boolean exitoPrestamo = idPrestamo != null;
-        
+
         respuesta.put("exito", exitoPrestamo);
         respuesta.put("mensaje", exitoPrestamo ? "Préstamo realizado exitosamente" : "Libro no disponible");
         respuesta.put("operacion", "PRESTAMO");
@@ -308,15 +310,31 @@ public class GA {
             datosReplicacion.put("isbn", isbn);
             datosReplicacion.put("usuario", usuario);
             datosReplicacion.put("idPrestamo", idPrestamo);
-            
+
             replicarOperacion(datosReplicacion);
         }
     }
 
     private void procesarDevolucion(Map<String, Object> solicitud, Map<String, Object> respuesta) {
         String idPrestamo = (String) solicitud.get("idPrestamo");
+        String isbn = (String) solicitud.get("isbn");
+        String usuario = (String) solicitud.get("usuario");
 
-        boolean exitoDevolucion = bdLocal.realizarDevolucion(idPrestamo);
+        boolean exitoDevolucion;
+        String idPrestamoFinal = idPrestamo;
+
+        if (idPrestamo != null) {
+            // Método 1: Devolución por ID directo
+            exitoDevolucion = bdLocal.realizarDevolucion(idPrestamo);
+        } else if (isbn != null && usuario != null) {
+            // Método 2: Devolución por ISBN + Usuario (usa el método que ya tienes)
+            idPrestamoFinal = bdLocal.buscarPrestamoActivo(isbn, usuario);
+            exitoDevolucion = bdLocal.realizarDevolucionPorUsuario(isbn, usuario);
+        } else {
+            exitoDevolucion = false;
+            System.err.println("ERROR: Faltan parámetros (idPrestamo) o (isbn + usuario)");
+        }
+
         respuesta.put("exito", exitoDevolucion);
         respuesta.put("mensaje", exitoDevolucion ? "Devolucion registrada exitosamente" : "Prestamo no encontrado");
         respuesta.put("operacion", "DEVOLUCION");
@@ -324,16 +342,34 @@ public class GA {
         if (exitoDevolucion) {
             Map<String, Object> datosReplicacion = new HashMap<>();
             datosReplicacion.put("operacion", "DEVOLUCION");
-            datosReplicacion.put("idPrestamo", idPrestamo);
-            
+            datosReplicacion.put("idPrestamo", idPrestamoFinal);
+            datosReplicacion.put("isbn", isbn);
+            datosReplicacion.put("usuario", usuario);
+
             replicarOperacion(datosReplicacion);
         }
     }
 
     private void procesarRenovacion(Map<String, Object> solicitud, Map<String, Object> respuesta) {
         String idPrestamo = (String) solicitud.get("idPrestamo");
+        String isbn = (String) solicitud.get("isbn");
+        String usuario = (String) solicitud.get("usuario");
 
-        boolean exitoRenovacion = bdLocal.realizarRenovacion(idPrestamo);
+        boolean exitoRenovacion;
+        String idPrestamoFinal = idPrestamo;
+
+        if (idPrestamo != null) {
+            // Método 1: Renovación por ID directo
+            exitoRenovacion = bdLocal.realizarRenovacion(idPrestamo);
+        } else if (isbn != null && usuario != null) {
+            // Método 2: Renovación por ISBN + Usuario (usa el método que ya tienes)
+            idPrestamoFinal = bdLocal.buscarPrestamoActivo(isbn, usuario);
+            exitoRenovacion = bdLocal.realizarRenovacionPorUsuario(isbn, usuario);
+        } else {
+            exitoRenovacion = false;
+            System.err.println("ERROR: Faltan parámetros (idPrestamo) o (isbn + usuario)");
+        }
+
         respuesta.put("exito", exitoRenovacion);
         respuesta.put("mensaje", exitoRenovacion ? "Renovación realizada exitosamente" : "No se puede renovar");
         respuesta.put("operacion", "RENOVACION");
@@ -341,8 +377,10 @@ public class GA {
         if (exitoRenovacion) {
             Map<String, Object> datosReplicacion = new HashMap<>();
             datosReplicacion.put("operacion", "RENOVACION");
-            datosReplicacion.put("idPrestamo", idPrestamo);
-            
+            datosReplicacion.put("idPrestamo", idPrestamoFinal);
+            datosReplicacion.put("isbn", isbn);
+            datosReplicacion.put("usuario", usuario);
+
             replicarOperacion(datosReplicacion);
         }
     }
@@ -369,10 +407,10 @@ public class GA {
                 operacion.put("timestamp", System.currentTimeMillis());
                 operacion.put("sedeOrigen", sede);
                 String mensaje = gson.toJson(operacion);
-                
+
                 socketReplicacionPub.send(mensaje, ZMQ.DONTWAIT);
                 System.out.println("[" + sede + "] Réplica enviada: " + operacion.get("operacion"));
-                
+
             } catch (Exception e) {
                 System.err.println("Error replicando operación: " + e.getMessage());
             }
@@ -407,8 +445,7 @@ public class GA {
                 args[3],
                 args[4],
                 args[5],
-                Boolean.parseBoolean(args[6])
-        );
+                Boolean.parseBoolean(args[6]));
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             ga.cerrar();

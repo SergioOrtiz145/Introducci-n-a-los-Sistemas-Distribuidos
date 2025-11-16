@@ -3,7 +3,6 @@ package com.proyecto.Testing;
 import java.io.*;
 import java.nio.file.*;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 /**
@@ -37,8 +36,6 @@ public class GeneradorDatosIniciales {
             "prof001", "prof002", "prof003", "prof004", "prof005",
             "inv001", "inv002", "inv003"
     };
-
-    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public static void main(String[] args) {
         String rutaBase = args.length > 0 ? args[0] : "./datos";
@@ -189,7 +186,6 @@ public class GeneradorDatosIniciales {
         for (String libro : libros) {
             String[] datos = libro.split(",");
             String isbn = datos[0];
-            int ejemplaresTotal = Integer.parseInt(datos[3]);
             int ejemplaresPrestados = contadorPrestamos.getOrDefault(isbn, 0);
 
             // Formato final: ISBN,Titulo,Autor,EjemplaresTotal,EjemplaresPrestados

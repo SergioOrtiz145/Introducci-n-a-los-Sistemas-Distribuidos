@@ -1,10 +1,9 @@
 /**
  * ============================================================
- * Título: GC
- * Autores: Ana Sofia Grass, Sergio Ortiz, Isabella Palacio, Sebastián Vargas
- * Fecha: 2025-10-10
+ * Titulo: GC (Gestor de Carga) - Version Mejorada
+ * Autores: Ana Sofia Grass, Sergio Ortiz, Isabella Palacio, Sebastian Vargas
+ * Fecha: 2025-11-15
  * ============================================================
- * GC actúa como gestor central, coordinando las solicitudes de préstamo, devolución y renovación entre los clientes y los actores correspondientes usando ZeroMQ.
  */
 package com.proyecto.Gestores;
 
@@ -12,79 +11,218 @@ import org.zeromq.SocketType;
 import org.zeromq.ZMQ.Socket;
 import org.zeromq.ZMQ;
 import org.zeromq.ZContext;
-import java.time.LocalDate;
+import com.google.gson.Gson;
+import java.time.LocalDateTime;
+import java.util.*;
 
 public class GC {
+    private static final Gson gson = new Gson();
+
     public static void main(String[] args) {
+        String direccionActorPrestamo = args.length > 0 ? args[0] : "tcp://127.0.0.1:5559";
+
+        System.out.println("===============================================");
+        System.out.println("  GESTOR DE CARGA (GC) - Iniciando");
+        System.out.println("===============================================");
+        System.out.println("Actor Prestamo: " + direccionActorPrestamo);
+        System.out.println("===============================================\n");
+
         try (ZContext context = new ZContext()) {
-            // Socket con el PS
             Socket socketPS = context.createSocket(SocketType.REP);
-            socketPS.bind("tcp://*:5555");
+            socketPS.bind("tcp://*:5565");
+            System.out.println("[OK] Socket PS iniciado en puerto 5565");
 
-            // Socket con el actor prestamo
             Socket socketPrestamo = context.createSocket(SocketType.REQ);
-            socketPrestamo.connect("tcp://127.0.0.1:5556");
+            socketPrestamo.connect(direccionActorPrestamo);
+            socketPrestamo.setReceiveTimeOut(5000);
+            System.out.println("[OK] Conectado a ActorPrestamo");
 
-            // Socket con el actor devolver
             Socket socketDevolver = context.createSocket(SocketType.PUB);
             socketDevolver.bind("tcp://*:5557");
+            System.out.println("[OK] Socket Devoluciones (PUB) en puerto 5557");
 
-            // Socket con el actor renovar
             Socket socketRenovar = context.createSocket(SocketType.PUB);
             socketRenovar.bind("tcp://*:5558");
+            System.out.println("[OK] Socket Renovaciones (PUB) en puerto 5558");
+
+            System.out.println("\n[LISTO] GC esperando solicitudes...\n");
 
             while (!Thread.currentThread().isInterrupted()) {
-                System.out.println("Esperando mensaje desde PS...");
-                byte[] reply = socketPS.recv();
-                System.out.println("Mensaje recibido.");
-                String solicitud = new String(reply, ZMQ.CHARSET);
-                System.out.println("Mensaje: " + solicitud);
-                String[] partes = solicitud.split(",");
-                if (partes[0].equals("PRESTAR")) {
-                    // lógica con el actor que maneje prestar - reply/request
+                byte[] mensajeBytes = socketPS.recv();
+                String solicitudTexto = new String(mensajeBytes, ZMQ.CHARSET);
 
-                    // Enviar solicitud al actor de prestamo
-                    socketPrestamo.send(solicitud.getBytes(), 0);
-                    System.out.println("Se envió mensaje al actor Prestamo.");
+                System.out.println("\n[SOLICITUD] Recibida: " + solicitudTexto);
 
-                    // Recibir mensaje del actor
-                    byte[] replyPrestamo = socketPrestamo.recv(0);
-                    System.out.println("Mensaje del actor: " + new String(replyPrestamo, ZMQ.CHARSET));
+                String[] partes = solicitudTexto.split(",");
 
-                    // Enviar respuesta al PS
-                    socketPS.send(replyPrestamo);
-                } else if (partes[0].equals("DEVOLVER")) {
-                    // lógica con el actor que maneje devolver - publish/subscribe
+                if (partes.length < 2) {
+                    String error = "ERROR: Formato invalido. Use: OPERACION,PARAMETROS";
+                    System.err.println("  [ERROR] " + error);
+                    socketPS.send(error.getBytes());
+                    continue;
+                }
 
-                    // Respuesta inmediata al PS
-                    String respuesta = "Devolucion aceptada";
-                    socketPS.send(respuesta.getBytes());
+                String operacion = partes[0].trim();
 
-                    // Públicar al tópico DEVOLVER
-                    socketDevolver.sendMore("DEVOLVER");
-                    socketDevolver.send(solicitud.getBytes());
-                    System.out.println("Se envió mensaje al actor Devolver.");
+                switch (operacion) {
+                    case "PRESTAR":
+                        manejarPrestamo(socketPS, socketPrestamo, partes);
+                        break;
 
-                } else if (partes[0].equals("RENOVAR")) {
-                    // lógica con el actor que maneje renovar - publish/subscribe
+                    case "DEVOLVER":
+                        manejarDevolucion(socketPS, socketDevolver, partes);
+                        break;
 
-                    // Obtener la fecha actual y la nueva fecha de entrega
-                    LocalDate fechaHoy = LocalDate.now();
-                    LocalDate fechaSemanaProxima = fechaHoy.plusWeeks(1);
-                    // Respuesta inmediata al PS
-                    String respuesta = "Renovacion aceptada, nueva fecha de entrega: "+fechaSemanaProxima;
-                    socketPS.send(respuesta.getBytes());
+                    case "RENOVAR":
+                        manejarRenovacion(socketPS, socketRenovar, partes);
+                        break;
 
-                    // Públicar al tópico RENOVAR la solicitud junto a las fechas
-                    solicitud = solicitud.concat(","+fechaHoy+","+fechaSemanaProxima);
-                    socketRenovar.sendMore("RENOVAR");
-                    socketRenovar.send(solicitud.getBytes());
-                    System.out.println("Se envió mensaje al actor Renovar.");
+                    default:
+                        String errorOp = "ERROR: Operacion desconocida: " + operacion;
+                        System.err.println("  [ERROR] " + errorOp);
+                        socketPS.send(errorOp.getBytes());
                 }
             }
+
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.err.println("[ERROR] Error en GC: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
+    private static void manejarPrestamo(Socket socketPS, Socket socketPrestamo, String[] partes) {
+        try {
+            if (partes.length < 3) {
+                String error = "ERROR: Use formato PRESTAR,ISBN,USUARIO";
+                System.err.println("  [ERROR] " + error);
+                socketPS.send(error.getBytes());
+                return;
+            }
+
+            String isbn = partes[1].trim();
+            String usuario = partes[2].trim();
+
+            System.out.println("  [PROCESANDO] Prestamo:");
+            System.out.println("    - ISBN: " + isbn);
+            System.out.println("    - Usuario: " + usuario);
+
+            Map<String, Object> solicitudActor = new HashMap<>();
+            solicitudActor.put("operacion", "PRESTAR");
+            solicitudActor.put("isbn", isbn);
+            solicitudActor.put("usuario", usuario);
+
+            String solicitudJson = gson.toJson(solicitudActor);
+
+            System.out.println("  [ENVIANDO] A ActorPrestamo: " + solicitudJson);
+            socketPrestamo.send(solicitudJson.getBytes(ZMQ.CHARSET));
+
+            byte[] respuestaBytes = socketPrestamo.recv();
+
+            if (respuestaBytes == null) {
+                String error = "ERROR: ActorPrestamo no responde (timeout)";
+                System.err.println("  [ERROR] " + error);
+                socketPS.send(error.getBytes());
+                return;
+            }
+
+            String respuestaActor = new String(respuestaBytes, ZMQ.CHARSET);
+            System.out.println("  [RESPUESTA] ActorPrestamo: " + respuestaActor);
+
+            socketPS.send(respuestaBytes);
+
+        } catch (Exception e) {
+            String error = "ERROR: Fallo procesando prestamo: " + e.getMessage();
+            System.err.println("  [ERROR] " + error);
+            socketPS.send(error.getBytes());
+        }
+    }
+
+    private static void manejarDevolucion(Socket socketPS, Socket socketDevolver, String[] partes) {
+        try {
+            if (partes.length < 3) {
+                String error = "ERROR: Use DEVOLVER,ISBN,USUARIO";
+                System.err.println("  [ERROR] " + error);
+                socketPS.send(error.getBytes());
+                return;
+            }
+
+            String isbn = partes[1].trim();
+            String usuario = partes[2].trim();
+            
+            System.out.println("  [PROCESANDO] Devolucion:");
+            System.out.println("    - ISBN: " + isbn);
+            System.out.println("    - Usuario: " + usuario);
+
+            Map<String, Object> mensajeActor = new HashMap<>();
+            mensajeActor.put("operacion", "DEVOLVER");
+            mensajeActor.put("isbn", isbn);
+            mensajeActor.put("usuario", usuario);
+            
+            String mensajeJson = gson.toJson(mensajeActor);
+
+            // Respuesta INMEDIATA al PS
+            String respuesta = "DEVOLUCION ACEPTADA: Se esta procesando la devolucion";
+            socketPS.send(respuesta.getBytes(ZMQ.CHARSET));
+            System.out.println("  [OK] Respuesta inmediata enviada al PS");
+
+            // Publicar JSON al topico DEVOLVER
+            socketDevolver.sendMore("DEVOLVER");
+            socketDevolver.send(mensajeJson.getBytes(ZMQ.CHARSET));
+
+            System.out.println("  [PUBLICADO] Topico DEVOLVER: " + mensajeJson);
+
+        } catch (Exception e) {
+            String error = "ERROR: Fallo procesando devolucion: " + e.getMessage();
+            System.err.println("  [ERROR] " + error);
+            socketPS.send(error.getBytes());
+        }
+    }
+
+    private static void manejarRenovacion(Socket socketPS, Socket socketRenovar, String[] partes) {
+        try {
+            if (partes.length < 3) {
+                String error = "ERROR: Use RENOVAR,ISBN,USUARIO";
+                System.err.println("  [ERROR] " + error);
+                socketPS.send(error.getBytes());
+                return;
+            }
+
+            String isbn = partes[1].trim();
+            String usuario = partes[2].trim();
+            
+            LocalDateTime fechaActual = LocalDateTime.now();
+            LocalDateTime fechaNuevaEntrega = fechaActual.plusWeeks(1);
+            
+            System.out.println("  [PROCESANDO] Renovacion:");
+            System.out.println("    - ISBN: " + isbn);
+            System.out.println("    - Usuario: " + usuario);
+            
+            Map<String, Object> mensajeActor = new HashMap<>();
+            mensajeActor.put("operacion", "RENOVAR");
+            mensajeActor.put("isbn", isbn);
+            mensajeActor.put("usuario", usuario);
+            mensajeActor.put("fechaActual", fechaActual.toString());
+            mensajeActor.put("fechaNuevaEntrega", fechaNuevaEntrega.toString());
+            
+            String mensajeJson = gson.toJson(mensajeActor);
+
+            // Respuesta INMEDIATA al PS
+            String respuesta = String.format(
+                    "RENOVACION ACEPTADA: Nueva fecha de entrega: %s",
+                    fechaNuevaEntrega.toLocalDate());
+            socketPS.send(respuesta.getBytes(ZMQ.CHARSET));
+            System.out.println("  [OK] Respuesta inmediata enviada al PS");
+
+            // Publicar JSON al topico RENOVAR
+            socketRenovar.sendMore("RENOVAR");
+            socketRenovar.send(mensajeJson.getBytes(ZMQ.CHARSET));
+
+            System.out.println("  [PUBLICADO] Topico RENOVAR: " + mensajeJson);
+
+        } catch (Exception e) {
+            String error = "ERROR: Fallo procesando renovacion: " + e.getMessage();
+            System.err.println("  [ERROR] " + error);
+            socketPS.send(error.getBytes());
+        }
+    }
 }
