@@ -2,7 +2,7 @@
  * ============================================================
  * Título: GA  
  * Autores: Sergio Ortiz, Isabella Palacio, Juan Sebastian Vargas, Ana Sofia Grass
- *  Fecha: 2025-11-19
+ * Fecha: 2025-11-19
  * ============================================================
  * GA gestiona la interacción con la base de datos y los procesos de replicación
  * para un sistema distribuido de gestión de préstamos de libros. 
@@ -24,7 +24,6 @@ public class GA {
     private BaseDatos bdLocal;
     private final String sede;
     private final String puertoServicio;
-    private final String puertoHealthCheck;
     private final String puertoReplicacionLocal;
     private final String direccionReplicaRemota;
     private final boolean esPrimario;
@@ -32,7 +31,6 @@ public class GA {
 
     private ZContext context;
     private ZMQ.Socket socketServicio;
-    private ZMQ.Socket socketHealthCheck;
     private ZMQ.Socket socketReplicacionPub;
     private ZMQ.Socket socketReplicacionSub;
     private final Gson gson;
@@ -43,14 +41,12 @@ public class GA {
 
     public GA(String sede, String rutaBD,
             String puertoServicio,
-            String puertoHealthCheck,
             String puertoReplicacionLocal,
             String direccionReplicaRemota,
             boolean esPrimario) {
         this.sede = sede;
         this.rutaBD = rutaBD;
         this.puertoServicio = puertoServicio;
-        this.puertoHealthCheck = puertoHealthCheck;
         this.puertoReplicacionLocal = puertoReplicacionLocal;
         this.direccionReplicaRemota = direccionReplicaRemota;
         this.esPrimario = esPrimario;
@@ -79,10 +75,6 @@ public class GA {
         socketServicio = context.createSocket(SocketType.REP);
         socketServicio.bind("tcp://*:" + puertoServicio);
         System.out.println("GA " + sede + " - Socket servicio en puerto " + puertoServicio);
-
-        socketHealthCheck = context.createSocket(SocketType.REP);
-        socketHealthCheck.bind("tcp://*:" + puertoHealthCheck);
-        System.out.println("GA " + sede + " - Socket health check en puerto " + puertoHealthCheck);
 
         socketReplicacionPub = context.createSocket(SocketType.PUB);
         socketReplicacionPub.bind("tcp://*:" + puertoReplicacionLocal);
@@ -209,7 +201,6 @@ public class GA {
                     break;
 
                 case "RENOVACION":
-                    // CAMBIO: Usar método específico para réplicas
                     boolean exitoRenovacion = bdLocal.realizarRenovacionReplica((String) operacion.get("idPrestamo"));
                     if (exitoRenovacion) {
                         System.out.println("Renovacion remota registrada");
@@ -228,9 +219,8 @@ public class GA {
     }
 
     public void ejecutar() {
-        ZMQ.Poller poller = context.createPoller(2);
+        ZMQ.Poller poller = context.createPoller(1);
         poller.register(socketServicio, ZMQ.Poller.POLLIN);
-        poller.register(socketHealthCheck, ZMQ.Poller.POLLIN);
 
         System.out.println("GA " + sede + " esperando solicitudes...\n");
 
@@ -240,10 +230,6 @@ public class GA {
 
                 if (poller.pollin(0)) {
                     procesarSolicitudServicio();
-                }
-
-                if (poller.pollin(1)) {
-                    procesarHealthCheck();
                 }
 
             } catch (Exception e) {
@@ -257,8 +243,7 @@ public class GA {
     private void procesarSolicitudServicio() {
         try {
             String mensajeJson = socketServicio.recvStr();
-            System.out.println(
-                    "Solicitud recibida: " + mensajeJson);
+            System.out.println("Solicitud recibida: " + mensajeJson);
 
             Map<String, Object> solicitud = gson.fromJson(mensajeJson, new TypeToken<Map<String, Object>>() {
             }.getType());
@@ -337,10 +322,8 @@ public class GA {
         String idPrestamoFinal = idPrestamo;
 
         if (idPrestamo != null) {
-            // Método 1: Devolución por ID directo
             exitoDevolucion = bdLocal.realizarDevolucion(idPrestamo);
         } else if (isbn != null && usuario != null) {
-            // Método 2: Devolución por ISBN + Usuario (usa el método que ya tienes)
             idPrestamoFinal = bdLocal.buscarPrestamoActivo(isbn, usuario);
             exitoDevolucion = bdLocal.realizarDevolucionPorUsuario(isbn, usuario);
         } else {
@@ -372,10 +355,8 @@ public class GA {
         String idPrestamoFinal = idPrestamo;
 
         if (idPrestamo != null) {
-            // Método 1: Renovación por ID directo
             exitoRenovacion = bdLocal.realizarRenovacion(idPrestamo);
         } else if (isbn != null && usuario != null) {
-            // Método 2: Renovación por ISBN + Usuario (usa el método que ya tienes)
             idPrestamoFinal = bdLocal.buscarPrestamoActivo(isbn, usuario);
             exitoRenovacion = bdLocal.realizarRenovacionPorUsuario(isbn, usuario);
         } else {
@@ -395,22 +376,6 @@ public class GA {
             datosReplicacion.put("usuario", usuario);
 
             replicarOperacion(datosReplicacion);
-        }
-    }
-
-    private void procesarHealthCheck() {
-        try {
-            Map<String, Object> health = new HashMap<>();
-            health.put("estado", activo ? "OK" : "FALLANDO");
-            health.put("sede", sede);
-            health.put("rol", esPrimario ? "PRIMARIO" : "SECUNDARIO");
-            health.put("bdDisponible", bdDisponible);
-            health.put("timestamp", System.currentTimeMillis());
-
-            socketHealthCheck.send(gson.toJson(health));
-
-        } catch (Exception e) {
-            System.err.println("Error en health check: " + e.getMessage());
         }
     }
 
@@ -441,24 +406,23 @@ public class GA {
     }
 
     public static void main(String[] args) {
-        if (args.length < 7) {
+        if (args.length < 6) {
             System.out.println("Uso: java GA <sede> <rutaBD> <puertoServicio> " +
-                    "<puertoHealthCheck> <puertoReplicacionLocal> <direccionReplicaRemota> <esPrimario>");
+                    "<puertoReplicacionLocal> <direccionReplicaRemota> <esPrimario>");
             System.out.println("\nEjemplo SEDE1:");
-            System.out.println("  java GA SEDE1 ./datos/sede1 5555 5556 5655 tcp://localhost:6655 true");
+            System.out.println("  java GA SEDE1 ./datos/sede1 5555 5655 tcp://localhost:6655 true");
             System.out.println("\nEjemplo SEDE2:");
-            System.out.println("  java GA SEDE2 ./datos/sede2 6555 6556 6655 tcp://localhost:5655 false");
+            System.out.println("  java GA SEDE2 ./datos/sede2 6555 6655 tcp://localhost:5655 false");
             return;
         }
 
         GA ga = new GA(
-                args[0],
-                args[1],
-                args[2],
-                args[3],
-                args[4],
-                args[5],
-                Boolean.parseBoolean(args[6]));
+                args[0],  // sede
+                args[1],  // rutaBD
+                args[2],  // puertoServicio
+                args[3],  // puertoReplicacionLocal
+                args[4],  // direccionReplicaRemota
+                Boolean.parseBoolean(args[5])); // esPrimario
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             ga.cerrar();
