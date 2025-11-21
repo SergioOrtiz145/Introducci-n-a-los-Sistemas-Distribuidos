@@ -1,3 +1,16 @@
+/**
+ * ============================================================
+ * Titulo: ActorDevolver
+ * Autores: Ana Sofia Grass, Sergio Ortiz, Isabella Palacio, Sebastian Vargas
+ * Fecha: 2025-11-15
+ * ============================================================
+ * El ActorDevolver es un componente especializado del sistema de gestión de bibliotecas
+ * distribuido responsable de procesar solicitudes de devolución de libros. Se suscribe
+ * al tópico de publicación DEVOLVER y coordina la devolución de libros prestados con
+ * el gestor de carga (GA) de cada sede.
+ * ============================================================
+ */
+
 package com.proyecto.Actores;
 
 import org.zeromq.SocketType;

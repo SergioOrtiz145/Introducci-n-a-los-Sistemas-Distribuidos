@@ -1,3 +1,16 @@
+/**
+ * ============================================================
+ * Título: Libro 
+ * Autores: Sergio Ortiz, Isabella Palacio, Juan Sebastian Vargas, Ana Sofia Grass
+ * Fecha: 2025-11-19
+ * ============================================================
+ * La clase Libro representa un libro en el sistema, con atributos como 
+ * el ISBN, título, autor, número de ejemplares disponibles y el total 
+ * de ejemplares. Proporciona métodos para gestionar los préstamos 
+ * de libros, asegurando que los ejemplares disponibles se reduzcan 
+ * de forma segura mediante sincronización.
+ */
+
 package com.proyecto.Modelos;
 
 public class Libro {

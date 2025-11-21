@@ -1,3 +1,16 @@
+/**
+ * ============================================================
+ * Título: Prestamo 
+ * Autores: Sergio Ortiz,Juan Sebastian Vargas, Ana Sofia Grass, Isabella Palacio Fajardo
+ * Fecha: 2025-11-19
+ * ============================================================
+ * La clase Prestamo representa un préstamo de libro realizado por 
+ * un usuario, con información sobre el libro, fecha de préstamo, 
+ * fecha de devolución, número de renovaciones permitidas, y estado 
+ * del préstamo. Permite gestionar la renovación del préstamo hasta 
+ * un máximo de 2 renovaciones, y proporciona un método para exportar 
+ * los detalles del préstamo en formato CSV.
+ */
 package com.proyecto.Modelos;
 
 import java.time.LocalDateTime;

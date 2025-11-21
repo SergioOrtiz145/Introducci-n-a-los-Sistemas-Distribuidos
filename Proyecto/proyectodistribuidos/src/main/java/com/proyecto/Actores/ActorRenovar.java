@@ -1,3 +1,16 @@
+/**
+ * ============================================================
+ * Titulo: ActorRenovar
+ * Autores: Ana Sofia Grass, Sergio Ortiz, Isabella Palacio, Sebastian Vargas
+ * Fecha: 2025-11-15
+ * ============================================================
+ * El ActorRenovar es un componente especializado del sistema de gestión de bibliotecas
+ * distribuido responsable de procesar solicitudes de renovación de libros prestados.
+ * Se suscribe al tópico de publicación RENOVAR y coordina la extensión de plazos de
+ * entrega con el Gestor de Almacenamiento (GA) de cada sede.
+ * ============================================================
+ */
+
 package com.proyecto.Actores;
 
 import org.zeromq.SocketType;

@@ -1,35 +1,43 @@
 /**
  * ============================================================
- * Titulo: GC (Gestor de Carga) 
- * Autores: Ana Sofia Grass, Sergio Ortiz, Isabella Palacio, Sebastian Vargas
- * Fecha: 2025-11-15
+ * Título: GCSincrono
+ * Autores: Sergio Ortiz, Isabella Palacio, Juan Sebastian Vargas, Ana Sofia Grass
+ * Fecha: 2025-11-19
  * ============================================================
- * El Gestor de Carga (GC) es un componente central del sistema de gestión de bibliotecas
- * distribuido que actúa como intermediario entre el ProbarServicio (PS) y los actores
- * especializados (ActorPrestamo, ActorDevolver, ActorRenovar).
- * ============================================================
+ * GCSincrono es un componente que maneja las operaciones de préstamo, 
+ * devolución y renovación de libros de manera síncrona, interactuando 
+ * con los actores correspondientes para procesar las solicitudes. 
+ * Se comunica con los actores de préstamo, devolución y renovación 
+ * mediante ZeroMQ y proporciona respuestas basadas en el resultado de 
+ * dichas operaciones.
  */
 package com.proyecto.Gestores;
 
-import org.zeromq.SocketType;
-import org.zeromq.ZMQ.Socket;
-import org.zeromq.ZMQ;
-import org.zeromq.ZContext;
-import com.google.gson.Gson;
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
-public class GC {
+import org.zeromq.SocketType;
+import org.zeromq.ZContext;
+import org.zeromq.ZMQ;
+import org.zeromq.ZMQ.Socket;
+
+import com.google.gson.Gson;
+
+public class GCSincrono {
     private static final Gson gson = new Gson();
 
     public static void main(String[] args) {
         String direccionActorPrestamo = args.length > 0 ? args[0] : "tcp://127.0.0.1:5559";
+        String direccionActorDevolver = args.length > 1 ? args[1] : "tcp://127.0.0.1:5560";
+        String direccionActorRenovar = args.length > 2 ? args[2] : "tcp://127.0.0.1:5561";
 
+
+        System.out.println("  GESTOR DE CARGA SÍNCRONO (GC) - Iniciando");
         System.out.println("===============================================");
-        System.out.println("  GESTOR DE CARGA (GC) - Iniciando");
-        System.out.println("===============================================");
-        System.out.println("Actor Prestamo: " + direccionActorPrestamo);
-        System.out.println("===============================================\n");
+        System.out.println("Actor Préstamo:   " + direccionActorPrestamo);
+        System.out.println("Actor Devolución: " + direccionActorDevolver);
+        System.out.println("Actor Renovación: " + direccionActorRenovar);
 
         try (ZContext context = new ZContext()) {
             Socket socketPS = context.createSocket(SocketType.REP);
@@ -41,15 +49,17 @@ public class GC {
             socketPrestamo.setReceiveTimeOut(7000);
             System.out.println("[OK] Conectado a ActorPrestamo");
 
-            Socket socketDevolver = context.createSocket(SocketType.PUB);
-            socketDevolver.bind("tcp://*:5557");
-            System.out.println("[OK] Socket Devoluciones (PUB) en puerto 5557");
+            Socket socketDevolver = context.createSocket(SocketType.REQ);
+            socketDevolver.connect(direccionActorDevolver);
+            socketDevolver.setReceiveTimeOut(7000);
+            System.out.println("[OK] Conectado a ActorDevolver");
 
-            Socket socketRenovar = context.createSocket(SocketType.PUB);
-            socketRenovar.bind("tcp://*:5558");
-            System.out.println("[OK] Socket Renovaciones (PUB) en puerto 5558");
+            Socket socketRenovar = context.createSocket(SocketType.REQ);
+            socketRenovar.connect(direccionActorRenovar);
+            socketRenovar.setReceiveTimeOut(7000);
+            System.out.println("[OK] Conectado a ActorRenovar");
 
-            System.out.println("\n[LISTO] GC esperando solicitudes...\n");
+            System.out.println("\n[LISTO] GC Síncrono esperando solicitudes...\n");
 
             while (!Thread.currentThread().isInterrupted()) {
                 byte[] mensajeBytes = socketPS.recv();
@@ -74,11 +84,11 @@ public class GC {
                         break;
 
                     case "DEVOLVER":
-                        manejarDevolucion(socketPS, socketDevolver, partes);
+                        manejarDevolucionSincrona(socketPS, socketDevolver, partes);
                         break;
 
                     case "RENOVAR":
-                        manejarRenovacion(socketPS, socketRenovar, partes);
+                        manejarRenovacionSincrona(socketPS, socketRenovar, partes);
                         break;
 
                     default:
@@ -90,7 +100,6 @@ public class GC {
 
         } catch (Exception e) {
             System.err.println("[ERROR] Error en GC: " + e.getMessage());
-            e.printStackTrace();
         }
     }
 
@@ -116,12 +125,9 @@ public class GC {
             solicitudActor.put("usuario", usuario);
 
             String solicitudJson = gson.toJson(solicitudActor);
-
-            System.out.println("  [ENVIANDO] A ActorPrestamo: " + solicitudJson);
             socketPrestamo.send(solicitudJson.getBytes(ZMQ.CHARSET));
 
             byte[] respuestaBytes = socketPrestamo.recv();
-
             if (respuestaBytes == null) {
                 String error = "ERROR: ActorPrestamo no responde (timeout)";
                 System.err.println("  [ERROR] " + error);
@@ -131,7 +137,6 @@ public class GC {
 
             String respuestaActor = new String(respuestaBytes, ZMQ.CHARSET);
             System.out.println("  [RESPUESTA] ActorPrestamo: " + respuestaActor);
-
             socketPS.send(respuestaBytes);
 
         } catch (Exception e) {
@@ -141,7 +146,7 @@ public class GC {
         }
     }
 
-    private static void manejarDevolucion(Socket socketPS, Socket socketDevolver, String[] partes) {
+    private static void manejarDevolucionSincrona(Socket socketPS, Socket socketDevolver, String[] partes) {
         try {
             if (partes.length < 3) {
                 String error = "ERROR: Use DEVOLVER,ISBN,USUARIO";
@@ -153,7 +158,7 @@ public class GC {
             String isbn = partes[1].trim();
             String usuario = partes[2].trim();
             
-            System.out.println("  [PROCESANDO] Devolucion:");
+            System.out.println("  [PROCESANDO] Devolucion SÍNCRONA:");
             System.out.println("    - ISBN: " + isbn);
             System.out.println("    - Usuario: " + usuario);
 
@@ -163,17 +168,21 @@ public class GC {
             mensajeActor.put("usuario", usuario);
             
             String mensajeJson = gson.toJson(mensajeActor);
-
-            // Respuesta INMEDIATA al PS
-            String respuesta = "DEVOLUCION ACEPTADA: Se esta procesando la devolucion";
-            socketPS.send(respuesta.getBytes(ZMQ.CHARSET));
-            System.out.println("  [OK] Respuesta inmediata enviada al PS");
-
-            // Publicar JSON al topico DEVOLVER
-            socketDevolver.sendMore("DEVOLVER");
             socketDevolver.send(mensajeJson.getBytes(ZMQ.CHARSET));
+            
+            byte[] respuestaBytes = socketDevolver.recv();
+            if (respuestaBytes == null) {
+                String error = "ERROR: ActorDevolver no responde (timeout)";
+                System.err.println("  [ERROR] " + error);
+                socketPS.send(error.getBytes());
+                return;
+            }
 
-            System.out.println("  [PUBLICADO] Topico DEVOLVER: " + mensajeJson);
+            String respuestaActor = new String(respuestaBytes, ZMQ.CHARSET);
+            System.out.println("  [RESPUESTA] ActorDevolver: " + respuestaActor);
+            
+            // Responder al PS DESPUÉS de que la BD esté actualizada
+            socketPS.send(respuestaBytes);
 
         } catch (Exception e) {
             String error = "ERROR: Fallo procesando devolucion: " + e.getMessage();
@@ -182,7 +191,8 @@ public class GC {
         }
     }
 
-    private static void manejarRenovacion(Socket socketPS, Socket socketRenovar, String[] partes) {
+    // 🔴 NUEVO MÉTODO SÍNCRONO PARA RENOVACIÓN
+    private static void manejarRenovacionSincrona(Socket socketPS, Socket socketRenovar, String[] partes) {
         try {
             if (partes.length < 3) {
                 String error = "ERROR: Use RENOVAR,ISBN,USUARIO";
@@ -197,7 +207,7 @@ public class GC {
             LocalDateTime fechaActual = LocalDateTime.now();
             LocalDateTime fechaNuevaEntrega = fechaActual.plusWeeks(1);
             
-            System.out.println("  [PROCESANDO] Renovacion:");
+            System.out.println("  [PROCESANDO] Renovacion SÍNCRONA:");
             System.out.println("    - ISBN: " + isbn);
             System.out.println("    - Usuario: " + usuario);
             
@@ -210,18 +220,19 @@ public class GC {
             
             String mensajeJson = gson.toJson(mensajeActor);
 
-            // Respuesta INMEDIATA al PS
-            String respuesta = String.format(
-                    "RENOVACION ACEPTADA: Nueva fecha de entrega: %s",
-                    fechaNuevaEntrega.toLocalDate());
-            socketPS.send(respuesta.getBytes(ZMQ.CHARSET));
-            System.out.println("  [OK] Respuesta inmediata enviada al PS");
-
-            // Publicar JSON al topico RENOVAR
-            socketRenovar.sendMore("RENOVAR");
             socketRenovar.send(mensajeJson.getBytes(ZMQ.CHARSET));
+            
+            byte[] respuestaBytes = socketRenovar.recv();
+            if (respuestaBytes == null) {
+                String error = "ERROR: ActorRenovar no responde (timeout)";
+                System.err.println("  [ERROR] " + error);
+                socketPS.send(error.getBytes());
+                return;
+            }
 
-            System.out.println("  [PUBLICADO] Topico RENOVAR: " + mensajeJson);
+            String respuestaActor = new String(respuestaBytes, ZMQ.CHARSET);
+            System.out.println("  [RESPUESTA] ActorRenovar: " + respuestaActor);
+            socketPS.send(respuestaBytes);
 
         } catch (Exception e) {
             String error = "ERROR: Fallo procesando renovacion: " + e.getMessage();

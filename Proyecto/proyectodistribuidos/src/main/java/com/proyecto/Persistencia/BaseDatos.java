@@ -1,3 +1,18 @@
+/**
+ * ============================================================
+ * Título: BaseDatos - Gestor de Base de Datos para Libros y Préstamos
+ * Autores: Sergio Ortiz,Juan Sebastian Vargas, Ana Sofia Grass, Isabella Palacio Fajardo
+ * Fecha: 2025-11-19
+ * ============================================================
+ * La clase BaseDatos gestiona la persistencia de los datos de los 
+ * libros y préstamos, incluyendo operaciones de préstamo, devolución 
+ * y renovación de libros. Los datos se almacenan en archivos de texto 
+ * y se gestionan en memoria a través de mapas concurrentes. La clase 
+ * soporta tanto operaciones locales como remotas (para la sincronización 
+ * entre sedes). Además, garantiza la consistencia de los datos mediante 
+ * la persistencia en disco de manera sincronizada.
+ */
+
 package com.proyecto.Persistencia;
 
 import com.proyecto.Modelos.Libro;
@@ -158,7 +173,6 @@ public class BaseDatos {
             return idPrestamo;
         }
 
-        // Solo registrar la operación, NO modificar inventario
         Prestamo prestamoRemoto = new Prestamo(idPrestamo, isbn, usuario, sedeOrigen);
         prestamos.put(idPrestamo, prestamoRemoto);
 

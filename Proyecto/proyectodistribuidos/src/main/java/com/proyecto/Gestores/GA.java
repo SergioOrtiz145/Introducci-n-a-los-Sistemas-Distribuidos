@@ -1,3 +1,16 @@
+/**
+ * ============================================================
+ * Título: GA  
+ * Autores: Sergio Ortiz, Isabella Palacio, Juan Sebastian Vargas, Ana Sofia Grass
+ *  Fecha: 2025-11-19
+ * ============================================================
+ * GA gestiona la interacción con la base de datos y los procesos de replicación
+ * para un sistema distribuido de gestión de préstamos de libros. 
+ * Maneja operaciones de préstamo, devolución, y renovación, 
+ * y asegura la disponibilidad de la base de datos y la sincronización 
+ * entre réplicas primarias y secundarias mediante ZeroMQ.
+ */
+
 package com.proyecto.Gestores;
 
 import com.proyecto.Persistencia.BaseDatos;
