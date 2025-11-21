@@ -179,19 +179,6 @@ public class ClientePS {
     }
     
     /**
-     * Obtiene el ID de préstamo activo para un ISBN
-     */
-    private String obtenerIdPrestamo(String parametro) {
-        // Si ya es un ID de préstamo (contiene guiones o UUID), devolverlo
-        if (parametro.contains("-") || parametro.length() > 20) {
-            return parametro;
-        }
-        
-        // Si es un ISBN, buscar en préstamos activos
-        return prestamosActivos.get(parametro);
-    }
-    
-    /**
      * Actualiza el registro de préstamos activos según la respuesta
      */
     private void actualizarEstadoPrestamos(String operacion, String parametro, String respuesta) {

@@ -1,1000 +1,1000 @@
-ISBN0512,Ficciones Vol.3,Miguel de Cervantes,7,0
-ISBN0754,Don Quijote de la Mancha Vol.5,Juan Rulfo,1,0
-ISBN0996,El Túnel Vol.7,Franz Kafka,1,0
-ISBN0513,Fundación Vol.4,Octavio Paz,1,0
-ISBN0755,El Túnel Vol.6,Marcel Proust,5,0
-ISBN0997,La Metamorfosis Vol.8,Ernesto Sabato,1,0
-ISBN0514,Ulises Vol.5,Victor Hugo,1,0
-ISBN0756,Ulises Vol.7,Ernesto Sabato,9,0
-ISBN0998,Pedro Páramo Vol.9,Isaac Asimov,1,0
-ISBN0515,Lolita Vol.6,Isaac Asimov,1,0
-ISBN0757,Mrs. Dalloway Vol.8,Gabriel García Márquez,2,0
-ISBN0999,La Odisea Vol.10,Juan Rulfo,2,0
-ISBN0750,Ulises Vol.1,Isabel Allende,1,0
-ISBN0992,Orgullo y Prejuicio Vol.3,Juan Rulfo,10,0
-ISBN0751,Ficciones Vol.2,Ernesto Sabato,1,0
-ISBN0993,Ulises Vol.4,León Tolstói,1,0
-ISBN0510,En Busca del Tiempo Perdido Vol.1,Albert Camus,1,0
-ISBN0752,Ulises Vol.3,Gabriel García Márquez,3,0
-ISBN0994,Pedro Páramo Vol.5,James Joyce,3,0
-ISBN0511,Lolita Vol.2,Homero,4,0
-ISBN0753,Ficciones Vol.4,Octavio Paz,1,0
-ISBN0995,Ulises Vol.6,Gustave Flaubert,2,0
-ISBN0990,Lolita Vol.1,Franz Kafka,7,0
-ISBN0991,Cien Años de Soledad Vol.2,Albert Camus,1,0
-ISBN0509,El Señor de los Anillos Vol.10,Marcel Proust,9,0
-ISBN0505,1984 Vol.6,William Gibson,2,0
-ISBN0747,Cien Años de Soledad Vol.8,Octavio Paz,3,0
-ISBN0989,El Extranjero Vol.10,James Joyce,1,0
-ISBN0506,Cien Años de Soledad Vol.7,Virginia Woolf,4,0
-ISBN0748,Don Quijote de la Mancha Vol.9,Frank Herbert,3,0
-ISBN0507,Fundación Vol.8,Julio Cortázar,5,0
-ISBN0749,Don Quijote de la Mancha Vol.10,Frank Herbert,1,0
-ISBN0508,Fundación Vol.9,Virginia Woolf,3,0
-ISBN0523,Guerra y Paz Vol.4,Julio Cortázar,1,0
-ISBN0765,1984 Vol.6,F. Scott Fitzgerald,1,0
-ISBN0524,Lolita Vol.5,Victor Hugo,1,0
-ISBN0766,Guerra y Paz Vol.7,Frank Herbert,3,0
-ISBN0525,En Busca del Tiempo Perdido Vol.6,Jorge Luis Borges,3,0
-ISBN0767,Cien Años de Soledad Vol.8,J.K. Rowling,1,1
-ISBN0526,Ulises Vol.7,Julio Cortázar,1,0
-ISBN0768,El Túnel Vol.9,Vladimir Nabokov,1,0
-ISBN0761,Los Miserables Vol.2,Jane Austen,3,0
-ISBN0520,Crónica de una Muerte Anunciada Vol.1,Victor Hugo,5,1
-ISBN0762,El Extranjero Vol.3,Isaac Asimov,1,1
-ISBN0521,La Casa de los Espíritus Vol.2,Juan Rulfo,5,0
-ISBN0763,El Hobbit Vol.4,Fiódor Dostoyevski,4,2
-ISBN0522,Guerra y Paz Vol.3,Albert Camus,2,0
-ISBN0764,Ficciones Vol.5,J.K. Rowling,7,0
-ISBN0760,El Gran Gatsby Vol.1,Vladimir Nabokov,1,1
-ISBN0516,1984 Vol.7,Fiódor Dostoyevski,1,1
-ISBN0758,Crimen y Castigo Vol.9,Julio Cortázar,3,0
-ISBN0517,Lolita Vol.8,Jorge Luis Borges,4,0
-ISBN0759,Madame Bovary Vol.10,William Shakespeare,5,0
-ISBN0518,Crimen y Castigo Vol.9,Victor Hugo,3,0
-ISBN0519,1984 Vol.10,Jane Austen,5,0
-ISBN0732,El Extranjero Vol.3,Fiódor Dostoyevski,2,0
-ISBN0974,Neuromante Vol.5,Franz Kafka,1,0
-ISBN0733,Crimen y Castigo Vol.4,Jane Austen,1,1
-ISBN0975,El Aleph Vol.6,León Tolstói,1,0
-ISBN0734,Fundación Vol.5,Jane Austen,2,0
-ISBN0976,La Metamorfosis Vol.7,Ernesto Sabato,3,1
-ISBN0735,La Odisea Vol.6,William Gibson,2,0
-ISBN0977,Ficciones Vol.8,Julio Cortázar,3,0
-ISBN0970,El Túnel Vol.1,William Shakespeare,5,1
-ISBN0971,Rayuela Vol.2,Gustave Flaubert,2,0
-ISBN0730,Pedro Páramo Vol.1,Jorge Luis Borges,1,1
-ISBN0972,El Gran Gatsby Vol.3,Julio Cortázar,2,1
-ISBN0731,El Gran Gatsby Vol.2,James Joyce,3,0
-ISBN0973,Crónica de una Muerte Anunciada Vol.4,James Joyce,4,0
-ISBN0729,El Extranjero Vol.10,Virginia Woolf,5,1
-ISBN0725,Neuromante Vol.6,William Shakespeare,3,0
-ISBN0967,Mrs. Dalloway Vol.8,Octavio Paz,2,1
-ISBN0726,El Señor de los Anillos Vol.7,Jane Austen,2,0
-ISBN0968,1984 Vol.9,Virginia Woolf,4,0
-ISBN0727,En Busca del Tiempo Perdido Vol.8,León Tolstói,5,0
-ISBN0969,El Hobbit Vol.10,Octavio Paz,2,0
-ISBN0728,1984 Vol.9,Miguel de Cervantes,5,0
-ISBN0501,La Metamorfosis Vol.2,Franz Kafka,5,0
-ISBN0743,Harry Potter Vol.4,Isabel Allende,4,0
-ISBN0985,Crimen y Castigo Vol.6,Gustave Flaubert,4,0
-ISBN0502,1984 Vol.3,Homero,5,0
-ISBN0744,La Metamorfosis Vol.5,León Tolstói,1,0
-ISBN0986,Harry Potter Vol.7,Isaac Asimov,1,0
-ISBN0503,La Odisea Vol.4,J.R.R. Tolkien,4,0
-ISBN0745,Hamlet Vol.6,Gustave Flaubert,1,1
-ISBN0987,La Casa de los Espíritus Vol.8,F. Scott Fitzgerald,1,0
-ISBN0504,La Casa de los Espíritus Vol.5,Frank Herbert,3,0
-ISBN0746,Fundación Vol.7,Isaac Asimov,1,0
-ISBN0988,Crimen y Castigo Vol.9,Juan Rulfo,7,0
-ISBN0981,Don Quijote de la Mancha Vol.2,Gustave Flaubert,2,0
-ISBN0740,Don Quijote de la Mancha Vol.1,Fiódor Dostoyevski,9,0
-ISBN0982,Mrs. Dalloway Vol.3,Juan Rulfo,2,0
-ISBN0741,Pedro Páramo Vol.2,William Gibson,4,0
-ISBN0983,La Metamorfosis Vol.4,George Orwell,2,0
-ISBN0500,Crimen y Castigo Vol.1,James Joyce,1,0
-ISBN0742,El Aleph Vol.3,Isabel Allende,4,0
-ISBN0984,Fundación Vol.5,James Joyce,5,0
-ISBN0980,El Extranjero Vol.1,Isaac Asimov,2,0
-ISBN0736,Don Quijote de la Mancha Vol.7,Albert Camus,2,0
-ISBN0978,Fundación Vol.9,León Tolstói,4,0
-ISBN0737,El Aleph Vol.8,Frank Herbert,5,0
-ISBN0979,En Busca del Tiempo Perdido Vol.10,Ernesto Sabato,4,0
-ISBN0738,Neuromante Vol.9,Virginia Woolf,1,0
-ISBN0739,Dune Vol.10,George Orwell,2,0
-ISBN0710,La Metamorfosis Vol.1,Ernesto Sabato,2,0
-ISBN0952,Crónica de una Muerte Anunciada Vol.3,J.R.R. Tolkien,5,0
-ISBN0711,La Casa de los Espíritus Vol.2,Marcel Proust,1,0
-ISBN0953,Rayuela Vol.4,Albert Camus,8,0
-ISBN0712,El Extranjero Vol.3,Fiódor Dostoyevski,4,0
-ISBN0954,Don Quijote de la Mancha Vol.5,Isaac Asimov,2,0
-ISBN0713,El Gran Gatsby Vol.4,Albert Camus,9,0
-ISBN0955,Ficciones Vol.6,William Shakespeare,1,0
-ISBN0950,Don Quijote de la Mancha Vol.1,Juan Rulfo,1,0
-ISBN0951,Cien Años de Soledad Vol.2,Isabel Allende,1,0
-ISBN0707,Don Quijote de la Mancha Vol.8,Jane Austen,1,0
-ISBN0949,Crónica de una Muerte Anunciada Vol.10,F. Scott Fitzgerald,1,1
-ISBN0708,1984 Vol.9,Jane Austen,5,0
-ISBN0709,1984 Vol.10,Jorge Luis Borges,2,1
-ISBN0703,Crimen y Castigo Vol.4,Isaac Asimov,1,0
-ISBN0945,Cien Años de Soledad Vol.6,León Tolstói,1,0
-ISBN0704,Fundación Vol.5,Virginia Woolf,1,0
-ISBN0946,El Gran Gatsby Vol.7,Gabriel García Márquez,1,0
-ISBN0705,El Hobbit Vol.6,Marcel Proust,4,0
-ISBN0947,Guerra y Paz Vol.8,Gustave Flaubert,2,0
-ISBN0706,El Hobbit Vol.7,Virginia Woolf,7,0
-ISBN0948,Cien Años de Soledad Vol.9,Marcel Proust,4,0
-ISBN0721,El Extranjero Vol.2,Franz Kafka,1,0
-ISBN0963,La Metamorfosis Vol.4,Jorge Luis Borges,2,0
-ISBN0722,El Hobbit Vol.3,Marcel Proust,1,1
-ISBN0964,El Aleph Vol.5,Isabel Allende,3,0
-ISBN0723,Ulises Vol.4,Julio Cortázar,3,0
-ISBN0965,Don Quijote de la Mancha Vol.6,Gabriel García Márquez,4,1
-ISBN0724,El Gran Gatsby Vol.5,Gabriel García Márquez,1,0
-ISBN0966,Orgullo y Prejuicio Vol.7,Miguel de Cervantes,2,0
-ISBN0960,El Gran Gatsby Vol.1,Miguel de Cervantes,5,0
-ISBN0961,Orgullo y Prejuicio Vol.2,William Shakespeare,5,0
-ISBN0720,Harry Potter Vol.1,Ernesto Sabato,3,0
-ISBN0962,Pedro Páramo Vol.3,Isabel Allende,5,0
-ISBN0718,El Hobbit Vol.9,J.K. Rowling,1,0
-ISBN0719,Madame Bovary Vol.10,Vladimir Nabokov,2,1
-ISBN0714,Ulises Vol.5,Frank Herbert,3,0
-ISBN0956,La Casa de los Espíritus Vol.7,Ernesto Sabato,2,0
-ISBN0715,Fundación Vol.6,Miguel de Cervantes,1,0
-ISBN0957,Los Miserables Vol.8,Jorge Luis Borges,2,0
-ISBN0716,El Aleph Vol.7,F. Scott Fitzgerald,1,0
-ISBN0958,Lolita Vol.9,William Gibson,1,0
-ISBN0717,La Metamorfosis Vol.8,Miguel de Cervantes,1,0
-ISBN0959,Pedro Páramo Vol.10,Miguel de Cervantes,1,0
-ISBN0930,Lolita Vol.1,Julio Cortázar,5,1
-ISBN0931,1984 Vol.2,Marcel Proust,7,0
-ISBN0932,Ulises Vol.3,Gabriel García Márquez,8,1
-ISBN0933,La Casa de los Espíritus Vol.4,Octavio Paz,2,0
-ISBN0927,Cien Años de Soledad Vol.8,Marcel Proust,4,0
-ISBN0928,Orgullo y Prejuicio Vol.9,Isabel Allende,4,0
-ISBN0929,El Aleph Vol.10,Ernesto Sabato,1,0
-ISBN0923,El Señor de los Anillos Vol.4,Albert Camus,1,1
-ISBN0924,El Túnel Vol.5,James Joyce,2,0
-ISBN0925,Guerra y Paz Vol.6,William Shakespeare,1,0
-ISBN0926,Crónica de una Muerte Anunciada Vol.7,Vladimir Nabokov,1,0
-ISBN0941,La Metamorfosis Vol.2,George Orwell,6,0
-ISBN0700,El Extranjero Vol.1,Franz Kafka,1,0
-ISBN0942,Ficciones Vol.3,Frank Herbert,1,0
-ISBN0701,Crónica de una Muerte Anunciada Vol.2,Homero,1,1
-ISBN0943,Lolita Vol.4,León Tolstói,1,0
-ISBN0702,La Odisea Vol.3,Homero,3,0
-ISBN0944,Mrs. Dalloway Vol.5,James Joyce,5,0
-ISBN0940,Guerra y Paz Vol.1,Miguel de Cervantes,9,0
-ISBN0938,Guerra y Paz Vol.9,Jorge Luis Borges,2,0
-ISBN0939,Ficciones Vol.10,Isaac Asimov,1,0
-ISBN0934,El Túnel Vol.5,Vladimir Nabokov,5,0
-ISBN0935,En Busca del Tiempo Perdido Vol.6,Fiódor Dostoyevski,5,0
-ISBN0936,Don Quijote de la Mancha Vol.7,Victor Hugo,1,0
-ISBN0937,El Señor de los Anillos Vol.8,Franz Kafka,8,0
-ISBN0358,Ficciones Vol.9,Victor Hugo,5,0
-ISBN0116,1984 Vol.7,Gustave Flaubert,3,1
-ISBN0117,La Odisea Vol.8,Gustave Flaubert,5,0
-ISBN0359,Orgullo y Prejuicio Vol.10,Vladimir Nabokov,2,0
-ISBN0118,Don Quijote de la Mancha Vol.9,Octavio Paz,1,1
-ISBN0119,La Metamorfosis Vol.10,Isaac Asimov,3,0
-ISBN0354,En Busca del Tiempo Perdido Vol.5,Albert Camus,3,0
-ISBN0112,El Extranjero Vol.3,Frank Herbert,10,1
-ISBN0596,La Odisea Vol.7,León Tolstói,3,0
-ISBN0355,Orgullo y Prejuicio Vol.6,Homero,1,0
-ISBN0113,Crimen y Castigo Vol.4,Julio Cortázar,7,0
-ISBN0597,El Túnel Vol.8,Gabriel García Márquez,1,0
-ISBN0356,Lolita Vol.7,Ernesto Sabato,4,0
-ISBN0114,Lolita Vol.5,Albert Camus,2,1
-ISBN0598,La Odisea Vol.9,Virginia Woolf,3,0
-ISBN0357,Orgullo y Prejuicio Vol.8,Gabriel García Márquez,3,0
-ISBN0115,Harry Potter Vol.6,J.K. Rowling,3,0
-ISBN0599,En Busca del Tiempo Perdido Vol.10,William Gibson,4,0
-ISBN0350,Don Quijote de la Mancha Vol.1,George Orwell,1,0
-ISBN0592,El Señor de los Anillos Vol.3,Marcel Proust,4,1
-ISBN0351,Fundación Vol.2,León Tolstói,6,0
-ISBN0593,La Odisea Vol.4,Miguel de Cervantes,3,0
-ISBN0352,En Busca del Tiempo Perdido Vol.3,J.K. Rowling,8,0
-ISBN0110,Harry Potter Vol.1,Jane Austen,5,0
-ISBN0594,Harry Potter Vol.5,Gabriel García Márquez,3,0
-ISBN0353,1984 Vol.4,J.R.R. Tolkien,3,0
-ISBN0111,Guerra y Paz Vol.2,William Shakespeare,1,0
-ISBN0595,Dune Vol.6,Homero,1,0
-ISBN0590,Crónica de una Muerte Anunciada Vol.1,Ernesto Sabato,1,1
-ISBN0591,Neuromante Vol.2,Gustave Flaubert,2,0
-ISBN0109,Hamlet Vol.10,George Orwell,5,0
-ISBN0127,El Túnel Vol.8,Gustave Flaubert,1,1
-ISBN0369,Pedro Páramo Vol.10,F. Scott Fitzgerald,5,0
-ISBN0128,Dune Vol.9,Homero,3,1
-ISBN0129,Guerra y Paz Vol.10,Jorge Luis Borges,1,0
-ISBN0365,Hamlet Vol.6,Julio Cortázar,3,0
-ISBN0123,La Casa de los Espíritus Vol.4,James Joyce,4,0
-ISBN0366,Madame Bovary Vol.7,Julio Cortázar,1,0
-ISBN0124,Ficciones Vol.5,Miguel de Cervantes,2,0
-ISBN0367,Dune Vol.8,Frank Herbert,1,0
-ISBN0125,Neuromante Vol.6,Fiódor Dostoyevski,1,0
-ISBN0368,El Extranjero Vol.9,F. Scott Fitzgerald,2,0
-ISBN0126,Fundación Vol.7,Homero,6,0
-ISBN0361,Hamlet Vol.2,Fiódor Dostoyevski,1,0
-ISBN0362,Pedro Páramo Vol.3,Albert Camus,1,0
-ISBN0120,Cien Años de Soledad Vol.1,Octavio Paz,1,1
-ISBN0363,La Casa de los Espíritus Vol.4,J.K. Rowling,4,1
-ISBN0121,El Gran Gatsby Vol.2,Virginia Woolf,1,0
-ISBN0364,Guerra y Paz Vol.5,Julio Cortázar,2,0
-ISBN0122,El Aleph Vol.3,Ernesto Sabato,5,0
-ISBN0360,Ficciones Vol.1,Virginia Woolf,2,0
-ISBN0578,Madame Bovary Vol.9,J.R.R. Tolkien,6,0
-ISBN0336,El Hobbit Vol.7,Isaac Asimov,4,0
-ISBN0337,Fundación Vol.8,Ernesto Sabato,4,0
-ISBN0579,Pedro Páramo Vol.10,Marcel Proust,1,0
-ISBN0338,Lolita Vol.9,Juan Rulfo,9,0
-ISBN0339,El Aleph Vol.10,Franz Kafka,3,1
-ISBN0574,Crónica de una Muerte Anunciada Vol.5,Miguel de Cervantes,10,0
-ISBN0332,Hamlet Vol.3,Miguel de Cervantes,9,0
-ISBN0575,La Metamorfosis Vol.6,Gabriel García Márquez,1,0
-ISBN0333,Cien Años de Soledad Vol.4,Ernesto Sabato,3,1
-ISBN0576,Los Miserables Vol.7,James Joyce,2,0
-ISBN0334,Los Miserables Vol.5,Octavio Paz,5,0
-ISBN0577,Cien Años de Soledad Vol.8,Juan Rulfo,1,0
-ISBN0335,Dune Vol.6,F. Scott Fitzgerald,5,0
-ISBN0570,Fundación Vol.1,Ernesto Sabato,4,0
-ISBN0571,El Extranjero Vol.2,J.K. Rowling,1,1
-ISBN0572,El Extranjero Vol.3,J.R.R. Tolkien,2,0
-ISBN0330,Hamlet Vol.1,William Gibson,1,0
-ISBN0573,El Extranjero Vol.4,Gabriel García Márquez,5,0
-ISBN0331,Orgullo y Prejuicio Vol.2,William Gibson,2,0
-ISBN0329,La Odisea Vol.10,Jane Austen,4,0
-ISBN0347,Los Miserables Vol.8,Isaac Asimov,5,0
-ISBN0105,Crimen y Castigo Vol.6,William Shakespeare,3,0
-ISBN0589,Crónica de una Muerte Anunciada Vol.10,Jane Austen,4,0
-ISBN0348,Dune Vol.9,F. Scott Fitzgerald,5,0
-ISBN0106,Dune Vol.7,J.K. Rowling,4,0
-ISBN0107,El Extranjero Vol.8,Albert Camus,4,0
-ISBN0349,Crimen y Castigo Vol.10,Juan Rulfo,3,0
-ISBN0108,Guerra y Paz Vol.9,Gabriel García Márquez,5,0
-ISBN0343,El Señor de los Anillos Vol.4,Julio Cortázar,3,1
-ISBN0101,Crónica de una Muerte Anunciada Vol.2,Ernesto Sabato,3,2
-ISBN0585,Ficciones Vol.6,Octavio Paz,1,0
-ISBN0344,Ulises Vol.5,George Orwell,1,0
-ISBN0102,Madame Bovary Vol.3,León Tolstói,5,0
-ISBN0586,El Señor de los Anillos Vol.7,Albert Camus,3,0
-ISBN0345,Crimen y Castigo Vol.6,Octavio Paz,1,0
-ISBN0103,El Aleph Vol.4,Isabel Allende,10,0
-ISBN0587,El Hobbit Vol.8,Jorge Luis Borges,2,0
-ISBN0346,Orgullo y Prejuicio Vol.7,León Tolstói,4,0
-ISBN0104,Guerra y Paz Vol.5,Jorge Luis Borges,6,0
-ISBN0588,La Casa de los Espíritus Vol.9,Jorge Luis Borges,3,0
-ISBN0581,La Odisea Vol.2,J.K. Rowling,1,0
-ISBN0340,Ficciones Vol.1,William Gibson,1,0
-ISBN0582,Ficciones Vol.3,Isaac Asimov,3,0
-ISBN0341,Mrs. Dalloway Vol.2,Vladimir Nabokov,1,0
-ISBN0583,Guerra y Paz Vol.4,Gustave Flaubert,2,0
-ISBN0342,La Odisea Vol.3,Fiódor Dostoyevski,5,0
-ISBN0100,Crimen y Castigo Vol.1,León Tolstói,5,0
-ISBN0584,Hamlet Vol.5,Homero,5,0
-ISBN0580,Orgullo y Prejuicio Vol.1,Isabel Allende,4,0
-ISBN0556,Ficciones Vol.7,Octavio Paz,3,0
-ISBN0314,Lolita Vol.5,Fiódor Dostoyevski,5,0
-ISBN0798,Hamlet Vol.9,J.R.R. Tolkien,5,0
-ISBN0557,Pedro Páramo Vol.8,Gabriel García Márquez,1,0
-ISBN0315,Neuromante Vol.6,J.K. Rowling,4,0
-ISBN0799,Lolita Vol.10,George Orwell,5,0
-ISBN0558,Ficciones Vol.9,Juan Rulfo,4,0
-ISBN0316,Ulises Vol.7,Isabel Allende,1,0
-ISBN0317,Crónica de una Muerte Anunciada Vol.8,Julio Cortázar,1,0
-ISBN0559,Ficciones Vol.10,Vladimir Nabokov,2,0
-ISBN0552,Neuromante Vol.3,Virginia Woolf,4,0
-ISBN0310,Madame Bovary Vol.1,George Orwell,2,0
-ISBN0794,Madame Bovary Vol.5,Julio Cortázar,1,1
-ISBN0553,Crimen y Castigo Vol.4,Ernesto Sabato,1,0
-ISBN0311,Dune Vol.2,Gabriel García Márquez,1,0
-ISBN0795,Crónica de una Muerte Anunciada Vol.6,Julio Cortázar,5,1
-ISBN0554,El Aleph Vol.5,León Tolstói,2,0
-ISBN0312,Crimen y Castigo Vol.3,William Shakespeare,1,0
-ISBN0796,1984 Vol.7,William Gibson,3,0
-ISBN0555,Harry Potter Vol.6,Jorge Luis Borges,3,0
-ISBN0313,El Hobbit Vol.4,Albert Camus,4,0
-ISBN0797,Cien Años de Soledad Vol.8,Albert Camus,3,0
-ISBN0790,Hamlet Vol.1,Juan Rulfo,1,0
-ISBN0791,Guerra y Paz Vol.2,J.R.R. Tolkien,4,0
-ISBN0550,Fundación Vol.1,Gabriel García Márquez,8,1
-ISBN0792,Crimen y Castigo Vol.3,Vladimir Nabokov,5,0
-ISBN0551,La Odisea Vol.2,Homero,1,0
-ISBN0793,Los Miserables Vol.4,Frank Herbert,1,0
-ISBN0307,La Odisea Vol.8,William Shakespeare,3,0
-ISBN0549,La Odisea Vol.10,Isabel Allende,2,0
-ISBN0308,Ficciones Vol.9,Marcel Proust,3,0
-ISBN0309,Fundación Vol.10,J.K. Rowling,2,0
-ISBN0567,La Casa de los Espíritus Vol.8,William Gibson,5,0
-ISBN0325,Guerra y Paz Vol.6,Victor Hugo,4,0
-ISBN0568,La Casa de los Espíritus Vol.9,William Gibson,2,0
-ISBN0326,La Casa de los Espíritus Vol.7,William Shakespeare,1,1
-ISBN0327,El Gran Gatsby Vol.8,Isaac Asimov,3,0
-ISBN0569,El Señor de los Anillos Vol.10,Homero,1,0
-ISBN0328,En Busca del Tiempo Perdido Vol.9,Franz Kafka,1,1
-ISBN0563,La Metamorfosis Vol.4,Gustave Flaubert,5,1
-ISBN0321,La Casa de los Espíritus Vol.2,Vladimir Nabokov,1,0
-ISBN0564,El Señor de los Anillos Vol.5,Gabriel García Márquez,5,0
-ISBN0322,La Metamorfosis Vol.3,Isaac Asimov,4,0
-ISBN0565,Mrs. Dalloway Vol.6,Albert Camus,2,0
-ISBN0323,Neuromante Vol.4,Ernesto Sabato,5,0
-ISBN0566,Fundación Vol.7,Fiódor Dostoyevski,1,0
-ISBN0324,Los Miserables Vol.5,Ernesto Sabato,3,0
-ISBN0560,1984 Vol.1,Gabriel García Márquez,5,1
-ISBN0561,Fundación Vol.2,Victor Hugo,3,0
-ISBN0562,Neuromante Vol.3,Frank Herbert,2,0
-ISBN0320,Los Miserables Vol.1,Gustave Flaubert,5,0
-ISBN0318,Crónica de una Muerte Anunciada Vol.9,Gabriel García Márquez,4,0
-ISBN0319,Fundación Vol.10,Marcel Proust,3,1
-ISBN0534,1984 Vol.5,Virginia Woolf,1,1
-ISBN0776,Pedro Páramo Vol.7,George Orwell,1,0
-ISBN0535,El Túnel Vol.6,Ernesto Sabato,3,0
-ISBN0777,Ficciones Vol.8,George Orwell,2,0
-ISBN0536,Ficciones Vol.7,Julio Cortázar,3,0
-ISBN0778,Lolita Vol.9,Gabriel García Márquez,5,0
-ISBN0537,Don Quijote de la Mancha Vol.8,Franz Kafka,7,1
-ISBN0779,Neuromante Vol.10,Isaac Asimov,2,0
-ISBN0530,Hamlet Vol.1,Albert Camus,5,0
-ISBN0772,Ulises Vol.3,George Orwell,1,0
-ISBN0531,El Gran Gatsby Vol.2,Vladimir Nabokov,1,0
-ISBN0773,Harry Potter Vol.4,Gabriel García Márquez,2,2
-ISBN0532,Crónica de una Muerte Anunciada Vol.3,Virginia Woolf,3,0
-ISBN0774,El Extranjero Vol.5,Virginia Woolf,4,0
-ISBN0533,Pedro Páramo Vol.4,J.R.R. Tolkien,1,1
-ISBN0775,Harry Potter Vol.6,Fiódor Dostoyevski,4,0
-ISBN0770,Crónica de una Muerte Anunciada Vol.1,Julio Cortázar,1,1
-ISBN0771,Neuromante Vol.2,J.K. Rowling,4,0
-ISBN0527,Guerra y Paz Vol.8,Victor Hugo,1,1
-ISBN0769,Orgullo y Prejuicio Vol.10,Ernesto Sabato,2,0
-ISBN0528,Orgullo y Prejuicio Vol.9,Miguel de Cervantes,2,0
-ISBN0529,En Busca del Tiempo Perdido Vol.10,Julio Cortázar,1,0
-ISBN0545,Guerra y Paz Vol.6,J.R.R. Tolkien,2,0
-ISBN0303,Don Quijote de la Mancha Vol.4,León Tolstói,3,0
-ISBN0787,Los Miserables Vol.8,William Shakespeare,3,1
-ISBN0546,Ulises Vol.7,Marcel Proust,4,0
-ISBN0304,Crimen y Castigo Vol.5,William Gibson,1,0
-ISBN0788,El Señor de los Anillos Vol.9,Gustave Flaubert,1,0
-ISBN0547,El Aleph Vol.8,Albert Camus,1,0
-ISBN0305,Harry Potter Vol.6,Gabriel García Márquez,5,0
-ISBN0789,Don Quijote de la Mancha Vol.10,Jorge Luis Borges,5,0
-ISBN0548,Crónica de una Muerte Anunciada Vol.9,Octavio Paz,4,0
-ISBN0306,El Aleph Vol.7,Vladimir Nabokov,4,0
-ISBN0541,Crimen y Castigo Vol.2,Jane Austen,2,0
-ISBN0783,Pedro Páramo Vol.4,J.K. Rowling,1,1
-ISBN0542,La Metamorfosis Vol.3,Ernesto Sabato,2,0
-ISBN0300,La Metamorfosis Vol.1,William Gibson,3,0
-ISBN0784,El Hobbit Vol.5,Gustave Flaubert,9,0
-ISBN0543,Crónica de una Muerte Anunciada Vol.4,Albert Camus,3,0
-ISBN0301,Lolita Vol.2,Octavio Paz,5,2
-ISBN0785,Guerra y Paz Vol.6,Frank Herbert,3,1
-ISBN0544,La Odisea Vol.5,F. Scott Fitzgerald,5,0
-ISBN0302,Rayuela Vol.3,Juan Rulfo,4,0
-ISBN0786,El Gran Gatsby Vol.7,Frank Herbert,3,1
-ISBN0780,Crónica de una Muerte Anunciada Vol.1,James Joyce,2,0
-ISBN0781,Rayuela Vol.2,Julio Cortázar,5,0
-ISBN0540,Los Miserables Vol.1,Miguel de Cervantes,1,0
-ISBN0782,Ulises Vol.3,Isabel Allende,3,0
-ISBN0538,Hamlet Vol.9,Franz Kafka,3,0
-ISBN0539,La Odisea Vol.10,William Shakespeare,5,0
-ISBN0079,La Casa de los Espíritus Vol.10,William Gibson,9,0
-ISBN0075,Hamlet Vol.6,Frank Herbert,1,0
-ISBN0076,Crimen y Castigo Vol.7,George Orwell,3,0
-ISBN0077,El Extranjero Vol.8,Virginia Woolf,2,0
-ISBN0078,Harry Potter Vol.9,William Gibson,4,1
-ISBN0071,1984 Vol.2,William Gibson,5,0
-ISBN0072,Fundación Vol.3,George Orwell,4,0
-ISBN0073,El Hobbit Vol.4,Victor Hugo,4,0
-ISBN0074,El Túnel Vol.5,León Tolstói,5,0
-ISBN0070,Crónica de una Muerte Anunciada Vol.1,Albert Camus,1,0
-ISBN0086,Ficciones Vol.7,James Joyce,2,0
-ISBN0087,El Túnel Vol.8,Ernesto Sabato,9,0
-ISBN0088,Don Quijote de la Mancha Vol.9,Homero,10,0
-ISBN0089,La Odisea Vol.10,F. Scott Fitzgerald,1,0
-ISBN0082,Ficciones Vol.3,Albert Camus,5,0
-ISBN0083,El Extranjero Vol.4,Franz Kafka,4,0
-ISBN0084,Pedro Páramo Vol.5,Miguel de Cervantes,5,0
-ISBN0085,Orgullo y Prejuicio Vol.6,William Gibson,3,0
-ISBN0080,Hamlet Vol.1,Miguel de Cervantes,10,0
-ISBN0081,La Odisea Vol.2,Vladimir Nabokov,3,0
+ISBN0001,Cien Años de Soledad Vol.2,León Tolstói,6,0
+ISBN0002,El Aleph Vol.3,William Gibson,1,0
+ISBN0003,Ulises Vol.4,Gabriel García Márquez,7,0
+ISBN0004,1984 Vol.5,Isabel Allende,1,0
+ISBN0005,1984 Vol.6,F. Scott Fitzgerald,8,0
+ISBN0006,Guerra y Paz Vol.7,Vladimir Nabokov,4,0
+ISBN0007,El Gran Gatsby Vol.8,Julio Cortázar,5,0
+ISBN0008,Crónica de una Muerte Anunciada Vol.9,Julio Cortázar,7,0
+ISBN0009,La Metamorfosis Vol.10,Vladimir Nabokov,1,0
+ISBN0010,Ulises Vol.1,Albert Camus,1,0
+ISBN0011,Lolita Vol.2,F. Scott Fitzgerald,2,0
+ISBN0012,El Aleph Vol.3,Ernesto Sabato,3,0
+ISBN0013,En Busca del Tiempo Perdido Vol.4,J.R.R. Tolkien,1,0
+ISBN0014,El Hobbit Vol.5,F. Scott Fitzgerald,1,0
+ISBN0015,Neuromante Vol.6,Octavio Paz,3,0
+ISBN0016,El Señor de los Anillos Vol.7,Miguel de Cervantes,1,0
+ISBN0017,Guerra y Paz Vol.8,Marcel Proust,3,0
+ISBN0018,1984 Vol.9,F. Scott Fitzgerald,5,0
+ISBN0019,El Hobbit Vol.10,F. Scott Fitzgerald,2,0
+ISBN0020,En Busca del Tiempo Perdido Vol.1,Miguel de Cervantes,2,0
+ISBN0021,Pedro Páramo Vol.2,William Gibson,5,0
+ISBN0022,El Hobbit Vol.3,Virginia Woolf,2,0
+ISBN0023,El Gran Gatsby Vol.4,Marcel Proust,5,0
+ISBN0024,Don Quijote de la Mancha Vol.5,Frank Herbert,1,0
+ISBN0025,1984 Vol.6,Ernesto Sabato,1,0
+ISBN0026,La Casa de los Espíritus Vol.7,Fiódor Dostoyevski,3,0
+ISBN0027,Crónica de una Muerte Anunciada Vol.8,Jorge Luis Borges,3,0
+ISBN0028,La Odisea Vol.9,Gabriel García Márquez,4,0
+ISBN0029,El Hobbit Vol.10,J.R.R. Tolkien,1,0
+ISBN0030,El Gran Gatsby Vol.1,Ernesto Sabato,5,0
+ISBN0031,En Busca del Tiempo Perdido Vol.2,Albert Camus,3,0
+ISBN0032,1984 Vol.3,William Gibson,4,0
+ISBN0033,Guerra y Paz Vol.4,Jorge Luis Borges,4,0
+ISBN0034,Hamlet Vol.5,George Orwell,3,3
+ISBN0035,Madame Bovary Vol.6,Albert Camus,1,0
+ISBN0036,Pedro Páramo Vol.7,Frank Herbert,1,1
+ISBN0037,Pedro Páramo Vol.8,Octavio Paz,3,0
+ISBN0038,Madame Bovary Vol.9,Julio Cortázar,1,0
+ISBN0039,La Metamorfosis Vol.10,George Orwell,1,0
+ISBN0040,Neuromante Vol.1,Julio Cortázar,1,0
+ISBN0041,La Metamorfosis Vol.2,Octavio Paz,2,0
+ISBN0042,Dune Vol.3,Virginia Woolf,3,0
+ISBN0043,El Túnel Vol.4,James Joyce,3,1
+ISBN0044,Ficciones Vol.5,Homero,1,0
+ISBN0045,La Metamorfosis Vol.6,James Joyce,2,0
+ISBN0046,Mrs. Dalloway Vol.7,Miguel de Cervantes,3,0
+ISBN0047,Pedro Páramo Vol.8,William Gibson,3,1
+ISBN0048,Neuromante Vol.9,Julio Cortázar,2,0
+ISBN0049,El Extranjero Vol.10,Juan Rulfo,9,1
+ISBN0050,Mrs. Dalloway Vol.1,Miguel de Cervantes,4,0
+ISBN0051,Cien Años de Soledad Vol.2,Octavio Paz,2,0
+ISBN0052,El Túnel Vol.3,Albert Camus,3,0
+ISBN0053,Harry Potter Vol.4,Victor Hugo,4,0
+ISBN0054,El Hobbit Vol.5,J.R.R. Tolkien,3,0
+ISBN0055,Hamlet Vol.6,J.K. Rowling,2,0
+ISBN0056,Don Quijote de la Mancha Vol.7,Gabriel García Márquez,4,0
 ISBN0057,Hamlet Vol.8,Albert Camus,2,0
-ISBN0299,Mrs. Dalloway Vol.10,Ernesto Sabato,3,0
 ISBN0058,Orgullo y Prejuicio Vol.9,Juan Rulfo,3,0
 ISBN0059,Fundación Vol.10,George Orwell,2,0
-ISBN0053,Harry Potter Vol.4,Victor Hugo,4,0
-ISBN0295,Don Quijote de la Mancha Vol.6,Isabel Allende,1,0
-ISBN0054,El Hobbit Vol.5,J.R.R. Tolkien,3,0
-ISBN0296,Cien Años de Soledad Vol.7,Fiódor Dostoyevski,5,0
-ISBN0055,Hamlet Vol.6,J.K. Rowling,2,0
-ISBN0297,Cien Años de Soledad Vol.8,Fiódor Dostoyevski,1,0
-ISBN0056,Don Quijote de la Mancha Vol.7,Gabriel García Márquez,4,0
-ISBN0298,Rayuela Vol.9,J.R.R. Tolkien,5,0
-ISBN0291,En Busca del Tiempo Perdido Vol.2,Victor Hugo,1,0
-ISBN0050,Mrs. Dalloway Vol.1,Miguel de Cervantes,4,0
-ISBN0292,En Busca del Tiempo Perdido Vol.3,Isaac Asimov,4,1
-ISBN0051,Cien Años de Soledad Vol.2,Octavio Paz,2,0
-ISBN0293,Crimen y Castigo Vol.4,J.R.R. Tolkien,5,0
-ISBN0052,El Túnel Vol.3,Albert Camus,3,0
-ISBN0294,El Hobbit Vol.5,J.K. Rowling,9,0
-ISBN0290,El Gran Gatsby Vol.1,Gabriel García Márquez,5,0
-ISBN0068,Cien Años de Soledad Vol.9,Isabel Allende,6,0
-ISBN0069,Rayuela Vol.10,Octavio Paz,5,0
-ISBN0064,El Aleph Vol.5,J.K. Rowling,3,1
-ISBN0065,Ficciones Vol.6,Isabel Allende,5,0
-ISBN0066,Cien Años de Soledad Vol.7,Jorge Luis Borges,3,1
-ISBN0067,Harry Potter Vol.8,Miguel de Cervantes,5,0
 ISBN0060,El Túnel Vol.1,Isaac Asimov,5,0
 ISBN0061,Ficciones Vol.2,William Gibson,2,0
 ISBN0062,El Señor de los Anillos Vol.3,Marcel Proust,4,0
 ISBN0063,El Aleph Vol.4,Octavio Paz,3,1
-ISBN0039,La Metamorfosis Vol.10,George Orwell,1,0
-ISBN0277,Madame Bovary Vol.8,Victor Hugo,1,0
-ISBN0035,Madame Bovary Vol.6,Albert Camus,1,0
-ISBN0278,Ficciones Vol.9,Fiódor Dostoyevski,1,0
-ISBN0036,Pedro Páramo Vol.7,Frank Herbert,1,1
-ISBN0037,Pedro Páramo Vol.8,Octavio Paz,3,0
-ISBN0279,Crimen y Castigo Vol.10,Miguel de Cervantes,3,0
-ISBN0038,Madame Bovary Vol.9,Julio Cortázar,1,0
-ISBN0273,Harry Potter Vol.4,Octavio Paz,1,0
-ISBN0031,En Busca del Tiempo Perdido Vol.2,Albert Camus,3,0
-ISBN0274,1984 Vol.5,William Shakespeare,1,1
-ISBN0032,1984 Vol.3,William Gibson,4,0
-ISBN0275,Mrs. Dalloway Vol.6,Marcel Proust,4,1
-ISBN0033,Guerra y Paz Vol.4,Jorge Luis Borges,4,0
-ISBN0276,Guerra y Paz Vol.7,Frank Herbert,4,0
-ISBN0034,Hamlet Vol.5,George Orwell,3,3
-ISBN0270,El Señor de los Anillos Vol.1,Frank Herbert,3,0
-ISBN0271,Ficciones Vol.2,Fiódor Dostoyevski,1,0
-ISBN0272,Pedro Páramo Vol.3,Frank Herbert,1,1
-ISBN0030,El Gran Gatsby Vol.1,Ernesto Sabato,5,0
-ISBN0046,Mrs. Dalloway Vol.7,Miguel de Cervantes,3,0
-ISBN0288,Crónica de una Muerte Anunciada Vol.9,Julio Cortázar,2,0
-ISBN0047,Pedro Páramo Vol.8,William Gibson,3,1
-ISBN0289,El Túnel Vol.10,Ernesto Sabato,3,0
-ISBN0048,Neuromante Vol.9,Julio Cortázar,2,0
-ISBN0049,El Extranjero Vol.10,Juan Rulfo,9,1
-ISBN0042,Dune Vol.3,Virginia Woolf,3,0
-ISBN0284,Fundación Vol.5,Fiódor Dostoyevski,2,0
-ISBN0043,El Túnel Vol.4,James Joyce,3,1
-ISBN0285,Guerra y Paz Vol.6,George Orwell,1,0
-ISBN0044,Ficciones Vol.5,Homero,1,0
-ISBN0286,Harry Potter Vol.7,Miguel de Cervantes,3,0
-ISBN0045,La Metamorfosis Vol.6,James Joyce,2,0
-ISBN0287,Orgullo y Prejuicio Vol.8,William Shakespeare,7,0
-ISBN0280,Ficciones Vol.1,Fiódor Dostoyevski,1,0
-ISBN0281,Harry Potter Vol.2,Juan Rulfo,2,0
-ISBN0040,Neuromante Vol.1,Julio Cortázar,1,0
-ISBN0282,Madame Bovary Vol.3,Juan Rulfo,3,0
-ISBN0041,La Metamorfosis Vol.2,Octavio Paz,2,0
-ISBN0283,Fundación Vol.4,Franz Kafka,5,1
-ISBN0017,Guerra y Paz Vol.8,Marcel Proust,3,0
-ISBN0259,Ulises Vol.10,James Joyce,4,0
-ISBN0018,1984 Vol.9,F. Scott Fitzgerald,5,0
-ISBN0019,El Hobbit Vol.10,F. Scott Fitzgerald,2,0
-ISBN0255,Don Quijote de la Mancha Vol.6,Franz Kafka,1,0
-ISBN0013,En Busca del Tiempo Perdido Vol.4,J.R.R. Tolkien,1,0
-ISBN0497,Hamlet Vol.8,Juan Rulfo,2,0
-ISBN0256,Don Quijote de la Mancha Vol.7,Victor Hugo,1,1
-ISBN0014,El Hobbit Vol.5,F. Scott Fitzgerald,1,0
-ISBN0498,En Busca del Tiempo Perdido Vol.9,Virginia Woolf,1,0
-ISBN0257,El Túnel Vol.8,Jorge Luis Borges,1,0
-ISBN0015,Neuromante Vol.6,Octavio Paz,3,0
-ISBN0499,Neuromante Vol.10,Victor Hugo,1,0
-ISBN0258,Lolita Vol.9,William Shakespeare,5,0
-ISBN0016,El Señor de los Anillos Vol.7,Miguel de Cervantes,1,0
-ISBN0251,Los Miserables Vol.2,Isabel Allende,3,0
-ISBN0493,Crónica de una Muerte Anunciada Vol.4,George Orwell,1,0
-ISBN0252,Cien Años de Soledad Vol.3,Victor Hugo,1,0
-ISBN0010,Ulises Vol.1,Albert Camus,1,1
-ISBN0494,Guerra y Paz Vol.5,Miguel de Cervantes,5,0
-ISBN0253,Madame Bovary Vol.4,León Tolstói,4,0
-ISBN0011,Lolita Vol.2,F. Scott Fitzgerald,2,0
-ISBN0495,La Metamorfosis Vol.6,William Gibson,1,0
-ISBN0254,Don Quijote de la Mancha Vol.5,Gabriel García Márquez,4,0
-ISBN0012,El Aleph Vol.3,Ernesto Sabato,3,0
-ISBN0496,Ficciones Vol.7,William Shakespeare,1,0
-ISBN0490,Crónica de una Muerte Anunciada Vol.1,J.R.R. Tolkien,5,0
-ISBN0491,En Busca del Tiempo Perdido Vol.2,Franz Kafka,4,0
-ISBN0250,Orgullo y Prejuicio Vol.1,Franz Kafka,2,0
-ISBN0492,Cien Años de Soledad Vol.3,Julio Cortázar,4,0
-ISBN0028,La Odisea Vol.9,Gabriel García Márquez,4,0
-ISBN0029,El Hobbit Vol.10,J.R.R. Tolkien,1,0
-ISBN0266,El Aleph Vol.7,J.R.R. Tolkien,6,0
-ISBN0024,Don Quijote de la Mancha Vol.5,Frank Herbert,1,0
-ISBN0267,El Túnel Vol.8,Fiódor Dostoyevski,2,0
-ISBN0025,1984 Vol.6,Ernesto Sabato,1,0
-ISBN0268,La Metamorfosis Vol.9,Jane Austen,2,0
-ISBN0026,La Casa de los Espíritus Vol.7,Fiódor Dostoyevski,3,0
-ISBN0027,Crónica de una Muerte Anunciada Vol.8,Jorge Luis Borges,3,0
-ISBN0269,Orgullo y Prejuicio Vol.10,Vladimir Nabokov,5,0
-ISBN0262,Guerra y Paz Vol.3,F. Scott Fitzgerald,4,0
-ISBN0020,En Busca del Tiempo Perdido Vol.1,Miguel de Cervantes,2,0
-ISBN0263,El Túnel Vol.4,F. Scott Fitzgerald,2,0
-ISBN0021,Pedro Páramo Vol.2,William Gibson,5,0
-ISBN0264,Crimen y Castigo Vol.5,Gabriel García Márquez,2,1
-ISBN0022,El Hobbit Vol.3,Virginia Woolf,2,0
-ISBN0265,Ulises Vol.6,Jane Austen,1,0
-ISBN0023,El Gran Gatsby Vol.4,Marcel Proust,5,0
-ISBN0260,Neuromante Vol.1,Gabriel García Márquez,4,0
-ISBN0261,Neuromante Vol.2,Ernesto Sabato,4,2
-ISBN0910,Orgullo y Prejuicio Vol.1,George Orwell,1,0
-ISBN0911,Fundación Vol.2,Victor Hugo,2,0
-ISBN0909,1984 Vol.10,Isaac Asimov,4,0
-ISBN0905,Los Miserables Vol.6,Isabel Allende,2,0
-ISBN0906,Guerra y Paz Vol.7,Jorge Luis Borges,1,0
-ISBN0907,La Metamorfosis Vol.8,Julio Cortázar,4,1
-ISBN0908,Ficciones Vol.9,William Shakespeare,1,0
-ISBN0901,Cien Años de Soledad Vol.2,Virginia Woolf,4,0
-ISBN0902,Madame Bovary Vol.3,George Orwell,5,0
-ISBN0903,El Túnel Vol.4,J.R.R. Tolkien,5,0
-ISBN0904,La Odisea Vol.5,William Gibson,4,0
-ISBN0920,Don Quijote de la Mancha Vol.1,J.K. Rowling,3,0
-ISBN0921,Dune Vol.2,Miguel de Cervantes,2,0
-ISBN0922,La Odisea Vol.3,Octavio Paz,4,0
-ISBN0916,Mrs. Dalloway Vol.7,J.R.R. Tolkien,3,0
-ISBN0917,Ficciones Vol.8,Franz Kafka,1,0
-ISBN0918,Hamlet Vol.9,Julio Cortázar,1,0
-ISBN0919,La Metamorfosis Vol.10,Gustave Flaubert,10,0
-ISBN0912,Guerra y Paz Vol.3,Jane Austen,4,0
-ISBN0913,El Hobbit Vol.4,Marcel Proust,5,0
-ISBN0914,El Extranjero Vol.5,Victor Hugo,5,0
-ISBN0915,El Extranjero Vol.6,William Shakespeare,3,2
-ISBN0900,Harry Potter Vol.1,George Orwell,4,0
-ISBN0097,El Gran Gatsby Vol.8,Jorge Luis Borges,5,0
-ISBN0098,Madame Bovary Vol.9,Fiódor Dostoyevski,2,1
-ISBN0099,Madame Bovary Vol.10,Gabriel García Márquez,4,1
+ISBN0064,El Aleph Vol.5,J.K. Rowling,3,1
+ISBN0065,Ficciones Vol.6,Isabel Allende,5,0
+ISBN0066,Cien Años de Soledad Vol.7,Jorge Luis Borges,3,1
+ISBN0067,Harry Potter Vol.8,Miguel de Cervantes,5,0
+ISBN0068,Cien Años de Soledad Vol.9,Isabel Allende,6,0
+ISBN0069,Rayuela Vol.10,Octavio Paz,5,0
+ISBN0070,Crónica de una Muerte Anunciada Vol.1,Albert Camus,1,0
+ISBN0071,1984 Vol.2,William Gibson,5,0
+ISBN0072,Fundación Vol.3,George Orwell,4,0
+ISBN0073,El Hobbit Vol.4,Victor Hugo,4,0
+ISBN0074,El Túnel Vol.5,León Tolstói,5,0
+ISBN0075,Hamlet Vol.6,Frank Herbert,1,0
+ISBN0076,Crimen y Castigo Vol.7,George Orwell,3,0
+ISBN0077,El Extranjero Vol.8,Virginia Woolf,2,0
+ISBN0078,Harry Potter Vol.9,William Gibson,4,1
+ISBN0079,La Casa de los Espíritus Vol.10,William Gibson,9,0
+ISBN0080,Hamlet Vol.1,Miguel de Cervantes,10,0
+ISBN0081,La Odisea Vol.2,Vladimir Nabokov,3,0
+ISBN0082,Ficciones Vol.3,Albert Camus,5,0
+ISBN0083,El Extranjero Vol.4,Franz Kafka,4,0
+ISBN0084,Pedro Páramo Vol.5,Miguel de Cervantes,5,0
+ISBN0085,Orgullo y Prejuicio Vol.6,William Gibson,3,0
+ISBN0086,Ficciones Vol.7,James Joyce,2,0
+ISBN0087,El Túnel Vol.8,Ernesto Sabato,9,0
+ISBN0088,Don Quijote de la Mancha Vol.9,Homero,10,0
+ISBN0089,La Odisea Vol.10,F. Scott Fitzgerald,1,0
+ISBN0090,Guerra y Paz Vol.1,Vladimir Nabokov,1,0
+ISBN0091,La Odisea Vol.2,Fiódor Dostoyevski,1,1
+ISBN0092,El Hobbit Vol.3,Isabel Allende,5,0
 ISBN0093,Crimen y Castigo Vol.4,Ernesto Sabato,1,0
 ISBN0094,Neuromante Vol.5,William Shakespeare,1,0
 ISBN0095,Ficciones Vol.6,León Tolstói,5,0
 ISBN0096,La Odisea Vol.7,Jorge Luis Borges,1,0
-ISBN0090,Guerra y Paz Vol.1,Vladimir Nabokov,1,0
-ISBN0091,La Odisea Vol.2,Fiódor Dostoyevski,1,1
-ISBN0092,El Hobbit Vol.3,Isabel Allende,5,0
-ISBN0633,La Odisea Vol.4,Virginia Woolf,6,0
-ISBN0875,Pedro Páramo Vol.6,J.R.R. Tolkien,2,0
-ISBN0634,Crónica de una Muerte Anunciada Vol.5,Miguel de Cervantes,3,1
-ISBN0876,El Señor de los Anillos Vol.7,William Gibson,1,0
-ISBN0635,Guerra y Paz Vol.6,William Shakespeare,10,2
-ISBN0877,En Busca del Tiempo Perdido Vol.8,Jorge Luis Borges,1,0
-ISBN0636,Dune Vol.7,William Shakespeare,4,0
-ISBN0878,1984 Vol.9,James Joyce,2,0
-ISBN0871,El Túnel Vol.2,Isabel Allende,3,0
-ISBN0630,Pedro Páramo Vol.1,Frank Herbert,1,0
-ISBN0872,Cien Años de Soledad Vol.3,Gabriel García Márquez,4,0
-ISBN0631,El Túnel Vol.2,William Gibson,1,0
-ISBN0873,1984 Vol.4,Virginia Woolf,5,0
-ISBN0632,Los Miserables Vol.3,Miguel de Cervantes,8,0
-ISBN0874,1984 Vol.5,Virginia Woolf,2,0
-ISBN0870,La Metamorfosis Vol.1,Virginia Woolf,2,0
-ISBN0626,La Metamorfosis Vol.7,Virginia Woolf,4,0
-ISBN0868,Guerra y Paz Vol.9,Franz Kafka,8,1
-ISBN0627,Fundación Vol.8,Juan Rulfo,1,0
-ISBN0869,Dune Vol.10,Isabel Allende,3,0
-ISBN0628,Orgullo y Prejuicio Vol.9,Franz Kafka,1,0
-ISBN0629,Rayuela Vol.10,James Joyce,5,0
-ISBN0644,Neuromante Vol.5,Gustave Flaubert,4,0
-ISBN0402,Cien Años de Soledad Vol.3,Miguel de Cervantes,1,0
-ISBN0886,Hamlet Vol.7,J.K. Rowling,3,0
-ISBN0645,Ulises Vol.6,Victor Hugo,3,0
-ISBN0403,El Señor de los Anillos Vol.4,William Shakespeare,1,0
-ISBN0887,El Señor de los Anillos Vol.8,Julio Cortázar,2,0
-ISBN0646,La Metamorfosis Vol.7,George Orwell,7,0
-ISBN0404,El Aleph Vol.5,Octavio Paz,2,0
-ISBN0888,Guerra y Paz Vol.9,Isabel Allende,2,0
-ISBN0647,Pedro Páramo Vol.8,J.K. Rowling,3,0
-ISBN0405,El Túnel Vol.6,Jorge Luis Borges,2,0
-ISBN0889,Dune Vol.10,Virginia Woolf,3,1
-ISBN0640,Cien Años de Soledad Vol.1,Fiódor Dostoyevski,5,0
-ISBN0882,Los Miserables Vol.3,Ernesto Sabato,3,0
-ISBN0641,Guerra y Paz Vol.2,William Shakespeare,1,0
-ISBN0883,El Túnel Vol.4,Franz Kafka,4,0
-ISBN0642,Lolita Vol.3,Miguel de Cervantes,3,0
-ISBN0400,El Gran Gatsby Vol.1,George Orwell,3,0
-ISBN0884,Guerra y Paz Vol.5,Homero,2,0
-ISBN0643,Orgullo y Prejuicio Vol.4,Marcel Proust,3,0
-ISBN0401,Fundación Vol.2,James Joyce,2,0
-ISBN0885,Mrs. Dalloway Vol.6,Homero,4,0
-ISBN0880,Rayuela Vol.1,Ernesto Sabato,3,0
-ISBN0881,Ulises Vol.2,William Shakespeare,1,0
-ISBN0637,Madame Bovary Vol.8,Julio Cortázar,2,0
-ISBN0879,Crónica de una Muerte Anunciada Vol.10,Jorge Luis Borges,3,0
-ISBN0638,1984 Vol.9,Franz Kafka,4,0
-ISBN0639,En Busca del Tiempo Perdido Vol.10,Isaac Asimov,3,0
-ISBN0611,La Metamorfosis Vol.2,William Shakespeare,2,0
-ISBN0853,Don Quijote de la Mancha Vol.4,Fiódor Dostoyevski,3,0
-ISBN0612,Don Quijote de la Mancha Vol.3,William Gibson,2,0
-ISBN0854,El Extranjero Vol.5,Frank Herbert,2,0
-ISBN0613,Crónica de una Muerte Anunciada Vol.4,Gabriel García Márquez,5,0
-ISBN0855,Ficciones Vol.6,Isaac Asimov,5,0
-ISBN0614,Harry Potter Vol.5,Ernesto Sabato,2,0
-ISBN0856,En Busca del Tiempo Perdido Vol.7,Virginia Woolf,5,0
-ISBN0850,Fundación Vol.1,Jane Austen,2,0
-ISBN0851,Madame Bovary Vol.2,Jorge Luis Borges,4,0
-ISBN0610,El Gran Gatsby Vol.1,J.K. Rowling,4,0
-ISBN0852,Orgullo y Prejuicio Vol.3,Gustave Flaubert,1,0
-ISBN0608,Ulises Vol.9,Octavio Paz,1,0
-ISBN0609,Harry Potter Vol.10,Julio Cortázar,1,0
-ISBN0604,El Túnel Vol.5,Jane Austen,1,0
-ISBN0846,El Gran Gatsby Vol.7,J.K. Rowling,2,0
-ISBN0605,Mrs. Dalloway Vol.6,Gustave Flaubert,1,0
-ISBN0847,Hamlet Vol.8,J.R.R. Tolkien,1,0
-ISBN0606,Cien Años de Soledad Vol.7,Fiódor Dostoyevski,3,0
-ISBN0848,El Túnel Vol.9,Albert Camus,2,0
-ISBN0607,Lolita Vol.8,Octavio Paz,1,0
-ISBN0849,La Metamorfosis Vol.10,James Joyce,5,1
-ISBN0622,Dune Vol.3,Vladimir Nabokov,5,2
-ISBN0864,Ficciones Vol.5,J.R.R. Tolkien,1,0
-ISBN0623,El Aleph Vol.4,F. Scott Fitzgerald,2,0
-ISBN0865,Fundación Vol.6,Jane Austen,3,1
-ISBN0624,1984 Vol.5,Frank Herbert,5,0
-ISBN0866,El Aleph Vol.7,George Orwell,3,0
-ISBN0625,Cien Años de Soledad Vol.6,Miguel de Cervantes,1,0
-ISBN0867,Guerra y Paz Vol.8,Isaac Asimov,1,0
-ISBN0860,Fundación Vol.1,Franz Kafka,10,0
-ISBN0861,Orgullo y Prejuicio Vol.2,George Orwell,5,0
-ISBN0620,Guerra y Paz Vol.1,Virginia Woolf,1,0
-ISBN0862,Lolita Vol.3,Miguel de Cervantes,5,0
-ISBN0621,Neuromante Vol.2,James Joyce,1,0
-ISBN0863,1984 Vol.4,Marcel Proust,3,1
-ISBN0619,Orgullo y Prejuicio Vol.10,Ernesto Sabato,4,0
-ISBN0615,El Extranjero Vol.6,George Orwell,3,0
-ISBN0857,El Hobbit Vol.8,J.K. Rowling,5,0
-ISBN0616,Fundación Vol.7,Fiódor Dostoyevski,5,0
-ISBN0858,Crónica de una Muerte Anunciada Vol.9,William Gibson,2,0
-ISBN0617,La Odisea Vol.8,Frank Herbert,3,0
-ISBN0859,El Aleph Vol.10,Fiódor Dostoyevski,2,0
-ISBN0618,La Metamorfosis Vol.9,William Gibson,4,0
-ISBN0831,El Túnel Vol.2,James Joyce,2,0
-ISBN0832,La Casa de los Espíritus Vol.3,León Tolstói,4,0
-ISBN0833,Lolita Vol.4,Marcel Proust,9,0
-ISBN0834,En Busca del Tiempo Perdido Vol.5,William Gibson,4,0
-ISBN0830,Madame Bovary Vol.1,Ernesto Sabato,2,0
-ISBN0828,El Túnel Vol.9,Miguel de Cervantes,4,1
-ISBN0829,Hamlet Vol.10,Albert Camus,2,1
-ISBN0824,Rayuela Vol.5,William Shakespeare,1,0
-ISBN0825,Lolita Vol.6,Gustave Flaubert,1,0
-ISBN0826,Don Quijote de la Mancha Vol.7,Isabel Allende,4,0
-ISBN0827,Dune Vol.8,Gustave Flaubert,5,0
-ISBN0600,La Casa de los Espíritus Vol.1,James Joyce,5,0
-ISBN0842,Ficciones Vol.3,Isaac Asimov,1,0
-ISBN0601,Rayuela Vol.2,William Gibson,3,0
-ISBN0843,El Señor de los Anillos Vol.4,George Orwell,5,0
-ISBN0602,La Casa de los Espíritus Vol.3,Homero,5,0
-ISBN0844,Don Quijote de la Mancha Vol.5,James Joyce,1,1
-ISBN0603,Madame Bovary Vol.4,Isaac Asimov,1,1
-ISBN0845,La Odisea Vol.6,Juan Rulfo,5,0
-ISBN0840,Orgullo y Prejuicio Vol.1,J.K. Rowling,1,0
-ISBN0841,En Busca del Tiempo Perdido Vol.2,William Shakespeare,4,0
-ISBN0839,Ulises Vol.10,Gabriel García Márquez,8,1
-ISBN0835,1984 Vol.6,Gustave Flaubert,2,0
-ISBN0836,Ficciones Vol.7,Gabriel García Márquez,1,0
-ISBN0837,La Metamorfosis Vol.8,León Tolstói,2,0
-ISBN0838,Crimen y Castigo Vol.9,Juan Rulfo,8,0
-ISBN0810,Pedro Páramo Vol.1,William Shakespeare,1,0
-ISBN0811,Neuromante Vol.2,Ernesto Sabato,3,0
-ISBN0812,Fundación Vol.3,James Joyce,2,0
-ISBN0806,Crónica de una Muerte Anunciada Vol.7,William Gibson,3,0
-ISBN0807,Harry Potter Vol.8,Victor Hugo,4,0
-ISBN0808,La Casa de los Espíritus Vol.9,Frank Herbert,2,0
-ISBN0809,Mrs. Dalloway Vol.10,Isabel Allende,4,0
-ISBN0802,Ulises Vol.3,F. Scott Fitzgerald,1,0
-ISBN0803,Los Miserables Vol.4,Vladimir Nabokov,5,0
-ISBN0804,Cien Años de Soledad Vol.5,Homero,1,0
-ISBN0805,Mrs. Dalloway Vol.6,F. Scott Fitzgerald,1,1
-ISBN0820,El Hobbit Vol.1,Julio Cortázar,5,0
-ISBN0821,El Hobbit Vol.2,George Orwell,5,1
-ISBN0822,Pedro Páramo Vol.3,Fiódor Dostoyevski,4,0
-ISBN0823,Ulises Vol.4,Homero,6,0
-ISBN0817,La Odisea Vol.8,Frank Herbert,5,0
-ISBN0818,Harry Potter Vol.9,Marcel Proust,4,0
-ISBN0819,Hamlet Vol.10,Miguel de Cervantes,5,0
-ISBN0813,Hamlet Vol.4,Juan Rulfo,9,0
-ISBN0814,Lolita Vol.5,León Tolstói,2,0
-ISBN0815,El Hobbit Vol.6,Isaac Asimov,3,1
-ISBN0816,Dune Vol.7,Isaac Asimov,5,0
-ISBN0237,El Gran Gatsby Vol.8,William Gibson,1,1
-ISBN0479,Fundación Vol.10,William Shakespeare,5,0
-ISBN0238,El Aleph Vol.9,William Shakespeare,1,0
-ISBN0239,Rayuela Vol.10,Fiódor Dostoyevski,5,0
-ISBN0475,Dune Vol.6,León Tolstói,5,0
-ISBN0233,El Túnel Vol.4,Franz Kafka,3,1
-ISBN0476,1984 Vol.7,Miguel de Cervantes,10,0
-ISBN0234,Don Quijote de la Mancha Vol.5,William Shakespeare,1,0
-ISBN0477,1984 Vol.8,Fiódor Dostoyevski,2,0
-ISBN0235,Mrs. Dalloway Vol.6,William Gibson,2,0
-ISBN0478,Pedro Páramo Vol.9,J.R.R. Tolkien,3,0
-ISBN0236,La Metamorfosis Vol.7,Albert Camus,1,0
-ISBN0471,Mrs. Dalloway Vol.2,J.R.R. Tolkien,4,0
-ISBN0472,La Metamorfosis Vol.3,Vladimir Nabokov,1,0
-ISBN0230,Neuromante Vol.1,George Orwell,1,0
-ISBN0473,Dune Vol.4,Fiódor Dostoyevski,3,0
-ISBN0231,La Odisea Vol.2,Gabriel García Márquez,4,0
-ISBN0474,En Busca del Tiempo Perdido Vol.5,J.K. Rowling,5,0
-ISBN0232,El Extranjero Vol.3,Gabriel García Márquez,10,0
-ISBN0470,El Túnel Vol.1,Jane Austen,1,0
-ISBN0248,Fundación Vol.9,Isaac Asimov,1,0
-ISBN0006,Guerra y Paz Vol.7,Vladimir Nabokov,4,0
-ISBN0007,El Gran Gatsby Vol.8,Julio Cortázar,5,0
-ISBN0249,Ficciones Vol.10,Virginia Woolf,1,0
-ISBN0008,Crónica de una Muerte Anunciada Vol.9,Julio Cortázar,7,0
-ISBN0009,La Metamorfosis Vol.10,Vladimir Nabokov,1,0
-ISBN0244,La Metamorfosis Vol.5,Gabriel García Márquez,5,0
-ISBN0002,El Aleph Vol.3,William Gibson,1,0
-ISBN0486,Ulises Vol.7,Frank Herbert,4,1
-ISBN0245,El Señor de los Anillos Vol.6,Fiódor Dostoyevski,1,0
-ISBN0003,Ulises Vol.4,Gabriel García Márquez,7,0
-ISBN0487,El Extranjero Vol.8,Jane Austen,1,0
-ISBN0246,El Hobbit Vol.7,J.K. Rowling,3,0
-ISBN0004,1984 Vol.5,Isabel Allende,1,0
-ISBN0488,Rayuela Vol.9,Franz Kafka,1,0
-ISBN0247,Rayuela Vol.8,George Orwell,1,0
-ISBN0005,1984 Vol.6,F. Scott Fitzgerald,8,0
-ISBN0489,El Túnel Vol.10,Jorge Luis Borges,3,0
-ISBN0240,El Túnel Vol.1,William Gibson,1,0
-ISBN0482,Don Quijote de la Mancha Vol.3,James Joyce,4,0
-ISBN0241,Guerra y Paz Vol.2,Ernesto Sabato,1,0
-ISBN0483,Ulises Vol.4,Miguel de Cervantes,5,0
-ISBN0242,Rayuela Vol.3,F. Scott Fitzgerald,1,0
-ISBN0484,Lolita Vol.5,Octavio Paz,5,0
-ISBN0243,Neuromante Vol.4,Fiódor Dostoyevski,4,0
-ISBN0001,Cien Años de Soledad Vol.2,León Tolstói,6,0
-ISBN0485,El Señor de los Anillos Vol.6,Isaac Asimov,4,0
-ISBN0480,El Señor de los Anillos Vol.1,Isaac Asimov,1,0
-ISBN0481,Ficciones Vol.2,Juan Rulfo,1,0
-ISBN0457,Mrs. Dalloway Vol.8,Virginia Woolf,1,1
-ISBN0215,La Odisea Vol.6,Ernesto Sabato,5,0
-ISBN0699,Guerra y Paz Vol.10,Miguel de Cervantes,2,0
-ISBN0458,El Túnel Vol.9,Franz Kafka,1,0
-ISBN0216,La Metamorfosis Vol.7,Ernesto Sabato,3,0
-ISBN0217,El Extranjero Vol.8,Vladimir Nabokov,7,0
-ISBN0459,El Túnel Vol.10,Octavio Paz,1,0
-ISBN0218,Fundación Vol.9,Julio Cortázar,5,1
-ISBN0453,Rayuela Vol.4,William Shakespeare,5,0
-ISBN0211,Cien Años de Soledad Vol.2,Miguel de Cervantes,1,0
-ISBN0695,Guerra y Paz Vol.6,William Gibson,1,0
-ISBN0454,Hamlet Vol.5,Juan Rulfo,6,0
-ISBN0212,La Casa de los Espíritus Vol.3,Albert Camus,4,0
-ISBN0696,El Extranjero Vol.7,Jorge Luis Borges,3,0
-ISBN0455,En Busca del Tiempo Perdido Vol.6,Julio Cortázar,4,0
-ISBN0213,Mrs. Dalloway Vol.4,James Joyce,2,1
-ISBN0697,Pedro Páramo Vol.8,William Gibson,1,0
-ISBN0456,Crimen y Castigo Vol.7,Franz Kafka,3,0
-ISBN0214,Don Quijote de la Mancha Vol.5,Juan Rulfo,3,0
-ISBN0698,El Gran Gatsby Vol.9,Jane Austen,1,0
-ISBN0691,El Gran Gatsby Vol.2,Virginia Woolf,2,1
-ISBN0450,Madame Bovary Vol.1,William Shakespeare,1,0
-ISBN0692,El Extranjero Vol.3,Fiódor Dostoyevski,2,1
-ISBN0451,La Casa de los Espíritus Vol.2,James Joyce,4,0
-ISBN0693,La Casa de los Espíritus Vol.4,Octavio Paz,5,0
-ISBN0452,Orgullo y Prejuicio Vol.3,Frank Herbert,1,0
-ISBN0210,La Metamorfosis Vol.1,Julio Cortázar,1,0
-ISBN0694,La Odisea Vol.5,Fiódor Dostoyevski,4,0
-ISBN0690,Fundación Vol.1,William Shakespeare,5,0
-ISBN0208,Ulises Vol.9,James Joyce,2,0
-ISBN0209,Fundación Vol.10,Gabriel García Márquez,3,0
-ISBN0468,Harry Potter Vol.9,Frank Herbert,5,1
-ISBN0226,Lolita Vol.7,Vladimir Nabokov,5,0
-ISBN0227,Orgullo y Prejuicio Vol.8,León Tolstói,5,1
-ISBN0469,Rayuela Vol.10,Jane Austen,1,0
-ISBN0228,El Extranjero Vol.9,George Orwell,4,0
-ISBN0229,El Gran Gatsby Vol.10,George Orwell,1,0
-ISBN0464,El Señor de los Anillos Vol.5,Gustave Flaubert,9,0
-ISBN0222,Hamlet Vol.3,Albert Camus,2,0
-ISBN0465,Ulises Vol.6,Jorge Luis Borges,5,0
-ISBN0223,Fundación Vol.4,Gustave Flaubert,1,0
-ISBN0466,Orgullo y Prejuicio Vol.7,Marcel Proust,1,0
-ISBN0224,Madame Bovary Vol.5,Vladimir Nabokov,5,0
-ISBN0467,Ficciones Vol.8,Ernesto Sabato,1,0
-ISBN0225,Ficciones Vol.6,Gabriel García Márquez,3,0
-ISBN0460,Guerra y Paz Vol.1,Juan Rulfo,4,0
-ISBN0461,La Casa de los Espíritus Vol.2,Octavio Paz,2,0
-ISBN0462,La Odisea Vol.3,Octavio Paz,2,0
-ISBN0220,Pedro Páramo Vol.1,Frank Herbert,5,0
-ISBN0463,Rayuela Vol.4,George Orwell,10,0
-ISBN0221,El Señor de los Anillos Vol.2,Jorge Luis Borges,6,0
-ISBN0219,El Extranjero Vol.10,Jane Austen,5,0
-ISBN0435,Crimen y Castigo Vol.6,Jane Austen,1,0
-ISBN0677,El Extranjero Vol.8,Frank Herbert,3,0
-ISBN0436,El Túnel Vol.7,Fiódor Dostoyevski,4,0
-ISBN0678,Orgullo y Prejuicio Vol.9,Jane Austen,5,1
-ISBN0437,Los Miserables Vol.8,Octavio Paz,2,0
-ISBN0679,Crimen y Castigo Vol.10,Gustave Flaubert,5,0
-ISBN0438,Ficciones Vol.9,Juan Rulfo,2,0
-ISBN0431,Dune Vol.2,León Tolstói,3,2
-ISBN0673,El Hobbit Vol.4,Victor Hugo,4,0
-ISBN0432,Harry Potter Vol.3,J.R.R. Tolkien,3,0
-ISBN0674,La Metamorfosis Vol.5,William Gibson,3,1
-ISBN0433,El Aleph Vol.4,Jorge Luis Borges,4,0
-ISBN0675,Madame Bovary Vol.6,George Orwell,2,0
-ISBN0434,El Hobbit Vol.5,Juan Rulfo,2,1
-ISBN0676,Madame Bovary Vol.7,Octavio Paz,1,0
-ISBN0670,Lolita Vol.1,Vladimir Nabokov,1,0
-ISBN0671,El Aleph Vol.2,Homero,3,0
-ISBN0430,Mrs. Dalloway Vol.1,J.R.R. Tolkien,3,0
-ISBN0672,La Odisea Vol.3,Homero,3,0
-ISBN0428,1984 Vol.9,Isabel Allende,4,0
-ISBN0429,Don Quijote de la Mancha Vol.10,Victor Hugo,1,0
-ISBN0446,Neuromante Vol.7,Julio Cortázar,4,0
-ISBN0204,La Metamorfosis Vol.5,Victor Hugo,2,0
-ISBN0688,Los Miserables Vol.9,Frank Herbert,5,0
-ISBN0447,Los Miserables Vol.8,Victor Hugo,1,0
-ISBN0205,Orgullo y Prejuicio Vol.6,William Shakespeare,10,0
-ISBN0689,Lolita Vol.10,Miguel de Cervantes,1,0
-ISBN0448,Don Quijote de la Mancha Vol.9,Virginia Woolf,4,0
-ISBN0206,El Señor de los Anillos Vol.7,Fiódor Dostoyevski,1,0
-ISBN0207,Madame Bovary Vol.8,Vladimir Nabokov,2,0
-ISBN0449,Harry Potter Vol.10,Marcel Proust,4,0
-ISBN0442,El Hobbit Vol.3,Homero,1,1
-ISBN0200,Lolita Vol.1,Virginia Woolf,1,0
-ISBN0684,Orgullo y Prejuicio Vol.5,Victor Hugo,7,0
-ISBN0443,La Odisea Vol.4,Gabriel García Márquez,3,0
-ISBN0201,Neuromante Vol.2,J.R.R. Tolkien,3,0
-ISBN0685,El Aleph Vol.6,F. Scott Fitzgerald,3,0
-ISBN0444,Ulises Vol.5,Albert Camus,5,0
-ISBN0202,El Señor de los Anillos Vol.3,Vladimir Nabokov,5,0
-ISBN0686,Don Quijote de la Mancha Vol.7,Gustave Flaubert,1,0
-ISBN0445,Hamlet Vol.6,Isabel Allende,1,0
-ISBN0203,Guerra y Paz Vol.4,Isabel Allende,4,0
-ISBN0687,1984 Vol.8,William Shakespeare,3,1
-ISBN0680,Fundación Vol.1,Franz Kafka,4,0
-ISBN0681,La Casa de los Espíritus Vol.2,Victor Hugo,4,0
-ISBN0440,Neuromante Vol.1,León Tolstói,2,0
-ISBN0682,La Metamorfosis Vol.3,Marcel Proust,3,2
-ISBN0441,Harry Potter Vol.2,Frank Herbert,1,0
-ISBN0683,1984 Vol.4,J.K. Rowling,1,0
-ISBN0439,Rayuela Vol.10,Vladimir Nabokov,5,0
-ISBN0413,Crimen y Castigo Vol.4,Marcel Proust,2,1
-ISBN0655,Cien Años de Soledad Vol.6,J.R.R. Tolkien,1,0
-ISBN0897,El Señor de los Anillos Vol.8,Juan Rulfo,5,0
-ISBN0414,El Señor de los Anillos Vol.5,Isabel Allende,5,0
-ISBN0656,Lolita Vol.7,Marcel Proust,1,0
-ISBN0898,Hamlet Vol.9,León Tolstói,6,0
-ISBN0415,Neuromante Vol.6,William Gibson,1,0
-ISBN0657,Guerra y Paz Vol.8,Marcel Proust,3,0
-ISBN0899,1984 Vol.10,Julio Cortázar,3,0
-ISBN0416,Fundación Vol.7,Miguel de Cervantes,2,1
-ISBN0658,Ficciones Vol.9,Gustave Flaubert,9,0
-ISBN0651,Don Quijote de la Mancha Vol.2,George Orwell,2,0
-ISBN0893,Crónica de una Muerte Anunciada Vol.4,Marcel Proust,8,0
-ISBN0410,El Túnel Vol.1,Ernesto Sabato,9,0
-ISBN0652,Rayuela Vol.3,William Gibson,5,0
-ISBN0894,Ficciones Vol.5,William Shakespeare,9,0
-ISBN0411,El Hobbit Vol.2,Miguel de Cervantes,2,0
-ISBN0653,Orgullo y Prejuicio Vol.4,Marcel Proust,1,1
-ISBN0895,Cien Años de Soledad Vol.6,Gustave Flaubert,2,0
-ISBN0412,El Gran Gatsby Vol.3,Jane Austen,3,0
-ISBN0654,El Extranjero Vol.5,Ernesto Sabato,2,0
-ISBN0896,La Casa de los Espíritus Vol.7,Gustave Flaubert,3,0
-ISBN0890,Pedro Páramo Vol.1,Juan Rulfo,1,0
-ISBN0891,Fundación Vol.2,Gabriel García Márquez,1,0
-ISBN0650,En Busca del Tiempo Perdido Vol.1,Jorge Luis Borges,2,0
-ISBN0892,Neuromante Vol.3,George Orwell,5,0
-ISBN0406,1984 Vol.7,Octavio Paz,1,0
-ISBN0648,La Casa de los Espíritus Vol.9,William Shakespeare,2,0
-ISBN0407,Orgullo y Prejuicio Vol.8,Gustave Flaubert,5,0
-ISBN0649,El Gran Gatsby Vol.10,Franz Kafka,1,0
-ISBN0408,La Metamorfosis Vol.9,Jorge Luis Borges,3,0
-ISBN0409,Ficciones Vol.10,Jorge Luis Borges,3,0
-ISBN0424,1984 Vol.5,Isabel Allende,7,0
-ISBN0666,Neuromante Vol.7,Jorge Luis Borges,7,0
-ISBN0425,El Señor de los Anillos Vol.6,William Shakespeare,3,0
-ISBN0667,Lolita Vol.8,Jorge Luis Borges,8,0
-ISBN0426,El Aleph Vol.7,Albert Camus,4,0
-ISBN0668,La Casa de los Espíritus Vol.9,Jane Austen,1,0
-ISBN0427,Madame Bovary Vol.8,León Tolstói,2,0
-ISBN0669,Guerra y Paz Vol.10,Frank Herbert,1,0
-ISBN0420,Hamlet Vol.1,León Tolstói,6,0
-ISBN0662,Ulises Vol.3,F. Scott Fitzgerald,2,0
-ISBN0421,Los Miserables Vol.2,Jorge Luis Borges,3,0
-ISBN0663,Crónica de una Muerte Anunciada Vol.4,Gabriel García Márquez,7,0
-ISBN0422,Ficciones Vol.3,J.R.R. Tolkien,1,0
-ISBN0664,Dune Vol.5,J.K. Rowling,1,0
-ISBN0423,Don Quijote de la Mancha Vol.4,Ernesto Sabato,3,0
-ISBN0665,Crónica de una Muerte Anunciada Vol.6,Virginia Woolf,3,0
-ISBN0660,Crónica de una Muerte Anunciada Vol.1,F. Scott Fitzgerald,2,0
-ISBN0661,Crónica de una Muerte Anunciada Vol.2,Albert Camus,1,0
-ISBN0417,Ulises Vol.8,Isaac Asimov,3,0
-ISBN0659,El Túnel Vol.10,J.R.R. Tolkien,2,0
-ISBN0418,Mrs. Dalloway Vol.9,Octavio Paz,4,0
-ISBN0419,Los Miserables Vol.10,Homero,3,0
-ISBN0196,Cien Años de Soledad Vol.7,Ernesto Sabato,7,0
-ISBN0197,Harry Potter Vol.8,William Gibson,3,1
-ISBN0198,El Extranjero Vol.9,Gustave Flaubert,2,0
-ISBN0199,La Casa de los Espíritus Vol.10,F. Scott Fitzgerald,4,0
-ISBN0192,Harry Potter Vol.3,Homero,5,0
-ISBN0193,En Busca del Tiempo Perdido Vol.4,Jane Austen,1,0
-ISBN0194,Neuromante Vol.5,Miguel de Cervantes,4,0
-ISBN0195,Dune Vol.6,George Orwell,3,1
-ISBN0190,Don Quijote de la Mancha Vol.1,León Tolstói,1,0
-ISBN0191,Cien Años de Soledad Vol.2,William Gibson,1,0
-ISBN0178,Lolita Vol.9,Marcel Proust,2,1
-ISBN0179,Neuromante Vol.10,Isaac Asimov,3,0
-ISBN0174,La Odisea Vol.5,Jane Austen,1,0
-ISBN0175,Neuromante Vol.6,Isabel Allende,3,0
-ISBN0176,Crimen y Castigo Vol.7,Ernesto Sabato,3,1
-ISBN0177,La Casa de los Espíritus Vol.8,Virginia Woolf,5,0
-ISBN0170,El Túnel Vol.1,Gustave Flaubert,9,2
-ISBN0171,1984 Vol.2,William Shakespeare,3,0
-ISBN0172,Dune Vol.3,Albert Camus,1,0
-ISBN0173,La Odisea Vol.4,Gustave Flaubert,5,0
-ISBN0189,El Hobbit Vol.10,Isabel Allende,1,0
-ISBN0185,Lolita Vol.6,Vladimir Nabokov,2,0
-ISBN0186,Crimen y Castigo Vol.7,Virginia Woolf,3,1
-ISBN0187,El Aleph Vol.8,Octavio Paz,4,0
-ISBN0188,Ficciones Vol.9,Juan Rulfo,2,1
-ISBN0181,La Odisea Vol.2,Juan Rulfo,4,0
-ISBN0182,El Túnel Vol.3,Virginia Woolf,3,0
-ISBN0183,El Túnel Vol.4,Gabriel García Márquez,1,1
-ISBN0184,Ficciones Vol.5,Marcel Proust,3,0
-ISBN0180,El Gran Gatsby Vol.1,George Orwell,4,0
+ISBN0097,El Gran Gatsby Vol.8,Jorge Luis Borges,5,0
+ISBN0098,Madame Bovary Vol.9,Fiódor Dostoyevski,2,1
+ISBN0099,Madame Bovary Vol.10,Gabriel García Márquez,4,1
+ISBN0100,Crimen y Castigo Vol.1,León Tolstói,5,0
+ISBN0101,Crónica de una Muerte Anunciada Vol.2,Ernesto Sabato,3,2
+ISBN0102,Madame Bovary Vol.3,León Tolstói,5,0
+ISBN0103,El Aleph Vol.4,Isabel Allende,10,0
+ISBN0104,Guerra y Paz Vol.5,Jorge Luis Borges,6,0
+ISBN0105,Crimen y Castigo Vol.6,William Shakespeare,3,0
+ISBN0106,Dune Vol.7,J.K. Rowling,4,0
+ISBN0107,El Extranjero Vol.8,Albert Camus,4,0
+ISBN0108,Guerra y Paz Vol.9,Gabriel García Márquez,5,0
+ISBN0109,Hamlet Vol.10,George Orwell,5,0
+ISBN0110,Harry Potter Vol.1,Jane Austen,5,0
+ISBN0111,Guerra y Paz Vol.2,William Shakespeare,1,0
+ISBN0112,El Extranjero Vol.3,Frank Herbert,10,1
+ISBN0113,Crimen y Castigo Vol.4,Julio Cortázar,7,0
+ISBN0114,Lolita Vol.5,Albert Camus,2,1
+ISBN0115,Harry Potter Vol.6,J.K. Rowling,3,0
+ISBN0116,1984 Vol.7,Gustave Flaubert,3,1
+ISBN0117,La Odisea Vol.8,Gustave Flaubert,5,0
+ISBN0118,Don Quijote de la Mancha Vol.9,Octavio Paz,1,1
+ISBN0119,La Metamorfosis Vol.10,Isaac Asimov,3,0
+ISBN0120,Cien Años de Soledad Vol.1,Octavio Paz,1,1
+ISBN0121,El Gran Gatsby Vol.2,Virginia Woolf,1,0
+ISBN0122,El Aleph Vol.3,Ernesto Sabato,5,0
+ISBN0123,La Casa de los Espíritus Vol.4,James Joyce,4,0
+ISBN0124,Ficciones Vol.5,Miguel de Cervantes,2,0
+ISBN0125,Neuromante Vol.6,Fiódor Dostoyevski,1,0
+ISBN0126,Fundación Vol.7,Homero,6,0
+ISBN0127,El Túnel Vol.8,Gustave Flaubert,1,1
+ISBN0128,Dune Vol.9,Homero,3,1
+ISBN0129,Guerra y Paz Vol.10,Jorge Luis Borges,1,0
+ISBN0130,Madame Bovary Vol.1,Isaac Asimov,5,1
+ISBN0131,Ficciones Vol.2,J.K. Rowling,4,0
+ISBN0132,Mrs. Dalloway Vol.3,William Shakespeare,3,0
+ISBN0133,Crónica de una Muerte Anunciada Vol.4,Vladimir Nabokov,1,0
+ISBN0134,Dune Vol.5,J.R.R. Tolkien,1,0
+ISBN0135,El Señor de los Anillos Vol.6,Miguel de Cervantes,2,0
+ISBN0136,Dune Vol.7,William Shakespeare,1,0
+ISBN0137,Lolita Vol.8,William Gibson,3,0
+ISBN0138,Neuromante Vol.9,Albert Camus,2,0
+ISBN0139,El Aleph Vol.10,Jorge Luis Borges,1,0
+ISBN0140,Dune Vol.1,Marcel Proust,3,0
+ISBN0141,Fundación Vol.2,F. Scott Fitzgerald,1,1
+ISBN0142,El Extranjero Vol.3,William Shakespeare,5,0
+ISBN0143,El Aleph Vol.4,Fiódor Dostoyevski,1,0
+ISBN0144,Don Quijote de la Mancha Vol.5,Isabel Allende,2,1
+ISBN0145,Dune Vol.6,Jane Austen,1,0
+ISBN0146,Crimen y Castigo Vol.7,Gustave Flaubert,1,0
+ISBN0147,Pedro Páramo Vol.8,William Gibson,4,0
+ISBN0148,Guerra y Paz Vol.9,León Tolstói,5,0
+ISBN0149,1984 Vol.10,Franz Kafka,6,0
+ISBN0150,La Casa de los Espíritus Vol.1,Gabriel García Márquez,5,0
+ISBN0151,Guerra y Paz Vol.2,Virginia Woolf,9,0
+ISBN0152,El Gran Gatsby Vol.3,Frank Herbert,5,0
+ISBN0153,Hamlet Vol.4,Octavio Paz,3,0
+ISBN0154,Dune Vol.5,Victor Hugo,4,0
+ISBN0155,La Odisea Vol.6,Jorge Luis Borges,2,0
 ISBN0156,Lolita Vol.7,Miguel de Cervantes,3,0
-ISBN0398,En Busca del Tiempo Perdido Vol.9,William Shakespeare,1,0
 ISBN0157,Fundación Vol.8,Albert Camus,1,0
-ISBN0399,El Aleph Vol.10,Albert Camus,6,1
 ISBN0158,La Casa de los Espíritus Vol.9,Ernesto Sabato,1,0
 ISBN0159,Crimen y Castigo Vol.10,Fiódor Dostoyevski,1,0
-ISBN0152,El Gran Gatsby Vol.3,Frank Herbert,5,0
-ISBN0394,Don Quijote de la Mancha Vol.5,León Tolstói,1,0
-ISBN1000,Madame Bovary Vol.1,Virginia Woolf,8,0
-ISBN0153,Hamlet Vol.4,Octavio Paz,3,0
-ISBN0395,La Odisea Vol.6,Gabriel García Márquez,2,0
-ISBN0154,Dune Vol.5,Victor Hugo,4,0
-ISBN0396,La Odisea Vol.7,Homero,1,0
-ISBN0155,La Odisea Vol.6,Jorge Luis Borges,2,0
-ISBN0397,Ficciones Vol.8,Fiódor Dostoyevski,5,0
-ISBN0390,Ulises Vol.1,Frank Herbert,2,0
-ISBN0391,La Casa de los Espíritus Vol.2,Gustave Flaubert,2,0
-ISBN0150,La Casa de los Espíritus Vol.1,Gabriel García Márquez,5,0
-ISBN0392,Lolita Vol.3,Julio Cortázar,7,1
-ISBN0151,Guerra y Paz Vol.2,Virginia Woolf,9,0
-ISBN0393,Ulises Vol.4,Frank Herbert,5,0
-ISBN0167,Ulises Vol.8,Miguel de Cervantes,3,0
-ISBN0168,La Odisea Vol.9,J.K. Rowling,1,0
-ISBN0169,El Gran Gatsby Vol.10,Jorge Luis Borges,2,0
+ISBN0160,El Túnel Vol.1,William Gibson,1,1
+ISBN0161,Ficciones Vol.2,J.R.R. Tolkien,1,0
+ISBN0162,Cien Años de Soledad Vol.3,Julio Cortázar,2,0
 ISBN0163,Mrs. Dalloway Vol.4,J.R.R. Tolkien,4,0
 ISBN0164,El Hobbit Vol.5,Jorge Luis Borges,3,0
 ISBN0165,Dune Vol.6,Marcel Proust,4,1
 ISBN0166,Cien Años de Soledad Vol.7,Albert Camus,2,2
-ISBN0160,El Túnel Vol.1,William Gibson,1,1
-ISBN0161,Ficciones Vol.2,J.R.R. Tolkien,1,0
-ISBN0162,Cien Años de Soledad Vol.3,Julio Cortázar,2,0
-ISBN0138,Neuromante Vol.9,Albert Camus,2,0
-ISBN0139,El Aleph Vol.10,Jorge Luis Borges,1,0
-ISBN0376,Orgullo y Prejuicio Vol.7,Frank Herbert,2,0
-ISBN0134,Dune Vol.5,J.R.R. Tolkien,1,0
-ISBN0377,Rayuela Vol.8,Jorge Luis Borges,2,0
-ISBN0135,El Señor de los Anillos Vol.6,Miguel de Cervantes,2,0
-ISBN0378,El Túnel Vol.9,Virginia Woolf,4,1
-ISBN0136,Dune Vol.7,William Shakespeare,1,0
-ISBN0137,Lolita Vol.8,William Gibson,3,0
-ISBN0379,Neuromante Vol.10,Marcel Proust,4,0
-ISBN0372,El Extranjero Vol.3,Homero,5,0
-ISBN0130,Madame Bovary Vol.1,Isaac Asimov,5,1
-ISBN0373,Pedro Páramo Vol.4,Gabriel García Márquez,4,0
-ISBN0131,Ficciones Vol.2,J.K. Rowling,4,0
-ISBN0374,El Hobbit Vol.5,Isabel Allende,2,0
-ISBN0132,Mrs. Dalloway Vol.3,William Shakespeare,3,0
-ISBN0375,El Extranjero Vol.6,Jorge Luis Borges,2,0
-ISBN0133,Crónica de una Muerte Anunciada Vol.4,Vladimir Nabokov,1,0
+ISBN0167,Ulises Vol.8,Miguel de Cervantes,3,0
+ISBN0168,La Odisea Vol.9,J.K. Rowling,1,0
+ISBN0169,El Gran Gatsby Vol.10,Jorge Luis Borges,2,0
+ISBN0170,El Túnel Vol.1,Gustave Flaubert,9,2
+ISBN0171,1984 Vol.2,William Shakespeare,3,0
+ISBN0172,Dune Vol.3,Albert Camus,1,0
+ISBN0173,La Odisea Vol.4,Gustave Flaubert,5,0
+ISBN0174,La Odisea Vol.5,Jane Austen,1,0
+ISBN0175,Neuromante Vol.6,Isabel Allende,3,0
+ISBN0176,Crimen y Castigo Vol.7,Ernesto Sabato,3,1
+ISBN0177,La Casa de los Espíritus Vol.8,Virginia Woolf,5,0
+ISBN0178,Lolita Vol.9,Marcel Proust,2,1
+ISBN0179,Neuromante Vol.10,Isaac Asimov,3,0
+ISBN0180,El Gran Gatsby Vol.1,George Orwell,4,0
+ISBN0181,La Odisea Vol.2,Juan Rulfo,4,0
+ISBN0182,El Túnel Vol.3,Virginia Woolf,3,0
+ISBN0183,El Túnel Vol.4,Gabriel García Márquez,1,1
+ISBN0184,Ficciones Vol.5,Marcel Proust,3,0
+ISBN0185,Lolita Vol.6,Vladimir Nabokov,2,0
+ISBN0186,Crimen y Castigo Vol.7,Virginia Woolf,3,1
+ISBN0187,El Aleph Vol.8,Octavio Paz,4,0
+ISBN0188,Ficciones Vol.9,Juan Rulfo,2,1
+ISBN0189,El Hobbit Vol.10,Isabel Allende,1,0
+ISBN0190,Don Quijote de la Mancha Vol.1,León Tolstói,1,0
+ISBN0191,Cien Años de Soledad Vol.2,William Gibson,1,0
+ISBN0192,Harry Potter Vol.3,Homero,5,0
+ISBN0193,En Busca del Tiempo Perdido Vol.4,Jane Austen,1,0
+ISBN0194,Neuromante Vol.5,Miguel de Cervantes,4,0
+ISBN0195,Dune Vol.6,George Orwell,3,1
+ISBN0196,Cien Años de Soledad Vol.7,Ernesto Sabato,7,0
+ISBN0197,Harry Potter Vol.8,William Gibson,3,1
+ISBN0198,El Extranjero Vol.9,Gustave Flaubert,2,0
+ISBN0199,La Casa de los Espíritus Vol.10,F. Scott Fitzgerald,4,0
+ISBN0200,Lolita Vol.1,Virginia Woolf,1,0
+ISBN0201,Neuromante Vol.2,J.R.R. Tolkien,3,0
+ISBN0202,El Señor de los Anillos Vol.3,Vladimir Nabokov,5,0
+ISBN0203,Guerra y Paz Vol.4,Isabel Allende,4,0
+ISBN0204,La Metamorfosis Vol.5,Victor Hugo,2,0
+ISBN0205,Orgullo y Prejuicio Vol.6,William Shakespeare,10,0
+ISBN0206,El Señor de los Anillos Vol.7,Fiódor Dostoyevski,1,0
+ISBN0207,Madame Bovary Vol.8,Vladimir Nabokov,2,0
+ISBN0208,Ulises Vol.9,James Joyce,2,0
+ISBN0209,Fundación Vol.10,Gabriel García Márquez,3,0
+ISBN0210,La Metamorfosis Vol.1,Julio Cortázar,1,0
+ISBN0211,Cien Años de Soledad Vol.2,Miguel de Cervantes,1,0
+ISBN0212,La Casa de los Espíritus Vol.3,Albert Camus,4,0
+ISBN0213,Mrs. Dalloway Vol.4,James Joyce,2,1
+ISBN0214,Don Quijote de la Mancha Vol.5,Juan Rulfo,3,0
+ISBN0215,La Odisea Vol.6,Ernesto Sabato,5,0
+ISBN0216,La Metamorfosis Vol.7,Ernesto Sabato,3,0
+ISBN0217,El Extranjero Vol.8,Vladimir Nabokov,7,0
+ISBN0218,Fundación Vol.9,Julio Cortázar,5,1
+ISBN0219,El Extranjero Vol.10,Jane Austen,5,0
+ISBN0220,Pedro Páramo Vol.1,Frank Herbert,5,0
+ISBN0221,El Señor de los Anillos Vol.2,Jorge Luis Borges,6,0
+ISBN0222,Hamlet Vol.3,Albert Camus,2,0
+ISBN0223,Fundación Vol.4,Gustave Flaubert,1,0
+ISBN0224,Madame Bovary Vol.5,Vladimir Nabokov,5,0
+ISBN0225,Ficciones Vol.6,Gabriel García Márquez,3,0
+ISBN0226,Lolita Vol.7,Vladimir Nabokov,5,0
+ISBN0227,Orgullo y Prejuicio Vol.8,León Tolstói,5,1
+ISBN0228,El Extranjero Vol.9,George Orwell,4,0
+ISBN0229,El Gran Gatsby Vol.10,George Orwell,1,0
+ISBN0230,Neuromante Vol.1,George Orwell,1,0
+ISBN0231,La Odisea Vol.2,Gabriel García Márquez,4,0
+ISBN0232,El Extranjero Vol.3,Gabriel García Márquez,10,0
+ISBN0233,El Túnel Vol.4,Franz Kafka,3,1
+ISBN0234,Don Quijote de la Mancha Vol.5,William Shakespeare,1,0
+ISBN0235,Mrs. Dalloway Vol.6,William Gibson,2,0
+ISBN0236,La Metamorfosis Vol.7,Albert Camus,1,0
+ISBN0237,El Gran Gatsby Vol.8,William Gibson,1,1
+ISBN0238,El Aleph Vol.9,William Shakespeare,1,0
+ISBN0239,Rayuela Vol.10,Fiódor Dostoyevski,5,0
+ISBN0240,El Túnel Vol.1,William Gibson,1,0
+ISBN0241,Guerra y Paz Vol.2,Ernesto Sabato,1,0
+ISBN0242,Rayuela Vol.3,F. Scott Fitzgerald,1,0
+ISBN0243,Neuromante Vol.4,Fiódor Dostoyevski,4,0
+ISBN0244,La Metamorfosis Vol.5,Gabriel García Márquez,5,0
+ISBN0245,El Señor de los Anillos Vol.6,Fiódor Dostoyevski,1,0
+ISBN0246,El Hobbit Vol.7,J.K. Rowling,3,0
+ISBN0247,Rayuela Vol.8,George Orwell,1,0
+ISBN0248,Fundación Vol.9,Isaac Asimov,1,0
+ISBN0249,Ficciones Vol.10,Virginia Woolf,1,0
+ISBN0250,Orgullo y Prejuicio Vol.1,Franz Kafka,2,0
+ISBN0251,Los Miserables Vol.2,Isabel Allende,3,0
+ISBN0252,Cien Años de Soledad Vol.3,Victor Hugo,1,0
+ISBN0253,Madame Bovary Vol.4,León Tolstói,4,0
+ISBN0254,Don Quijote de la Mancha Vol.5,Gabriel García Márquez,4,0
+ISBN0255,Don Quijote de la Mancha Vol.6,Franz Kafka,1,0
+ISBN0256,Don Quijote de la Mancha Vol.7,Victor Hugo,1,1
+ISBN0257,El Túnel Vol.8,Jorge Luis Borges,1,0
+ISBN0258,Lolita Vol.9,William Shakespeare,5,0
+ISBN0259,Ulises Vol.10,James Joyce,4,0
+ISBN0260,Neuromante Vol.1,Gabriel García Márquez,4,0
+ISBN0261,Neuromante Vol.2,Ernesto Sabato,4,2
+ISBN0262,Guerra y Paz Vol.3,F. Scott Fitzgerald,4,0
+ISBN0263,El Túnel Vol.4,F. Scott Fitzgerald,2,0
+ISBN0264,Crimen y Castigo Vol.5,Gabriel García Márquez,2,1
+ISBN0265,Ulises Vol.6,Jane Austen,1,0
+ISBN0266,El Aleph Vol.7,J.R.R. Tolkien,6,0
+ISBN0267,El Túnel Vol.8,Fiódor Dostoyevski,2,0
+ISBN0268,La Metamorfosis Vol.9,Jane Austen,2,0
+ISBN0269,Orgullo y Prejuicio Vol.10,Vladimir Nabokov,5,0
+ISBN0270,El Señor de los Anillos Vol.1,Frank Herbert,3,0
+ISBN0271,Ficciones Vol.2,Fiódor Dostoyevski,1,0
+ISBN0272,Pedro Páramo Vol.3,Frank Herbert,1,1
+ISBN0273,Harry Potter Vol.4,Octavio Paz,1,0
+ISBN0274,1984 Vol.5,William Shakespeare,1,1
+ISBN0275,Mrs. Dalloway Vol.6,Marcel Proust,4,1
+ISBN0276,Guerra y Paz Vol.7,Frank Herbert,4,0
+ISBN0277,Madame Bovary Vol.8,Victor Hugo,1,0
+ISBN0278,Ficciones Vol.9,Fiódor Dostoyevski,1,0
+ISBN0279,Crimen y Castigo Vol.10,Miguel de Cervantes,3,0
+ISBN0280,Ficciones Vol.1,Fiódor Dostoyevski,1,0
+ISBN0281,Harry Potter Vol.2,Juan Rulfo,2,0
+ISBN0282,Madame Bovary Vol.3,Juan Rulfo,3,0
+ISBN0283,Fundación Vol.4,Franz Kafka,5,1
+ISBN0284,Fundación Vol.5,Fiódor Dostoyevski,2,0
+ISBN0285,Guerra y Paz Vol.6,George Orwell,1,0
+ISBN0286,Harry Potter Vol.7,Miguel de Cervantes,3,0
+ISBN0287,Orgullo y Prejuicio Vol.8,William Shakespeare,7,0
+ISBN0288,Crónica de una Muerte Anunciada Vol.9,Julio Cortázar,2,0
+ISBN0289,El Túnel Vol.10,Ernesto Sabato,3,0
+ISBN0290,El Gran Gatsby Vol.1,Gabriel García Márquez,5,0
+ISBN0291,En Busca del Tiempo Perdido Vol.2,Victor Hugo,1,0
+ISBN0292,En Busca del Tiempo Perdido Vol.3,Isaac Asimov,4,1
+ISBN0293,Crimen y Castigo Vol.4,J.R.R. Tolkien,5,0
+ISBN0294,El Hobbit Vol.5,J.K. Rowling,9,0
+ISBN0295,Don Quijote de la Mancha Vol.6,Isabel Allende,1,0
+ISBN0296,Cien Años de Soledad Vol.7,Fiódor Dostoyevski,5,0
+ISBN0297,Cien Años de Soledad Vol.8,Fiódor Dostoyevski,1,0
+ISBN0298,Rayuela Vol.9,J.R.R. Tolkien,5,0
+ISBN0299,Mrs. Dalloway Vol.10,Ernesto Sabato,3,0
+ISBN0300,La Metamorfosis Vol.1,William Gibson,3,0
+ISBN0301,Lolita Vol.2,Octavio Paz,5,2
+ISBN0302,Rayuela Vol.3,Juan Rulfo,4,0
+ISBN0303,Don Quijote de la Mancha Vol.4,León Tolstói,3,0
+ISBN0304,Crimen y Castigo Vol.5,William Gibson,1,0
+ISBN0305,Harry Potter Vol.6,Gabriel García Márquez,5,0
+ISBN0306,El Aleph Vol.7,Vladimir Nabokov,4,0
+ISBN0307,La Odisea Vol.8,William Shakespeare,3,0
+ISBN0308,Ficciones Vol.9,Marcel Proust,3,0
+ISBN0309,Fundación Vol.10,J.K. Rowling,2,0
+ISBN0310,Madame Bovary Vol.1,George Orwell,2,0
+ISBN0311,Dune Vol.2,Gabriel García Márquez,1,0
+ISBN0312,Crimen y Castigo Vol.3,William Shakespeare,1,0
+ISBN0313,El Hobbit Vol.4,Albert Camus,4,0
+ISBN0314,Lolita Vol.5,Fiódor Dostoyevski,5,0
+ISBN0315,Neuromante Vol.6,J.K. Rowling,4,0
+ISBN0316,Ulises Vol.7,Isabel Allende,1,0
+ISBN0317,Crónica de una Muerte Anunciada Vol.8,Julio Cortázar,1,0
+ISBN0318,Crónica de una Muerte Anunciada Vol.9,Gabriel García Márquez,4,0
+ISBN0319,Fundación Vol.10,Marcel Proust,3,1
+ISBN0320,Los Miserables Vol.1,Gustave Flaubert,5,0
+ISBN0321,La Casa de los Espíritus Vol.2,Vladimir Nabokov,1,0
+ISBN0322,La Metamorfosis Vol.3,Isaac Asimov,4,0
+ISBN0323,Neuromante Vol.4,Ernesto Sabato,5,0
+ISBN0324,Los Miserables Vol.5,Ernesto Sabato,3,0
+ISBN0325,Guerra y Paz Vol.6,Victor Hugo,4,0
+ISBN0326,La Casa de los Espíritus Vol.7,William Shakespeare,1,1
+ISBN0327,El Gran Gatsby Vol.8,Isaac Asimov,3,0
+ISBN0328,En Busca del Tiempo Perdido Vol.9,Franz Kafka,1,1
+ISBN0329,La Odisea Vol.10,Jane Austen,4,0
+ISBN0330,Hamlet Vol.1,William Gibson,1,0
+ISBN0331,Orgullo y Prejuicio Vol.2,William Gibson,2,0
+ISBN0332,Hamlet Vol.3,Miguel de Cervantes,9,0
+ISBN0333,Cien Años de Soledad Vol.4,Ernesto Sabato,3,1
+ISBN0334,Los Miserables Vol.5,Octavio Paz,5,0
+ISBN0335,Dune Vol.6,F. Scott Fitzgerald,5,0
+ISBN0336,El Hobbit Vol.7,Isaac Asimov,4,0
+ISBN0337,Fundación Vol.8,Ernesto Sabato,4,0
+ISBN0338,Lolita Vol.9,Juan Rulfo,9,0
+ISBN0339,El Aleph Vol.10,Franz Kafka,3,1
+ISBN0340,Ficciones Vol.1,William Gibson,1,0
+ISBN0341,Mrs. Dalloway Vol.2,Vladimir Nabokov,1,0
+ISBN0342,La Odisea Vol.3,Fiódor Dostoyevski,5,0
+ISBN0343,El Señor de los Anillos Vol.4,Julio Cortázar,3,1
+ISBN0344,Ulises Vol.5,George Orwell,1,0
+ISBN0345,Crimen y Castigo Vol.6,Octavio Paz,1,0
+ISBN0346,Orgullo y Prejuicio Vol.7,León Tolstói,4,0
+ISBN0347,Los Miserables Vol.8,Isaac Asimov,5,0
+ISBN0348,Dune Vol.9,F. Scott Fitzgerald,5,0
+ISBN0349,Crimen y Castigo Vol.10,Juan Rulfo,3,0
+ISBN0350,Don Quijote de la Mancha Vol.1,George Orwell,1,0
+ISBN0351,Fundación Vol.2,León Tolstói,6,0
+ISBN0352,En Busca del Tiempo Perdido Vol.3,J.K. Rowling,8,0
+ISBN0353,1984 Vol.4,J.R.R. Tolkien,3,0
+ISBN0354,En Busca del Tiempo Perdido Vol.5,Albert Camus,3,0
+ISBN0355,Orgullo y Prejuicio Vol.6,Homero,1,0
+ISBN0356,Lolita Vol.7,Ernesto Sabato,4,0
+ISBN0357,Orgullo y Prejuicio Vol.8,Gabriel García Márquez,3,0
+ISBN0358,Ficciones Vol.9,Victor Hugo,5,0
+ISBN0359,Orgullo y Prejuicio Vol.10,Vladimir Nabokov,2,0
+ISBN0360,Ficciones Vol.1,Virginia Woolf,2,0
+ISBN0361,Hamlet Vol.2,Fiódor Dostoyevski,1,0
+ISBN0362,Pedro Páramo Vol.3,Albert Camus,1,0
+ISBN0363,La Casa de los Espíritus Vol.4,J.K. Rowling,4,1
+ISBN0364,Guerra y Paz Vol.5,Julio Cortázar,2,0
+ISBN0365,Hamlet Vol.6,Julio Cortázar,3,0
+ISBN0366,Madame Bovary Vol.7,Julio Cortázar,1,0
+ISBN0367,Dune Vol.8,Frank Herbert,1,0
+ISBN0368,El Extranjero Vol.9,F. Scott Fitzgerald,2,0
+ISBN0369,Pedro Páramo Vol.10,F. Scott Fitzgerald,5,0
 ISBN0370,En Busca del Tiempo Perdido Vol.1,Fiódor Dostoyevski,7,0
 ISBN0371,Crónica de una Muerte Anunciada Vol.2,Homero,3,0
-ISBN0149,1984 Vol.10,Franz Kafka,6,0
-ISBN0145,Dune Vol.6,Jane Austen,1,0
-ISBN0387,El Hobbit Vol.8,Homero,4,1
-ISBN0146,Crimen y Castigo Vol.7,Gustave Flaubert,1,0
-ISBN0388,Neuromante Vol.9,Victor Hugo,7,2
-ISBN0147,Pedro Páramo Vol.8,William Gibson,4,0
-ISBN0389,Crónica de una Muerte Anunciada Vol.10,Fiódor Dostoyevski,4,0
-ISBN0148,Guerra y Paz Vol.9,León Tolstói,5,0
-ISBN0141,Fundación Vol.2,F. Scott Fitzgerald,1,1
-ISBN0383,Neuromante Vol.4,Jane Austen,9,0
-ISBN0142,El Extranjero Vol.3,William Shakespeare,5,0
-ISBN0384,Orgullo y Prejuicio Vol.5,George Orwell,1,0
-ISBN0143,El Aleph Vol.4,Fiódor Dostoyevski,1,0
-ISBN0385,En Busca del Tiempo Perdido Vol.6,Frank Herbert,4,1
-ISBN0144,Don Quijote de la Mancha Vol.5,Isabel Allende,2,1
-ISBN0386,Los Miserables Vol.7,Gustave Flaubert,1,0
+ISBN0372,El Extranjero Vol.3,Homero,5,0
+ISBN0373,Pedro Páramo Vol.4,Gabriel García Márquez,4,0
+ISBN0374,El Hobbit Vol.5,Isabel Allende,2,0
+ISBN0375,El Extranjero Vol.6,Jorge Luis Borges,2,0
+ISBN0376,Orgullo y Prejuicio Vol.7,Frank Herbert,2,0
+ISBN0377,Rayuela Vol.8,Jorge Luis Borges,2,0
+ISBN0378,El Túnel Vol.9,Virginia Woolf,4,1
+ISBN0379,Neuromante Vol.10,Marcel Proust,4,0
 ISBN0380,El Gran Gatsby Vol.1,León Tolstói,5,0
 ISBN0381,El Túnel Vol.2,Victor Hugo,1,0
-ISBN0140,Dune Vol.1,Marcel Proust,3,0
 ISBN0382,Hamlet Vol.3,Ernesto Sabato,2,0
+ISBN0383,Neuromante Vol.4,Jane Austen,9,0
+ISBN0384,Orgullo y Prejuicio Vol.5,George Orwell,1,0
+ISBN0385,En Busca del Tiempo Perdido Vol.6,Frank Herbert,4,1
+ISBN0386,Los Miserables Vol.7,Gustave Flaubert,1,0
+ISBN0387,El Hobbit Vol.8,Homero,4,1
+ISBN0388,Neuromante Vol.9,Victor Hugo,7,2
+ISBN0389,Crónica de una Muerte Anunciada Vol.10,Fiódor Dostoyevski,4,0
+ISBN0390,Ulises Vol.1,Frank Herbert,2,0
+ISBN0391,La Casa de los Espíritus Vol.2,Gustave Flaubert,2,0
+ISBN0392,Lolita Vol.3,Julio Cortázar,7,1
+ISBN0393,Ulises Vol.4,Frank Herbert,5,0
+ISBN0394,Don Quijote de la Mancha Vol.5,León Tolstói,1,0
+ISBN0395,La Odisea Vol.6,Gabriel García Márquez,2,0
+ISBN0396,La Odisea Vol.7,Homero,1,0
+ISBN0397,Ficciones Vol.8,Fiódor Dostoyevski,5,0
+ISBN0398,En Busca del Tiempo Perdido Vol.9,William Shakespeare,1,0
+ISBN0399,El Aleph Vol.10,Albert Camus,6,1
+ISBN0400,El Gran Gatsby Vol.1,George Orwell,3,0
+ISBN0401,Fundación Vol.2,James Joyce,2,0
+ISBN0402,Cien Años de Soledad Vol.3,Miguel de Cervantes,1,0
+ISBN0403,El Señor de los Anillos Vol.4,William Shakespeare,1,0
+ISBN0404,El Aleph Vol.5,Octavio Paz,2,0
+ISBN0405,El Túnel Vol.6,Jorge Luis Borges,2,0
+ISBN0406,1984 Vol.7,Octavio Paz,1,0
+ISBN0407,Orgullo y Prejuicio Vol.8,Gustave Flaubert,5,0
+ISBN0408,La Metamorfosis Vol.9,Jorge Luis Borges,3,0
+ISBN0409,Ficciones Vol.10,Jorge Luis Borges,3,0
+ISBN0410,El Túnel Vol.1,Ernesto Sabato,9,0
+ISBN0411,El Hobbit Vol.2,Miguel de Cervantes,2,0
+ISBN0412,El Gran Gatsby Vol.3,Jane Austen,3,0
+ISBN0413,Crimen y Castigo Vol.4,Marcel Proust,2,1
+ISBN0414,El Señor de los Anillos Vol.5,Isabel Allende,5,0
+ISBN0415,Neuromante Vol.6,William Gibson,1,0
+ISBN0416,Fundación Vol.7,Miguel de Cervantes,2,1
+ISBN0417,Ulises Vol.8,Isaac Asimov,3,0
+ISBN0418,Mrs. Dalloway Vol.9,Octavio Paz,4,0
+ISBN0419,Los Miserables Vol.10,Homero,3,0
+ISBN0420,Hamlet Vol.1,León Tolstói,6,0
+ISBN0421,Los Miserables Vol.2,Jorge Luis Borges,3,0
+ISBN0422,Ficciones Vol.3,J.R.R. Tolkien,1,0
+ISBN0423,Don Quijote de la Mancha Vol.4,Ernesto Sabato,3,0
+ISBN0424,1984 Vol.5,Isabel Allende,7,0
+ISBN0425,El Señor de los Anillos Vol.6,William Shakespeare,3,0
+ISBN0426,El Aleph Vol.7,Albert Camus,4,0
+ISBN0427,Madame Bovary Vol.8,León Tolstói,2,0
+ISBN0428,1984 Vol.9,Isabel Allende,4,0
+ISBN0429,Don Quijote de la Mancha Vol.10,Victor Hugo,1,0
+ISBN0430,Mrs. Dalloway Vol.1,J.R.R. Tolkien,3,0
+ISBN0431,Dune Vol.2,León Tolstói,3,2
+ISBN0432,Harry Potter Vol.3,J.R.R. Tolkien,3,0
+ISBN0433,El Aleph Vol.4,Jorge Luis Borges,4,0
+ISBN0434,El Hobbit Vol.5,Juan Rulfo,2,1
+ISBN0435,Crimen y Castigo Vol.6,Jane Austen,1,0
+ISBN0436,El Túnel Vol.7,Fiódor Dostoyevski,4,0
+ISBN0437,Los Miserables Vol.8,Octavio Paz,2,0
+ISBN0438,Ficciones Vol.9,Juan Rulfo,2,0
+ISBN0439,Rayuela Vol.10,Vladimir Nabokov,5,0
+ISBN0440,Neuromante Vol.1,León Tolstói,2,0
+ISBN0441,Harry Potter Vol.2,Frank Herbert,1,0
+ISBN0442,El Hobbit Vol.3,Homero,1,1
+ISBN0443,La Odisea Vol.4,Gabriel García Márquez,3,0
+ISBN0444,Ulises Vol.5,Albert Camus,5,0
+ISBN0445,Hamlet Vol.6,Isabel Allende,1,0
+ISBN0446,Neuromante Vol.7,Julio Cortázar,4,0
+ISBN0447,Los Miserables Vol.8,Victor Hugo,1,0
+ISBN0448,Don Quijote de la Mancha Vol.9,Virginia Woolf,4,0
+ISBN0449,Harry Potter Vol.10,Marcel Proust,4,0
+ISBN0450,Madame Bovary Vol.1,William Shakespeare,1,0
+ISBN0451,La Casa de los Espíritus Vol.2,James Joyce,4,0
+ISBN0452,Orgullo y Prejuicio Vol.3,Frank Herbert,1,0
+ISBN0453,Rayuela Vol.4,William Shakespeare,5,0
+ISBN0454,Hamlet Vol.5,Juan Rulfo,6,0
+ISBN0455,En Busca del Tiempo Perdido Vol.6,Julio Cortázar,4,0
+ISBN0456,Crimen y Castigo Vol.7,Franz Kafka,3,0
+ISBN0457,Mrs. Dalloway Vol.8,Virginia Woolf,1,1
+ISBN0458,El Túnel Vol.9,Franz Kafka,1,0
+ISBN0459,El Túnel Vol.10,Octavio Paz,1,0
+ISBN0460,Guerra y Paz Vol.1,Juan Rulfo,4,0
+ISBN0461,La Casa de los Espíritus Vol.2,Octavio Paz,2,0
+ISBN0462,La Odisea Vol.3,Octavio Paz,2,0
+ISBN0463,Rayuela Vol.4,George Orwell,10,0
+ISBN0464,El Señor de los Anillos Vol.5,Gustave Flaubert,9,0
+ISBN0465,Ulises Vol.6,Jorge Luis Borges,5,0
+ISBN0466,Orgullo y Prejuicio Vol.7,Marcel Proust,1,0
+ISBN0467,Ficciones Vol.8,Ernesto Sabato,1,0
+ISBN0468,Harry Potter Vol.9,Frank Herbert,5,1
+ISBN0469,Rayuela Vol.10,Jane Austen,1,0
+ISBN0470,El Túnel Vol.1,Jane Austen,1,0
+ISBN0471,Mrs. Dalloway Vol.2,J.R.R. Tolkien,4,0
+ISBN0472,La Metamorfosis Vol.3,Vladimir Nabokov,1,0
+ISBN0473,Dune Vol.4,Fiódor Dostoyevski,3,0
+ISBN0474,En Busca del Tiempo Perdido Vol.5,J.K. Rowling,5,0
+ISBN0475,Dune Vol.6,León Tolstói,5,0
+ISBN0476,1984 Vol.7,Miguel de Cervantes,10,0
+ISBN0477,1984 Vol.8,Fiódor Dostoyevski,2,0
+ISBN0478,Pedro Páramo Vol.9,J.R.R. Tolkien,3,0
+ISBN0479,Fundación Vol.10,William Shakespeare,5,0
+ISBN0480,El Señor de los Anillos Vol.1,Isaac Asimov,1,0
+ISBN0481,Ficciones Vol.2,Juan Rulfo,1,0
+ISBN0482,Don Quijote de la Mancha Vol.3,James Joyce,4,0
+ISBN0483,Ulises Vol.4,Miguel de Cervantes,5,0
+ISBN0484,Lolita Vol.5,Octavio Paz,5,0
+ISBN0485,El Señor de los Anillos Vol.6,Isaac Asimov,4,0
+ISBN0486,Ulises Vol.7,Frank Herbert,4,1
+ISBN0487,El Extranjero Vol.8,Jane Austen,1,0
+ISBN0488,Rayuela Vol.9,Franz Kafka,1,0
+ISBN0489,El Túnel Vol.10,Jorge Luis Borges,3,0
+ISBN0490,Crónica de una Muerte Anunciada Vol.1,J.R.R. Tolkien,5,0
+ISBN0491,En Busca del Tiempo Perdido Vol.2,Franz Kafka,4,0
+ISBN0492,Cien Años de Soledad Vol.3,Julio Cortázar,4,0
+ISBN0493,Crónica de una Muerte Anunciada Vol.4,George Orwell,1,0
+ISBN0494,Guerra y Paz Vol.5,Miguel de Cervantes,5,0
+ISBN0495,La Metamorfosis Vol.6,William Gibson,1,0
+ISBN0496,Ficciones Vol.7,William Shakespeare,1,0
+ISBN0497,Hamlet Vol.8,Juan Rulfo,2,0
+ISBN0498,En Busca del Tiempo Perdido Vol.9,Virginia Woolf,1,0
+ISBN0499,Neuromante Vol.10,Victor Hugo,1,0
+ISBN0500,Crimen y Castigo Vol.1,James Joyce,1,0
+ISBN0501,La Metamorfosis Vol.2,Franz Kafka,5,0
+ISBN0502,1984 Vol.3,Homero,5,0
+ISBN0503,La Odisea Vol.4,J.R.R. Tolkien,4,0
+ISBN0504,La Casa de los Espíritus Vol.5,Frank Herbert,3,0
+ISBN0505,1984 Vol.6,William Gibson,2,0
+ISBN0506,Cien Años de Soledad Vol.7,Virginia Woolf,4,0
+ISBN0507,Fundación Vol.8,Julio Cortázar,5,0
+ISBN0508,Fundación Vol.9,Virginia Woolf,3,0
+ISBN0509,El Señor de los Anillos Vol.10,Marcel Proust,9,0
+ISBN0510,En Busca del Tiempo Perdido Vol.1,Albert Camus,1,0
+ISBN0511,Lolita Vol.2,Homero,4,0
+ISBN0512,Ficciones Vol.3,Miguel de Cervantes,7,0
+ISBN0513,Fundación Vol.4,Octavio Paz,1,0
+ISBN0514,Ulises Vol.5,Victor Hugo,1,0
+ISBN0515,Lolita Vol.6,Isaac Asimov,1,0
+ISBN0516,1984 Vol.7,Fiódor Dostoyevski,1,1
+ISBN0517,Lolita Vol.8,Jorge Luis Borges,4,0
+ISBN0518,Crimen y Castigo Vol.9,Victor Hugo,3,0
+ISBN0519,1984 Vol.10,Jane Austen,5,0
+ISBN0520,Crónica de una Muerte Anunciada Vol.1,Victor Hugo,5,1
+ISBN0521,La Casa de los Espíritus Vol.2,Juan Rulfo,5,0
+ISBN0522,Guerra y Paz Vol.3,Albert Camus,2,0
+ISBN0523,Guerra y Paz Vol.4,Julio Cortázar,1,0
+ISBN0524,Lolita Vol.5,Victor Hugo,1,0
+ISBN0525,En Busca del Tiempo Perdido Vol.6,Jorge Luis Borges,3,0
+ISBN0526,Ulises Vol.7,Julio Cortázar,1,0
+ISBN0527,Guerra y Paz Vol.8,Victor Hugo,1,1
+ISBN0528,Orgullo y Prejuicio Vol.9,Miguel de Cervantes,2,0
+ISBN0529,En Busca del Tiempo Perdido Vol.10,Julio Cortázar,1,0
+ISBN0530,Hamlet Vol.1,Albert Camus,5,0
+ISBN0531,El Gran Gatsby Vol.2,Vladimir Nabokov,1,0
+ISBN0532,Crónica de una Muerte Anunciada Vol.3,Virginia Woolf,3,0
+ISBN0533,Pedro Páramo Vol.4,J.R.R. Tolkien,1,1
+ISBN0534,1984 Vol.5,Virginia Woolf,1,1
+ISBN0535,El Túnel Vol.6,Ernesto Sabato,3,0
+ISBN0536,Ficciones Vol.7,Julio Cortázar,3,0
+ISBN0537,Don Quijote de la Mancha Vol.8,Franz Kafka,7,1
+ISBN0538,Hamlet Vol.9,Franz Kafka,3,0
+ISBN0539,La Odisea Vol.10,William Shakespeare,5,0
+ISBN0540,Los Miserables Vol.1,Miguel de Cervantes,1,0
+ISBN0541,Crimen y Castigo Vol.2,Jane Austen,2,0
+ISBN0542,La Metamorfosis Vol.3,Ernesto Sabato,2,0
+ISBN0543,Crónica de una Muerte Anunciada Vol.4,Albert Camus,3,0
+ISBN0544,La Odisea Vol.5,F. Scott Fitzgerald,5,0
+ISBN0545,Guerra y Paz Vol.6,J.R.R. Tolkien,2,0
+ISBN0546,Ulises Vol.7,Marcel Proust,4,0
+ISBN0547,El Aleph Vol.8,Albert Camus,1,0
+ISBN0548,Crónica de una Muerte Anunciada Vol.9,Octavio Paz,4,0
+ISBN0549,La Odisea Vol.10,Isabel Allende,2,0
+ISBN0550,Fundación Vol.1,Gabriel García Márquez,8,1
+ISBN0551,La Odisea Vol.2,Homero,1,0
+ISBN0552,Neuromante Vol.3,Virginia Woolf,4,0
+ISBN0553,Crimen y Castigo Vol.4,Ernesto Sabato,1,0
+ISBN0554,El Aleph Vol.5,León Tolstói,2,0
+ISBN0555,Harry Potter Vol.6,Jorge Luis Borges,3,0
+ISBN0556,Ficciones Vol.7,Octavio Paz,3,0
+ISBN0557,Pedro Páramo Vol.8,Gabriel García Márquez,1,0
+ISBN0558,Ficciones Vol.9,Juan Rulfo,4,0
+ISBN0559,Ficciones Vol.10,Vladimir Nabokov,2,0
+ISBN0560,1984 Vol.1,Gabriel García Márquez,5,1
+ISBN0561,Fundación Vol.2,Victor Hugo,3,0
+ISBN0562,Neuromante Vol.3,Frank Herbert,2,0
+ISBN0563,La Metamorfosis Vol.4,Gustave Flaubert,5,1
+ISBN0564,El Señor de los Anillos Vol.5,Gabriel García Márquez,5,0
+ISBN0565,Mrs. Dalloway Vol.6,Albert Camus,2,0
+ISBN0566,Fundación Vol.7,Fiódor Dostoyevski,1,0
+ISBN0567,La Casa de los Espíritus Vol.8,William Gibson,5,0
+ISBN0568,La Casa de los Espíritus Vol.9,William Gibson,2,0
+ISBN0569,El Señor de los Anillos Vol.10,Homero,1,0
+ISBN0570,Fundación Vol.1,Ernesto Sabato,4,0
+ISBN0571,El Extranjero Vol.2,J.K. Rowling,1,1
+ISBN0572,El Extranjero Vol.3,J.R.R. Tolkien,2,0
+ISBN0573,El Extranjero Vol.4,Gabriel García Márquez,5,0
+ISBN0574,Crónica de una Muerte Anunciada Vol.5,Miguel de Cervantes,10,0
+ISBN0575,La Metamorfosis Vol.6,Gabriel García Márquez,1,0
+ISBN0576,Los Miserables Vol.7,James Joyce,2,0
+ISBN0577,Cien Años de Soledad Vol.8,Juan Rulfo,1,0
+ISBN0578,Madame Bovary Vol.9,J.R.R. Tolkien,6,0
+ISBN0579,Pedro Páramo Vol.10,Marcel Proust,1,0
+ISBN0580,Orgullo y Prejuicio Vol.1,Isabel Allende,4,0
+ISBN0581,La Odisea Vol.2,J.K. Rowling,1,0
+ISBN0582,Ficciones Vol.3,Isaac Asimov,3,0
+ISBN0583,Guerra y Paz Vol.4,Gustave Flaubert,2,0
+ISBN0584,Hamlet Vol.5,Homero,5,0
+ISBN0585,Ficciones Vol.6,Octavio Paz,1,0
+ISBN0586,El Señor de los Anillos Vol.7,Albert Camus,3,0
+ISBN0587,El Hobbit Vol.8,Jorge Luis Borges,2,0
+ISBN0588,La Casa de los Espíritus Vol.9,Jorge Luis Borges,3,0
+ISBN0589,Crónica de una Muerte Anunciada Vol.10,Jane Austen,4,0
+ISBN0590,Crónica de una Muerte Anunciada Vol.1,Ernesto Sabato,1,1
+ISBN0591,Neuromante Vol.2,Gustave Flaubert,2,0
+ISBN0592,El Señor de los Anillos Vol.3,Marcel Proust,4,1
+ISBN0593,La Odisea Vol.4,Miguel de Cervantes,3,0
+ISBN0594,Harry Potter Vol.5,Gabriel García Márquez,3,0
+ISBN0595,Dune Vol.6,Homero,1,0
+ISBN0596,La Odisea Vol.7,León Tolstói,3,0
+ISBN0597,El Túnel Vol.8,Gabriel García Márquez,1,0
+ISBN0598,La Odisea Vol.9,Virginia Woolf,3,0
+ISBN0599,En Busca del Tiempo Perdido Vol.10,William Gibson,4,0
+ISBN0600,La Casa de los Espíritus Vol.1,James Joyce,5,0
+ISBN0601,Rayuela Vol.2,William Gibson,3,0
+ISBN0602,La Casa de los Espíritus Vol.3,Homero,5,0
+ISBN0603,Madame Bovary Vol.4,Isaac Asimov,1,1
+ISBN0604,El Túnel Vol.5,Jane Austen,1,0
+ISBN0605,Mrs. Dalloway Vol.6,Gustave Flaubert,1,0
+ISBN0606,Cien Años de Soledad Vol.7,Fiódor Dostoyevski,3,0
+ISBN0607,Lolita Vol.8,Octavio Paz,1,0
+ISBN0608,Ulises Vol.9,Octavio Paz,1,0
+ISBN0609,Harry Potter Vol.10,Julio Cortázar,1,0
+ISBN0610,El Gran Gatsby Vol.1,J.K. Rowling,4,0
+ISBN0611,La Metamorfosis Vol.2,William Shakespeare,2,0
+ISBN0612,Don Quijote de la Mancha Vol.3,William Gibson,2,0
+ISBN0613,Crónica de una Muerte Anunciada Vol.4,Gabriel García Márquez,5,0
+ISBN0614,Harry Potter Vol.5,Ernesto Sabato,2,0
+ISBN0615,El Extranjero Vol.6,George Orwell,3,0
+ISBN0616,Fundación Vol.7,Fiódor Dostoyevski,5,0
+ISBN0617,La Odisea Vol.8,Frank Herbert,3,0
+ISBN0618,La Metamorfosis Vol.9,William Gibson,4,0
+ISBN0619,Orgullo y Prejuicio Vol.10,Ernesto Sabato,4,0
+ISBN0620,Guerra y Paz Vol.1,Virginia Woolf,1,0
+ISBN0621,Neuromante Vol.2,James Joyce,1,0
+ISBN0622,Dune Vol.3,Vladimir Nabokov,5,2
+ISBN0623,El Aleph Vol.4,F. Scott Fitzgerald,2,0
+ISBN0624,1984 Vol.5,Frank Herbert,5,0
+ISBN0625,Cien Años de Soledad Vol.6,Miguel de Cervantes,1,0
+ISBN0626,La Metamorfosis Vol.7,Virginia Woolf,4,0
+ISBN0627,Fundación Vol.8,Juan Rulfo,1,0
+ISBN0628,Orgullo y Prejuicio Vol.9,Franz Kafka,1,0
+ISBN0629,Rayuela Vol.10,James Joyce,5,0
+ISBN0630,Pedro Páramo Vol.1,Frank Herbert,1,0
+ISBN0631,El Túnel Vol.2,William Gibson,1,0
+ISBN0632,Los Miserables Vol.3,Miguel de Cervantes,8,0
+ISBN0633,La Odisea Vol.4,Virginia Woolf,6,0
+ISBN0634,Crónica de una Muerte Anunciada Vol.5,Miguel de Cervantes,3,1
+ISBN0635,Guerra y Paz Vol.6,William Shakespeare,10,2
+ISBN0636,Dune Vol.7,William Shakespeare,4,0
+ISBN0637,Madame Bovary Vol.8,Julio Cortázar,2,0
+ISBN0638,1984 Vol.9,Franz Kafka,4,0
+ISBN0639,En Busca del Tiempo Perdido Vol.10,Isaac Asimov,3,0
+ISBN0640,Cien Años de Soledad Vol.1,Fiódor Dostoyevski,5,0
+ISBN0641,Guerra y Paz Vol.2,William Shakespeare,1,0
+ISBN0642,Lolita Vol.3,Miguel de Cervantes,3,0
+ISBN0643,Orgullo y Prejuicio Vol.4,Marcel Proust,3,0
+ISBN0644,Neuromante Vol.5,Gustave Flaubert,4,0
+ISBN0645,Ulises Vol.6,Victor Hugo,3,0
+ISBN0646,La Metamorfosis Vol.7,George Orwell,7,0
+ISBN0647,Pedro Páramo Vol.8,J.K. Rowling,3,0
+ISBN0648,La Casa de los Espíritus Vol.9,William Shakespeare,2,0
+ISBN0649,El Gran Gatsby Vol.10,Franz Kafka,1,0
+ISBN0650,En Busca del Tiempo Perdido Vol.1,Jorge Luis Borges,2,0
+ISBN0651,Don Quijote de la Mancha Vol.2,George Orwell,2,0
+ISBN0652,Rayuela Vol.3,William Gibson,5,0
+ISBN0653,Orgullo y Prejuicio Vol.4,Marcel Proust,1,1
+ISBN0654,El Extranjero Vol.5,Ernesto Sabato,2,0
+ISBN0655,Cien Años de Soledad Vol.6,J.R.R. Tolkien,1,0
+ISBN0656,Lolita Vol.7,Marcel Proust,1,0
+ISBN0657,Guerra y Paz Vol.8,Marcel Proust,3,0
+ISBN0658,Ficciones Vol.9,Gustave Flaubert,9,0
+ISBN0659,El Túnel Vol.10,J.R.R. Tolkien,2,0
+ISBN0660,Crónica de una Muerte Anunciada Vol.1,F. Scott Fitzgerald,2,0
+ISBN0661,Crónica de una Muerte Anunciada Vol.2,Albert Camus,1,0
+ISBN0662,Ulises Vol.3,F. Scott Fitzgerald,2,0
+ISBN0663,Crónica de una Muerte Anunciada Vol.4,Gabriel García Márquez,7,0
+ISBN0664,Dune Vol.5,J.K. Rowling,1,0
+ISBN0665,Crónica de una Muerte Anunciada Vol.6,Virginia Woolf,3,0
+ISBN0666,Neuromante Vol.7,Jorge Luis Borges,7,0
+ISBN0667,Lolita Vol.8,Jorge Luis Borges,8,0
+ISBN0668,La Casa de los Espíritus Vol.9,Jane Austen,1,0
+ISBN0669,Guerra y Paz Vol.10,Frank Herbert,1,0
+ISBN0670,Lolita Vol.1,Vladimir Nabokov,1,0
+ISBN0671,El Aleph Vol.2,Homero,3,0
+ISBN0672,La Odisea Vol.3,Homero,3,0
+ISBN0673,El Hobbit Vol.4,Victor Hugo,4,0
+ISBN0674,La Metamorfosis Vol.5,William Gibson,3,1
+ISBN0675,Madame Bovary Vol.6,George Orwell,2,0
+ISBN0676,Madame Bovary Vol.7,Octavio Paz,1,0
+ISBN0677,El Extranjero Vol.8,Frank Herbert,3,0
+ISBN0678,Orgullo y Prejuicio Vol.9,Jane Austen,5,1
+ISBN0679,Crimen y Castigo Vol.10,Gustave Flaubert,5,0
+ISBN0680,Fundación Vol.1,Franz Kafka,4,0
+ISBN0681,La Casa de los Espíritus Vol.2,Victor Hugo,4,0
+ISBN0682,La Metamorfosis Vol.3,Marcel Proust,3,2
+ISBN0683,1984 Vol.4,J.K. Rowling,1,0
+ISBN0684,Orgullo y Prejuicio Vol.5,Victor Hugo,7,0
+ISBN0685,El Aleph Vol.6,F. Scott Fitzgerald,3,0
+ISBN0686,Don Quijote de la Mancha Vol.7,Gustave Flaubert,1,0
+ISBN0687,1984 Vol.8,William Shakespeare,3,1
+ISBN0688,Los Miserables Vol.9,Frank Herbert,5,0
+ISBN0689,Lolita Vol.10,Miguel de Cervantes,1,0
+ISBN0690,Fundación Vol.1,William Shakespeare,5,0
+ISBN0691,El Gran Gatsby Vol.2,Virginia Woolf,2,1
+ISBN0692,El Extranjero Vol.3,Fiódor Dostoyevski,2,1
+ISBN0693,La Casa de los Espíritus Vol.4,Octavio Paz,5,0
+ISBN0694,La Odisea Vol.5,Fiódor Dostoyevski,4,0
+ISBN0695,Guerra y Paz Vol.6,William Gibson,1,0
+ISBN0696,El Extranjero Vol.7,Jorge Luis Borges,3,0
+ISBN0697,Pedro Páramo Vol.8,William Gibson,1,0
+ISBN0698,El Gran Gatsby Vol.9,Jane Austen,1,0
+ISBN0699,Guerra y Paz Vol.10,Miguel de Cervantes,2,0
+ISBN0700,El Extranjero Vol.1,Franz Kafka,1,0
+ISBN0701,Crónica de una Muerte Anunciada Vol.2,Homero,1,1
+ISBN0702,La Odisea Vol.3,Homero,3,0
+ISBN0703,Crimen y Castigo Vol.4,Isaac Asimov,1,0
+ISBN0704,Fundación Vol.5,Virginia Woolf,1,0
+ISBN0705,El Hobbit Vol.6,Marcel Proust,4,0
+ISBN0706,El Hobbit Vol.7,Virginia Woolf,7,0
+ISBN0707,Don Quijote de la Mancha Vol.8,Jane Austen,1,0
+ISBN0708,1984 Vol.9,Jane Austen,5,0
+ISBN0709,1984 Vol.10,Jorge Luis Borges,2,1
+ISBN0710,La Metamorfosis Vol.1,Ernesto Sabato,2,0
+ISBN0711,La Casa de los Espíritus Vol.2,Marcel Proust,1,0
+ISBN0712,El Extranjero Vol.3,Fiódor Dostoyevski,4,0
+ISBN0713,El Gran Gatsby Vol.4,Albert Camus,9,0
+ISBN0714,Ulises Vol.5,Frank Herbert,3,0
+ISBN0715,Fundación Vol.6,Miguel de Cervantes,1,0
+ISBN0716,El Aleph Vol.7,F. Scott Fitzgerald,1,0
+ISBN0717,La Metamorfosis Vol.8,Miguel de Cervantes,1,0
+ISBN0718,El Hobbit Vol.9,J.K. Rowling,1,0
+ISBN0719,Madame Bovary Vol.10,Vladimir Nabokov,2,1
+ISBN0720,Harry Potter Vol.1,Ernesto Sabato,3,0
+ISBN0721,El Extranjero Vol.2,Franz Kafka,1,0
+ISBN0722,El Hobbit Vol.3,Marcel Proust,1,1
+ISBN0723,Ulises Vol.4,Julio Cortázar,3,0
+ISBN0724,El Gran Gatsby Vol.5,Gabriel García Márquez,1,0
+ISBN0725,Neuromante Vol.6,William Shakespeare,3,0
+ISBN0726,El Señor de los Anillos Vol.7,Jane Austen,2,0
+ISBN0727,En Busca del Tiempo Perdido Vol.8,León Tolstói,5,0
+ISBN0728,1984 Vol.9,Miguel de Cervantes,5,0
+ISBN0729,El Extranjero Vol.10,Virginia Woolf,5,1
+ISBN0730,Pedro Páramo Vol.1,Jorge Luis Borges,1,1
+ISBN0731,El Gran Gatsby Vol.2,James Joyce,3,0
+ISBN0732,El Extranjero Vol.3,Fiódor Dostoyevski,2,0
+ISBN0733,Crimen y Castigo Vol.4,Jane Austen,1,1
+ISBN0734,Fundación Vol.5,Jane Austen,2,0
+ISBN0735,La Odisea Vol.6,William Gibson,2,0
+ISBN0736,Don Quijote de la Mancha Vol.7,Albert Camus,2,0
+ISBN0737,El Aleph Vol.8,Frank Herbert,5,0
+ISBN0738,Neuromante Vol.9,Virginia Woolf,1,0
+ISBN0739,Dune Vol.10,George Orwell,2,0
+ISBN0740,Don Quijote de la Mancha Vol.1,Fiódor Dostoyevski,9,0
+ISBN0741,Pedro Páramo Vol.2,William Gibson,4,0
+ISBN0742,El Aleph Vol.3,Isabel Allende,4,0
+ISBN0743,Harry Potter Vol.4,Isabel Allende,4,0
+ISBN0744,La Metamorfosis Vol.5,León Tolstói,1,0
+ISBN0745,Hamlet Vol.6,Gustave Flaubert,1,1
+ISBN0746,Fundación Vol.7,Isaac Asimov,1,0
+ISBN0747,Cien Años de Soledad Vol.8,Octavio Paz,3,0
+ISBN0748,Don Quijote de la Mancha Vol.9,Frank Herbert,3,0
+ISBN0749,Don Quijote de la Mancha Vol.10,Frank Herbert,1,0
+ISBN0750,Ulises Vol.1,Isabel Allende,1,0
+ISBN0751,Ficciones Vol.2,Ernesto Sabato,1,0
+ISBN0752,Ulises Vol.3,Gabriel García Márquez,3,0
+ISBN0753,Ficciones Vol.4,Octavio Paz,1,0
+ISBN0754,Don Quijote de la Mancha Vol.5,Juan Rulfo,1,0
+ISBN0755,El Túnel Vol.6,Marcel Proust,5,0
+ISBN0756,Ulises Vol.7,Ernesto Sabato,9,0
+ISBN0757,Mrs. Dalloway Vol.8,Gabriel García Márquez,2,0
+ISBN0758,Crimen y Castigo Vol.9,Julio Cortázar,3,0
+ISBN0759,Madame Bovary Vol.10,William Shakespeare,5,0
+ISBN0760,El Gran Gatsby Vol.1,Vladimir Nabokov,1,1
+ISBN0761,Los Miserables Vol.2,Jane Austen,3,0
+ISBN0762,El Extranjero Vol.3,Isaac Asimov,1,1
+ISBN0763,El Hobbit Vol.4,Fiódor Dostoyevski,4,2
+ISBN0764,Ficciones Vol.5,J.K. Rowling,7,0
+ISBN0765,1984 Vol.6,F. Scott Fitzgerald,1,0
+ISBN0766,Guerra y Paz Vol.7,Frank Herbert,3,0
+ISBN0767,Cien Años de Soledad Vol.8,J.K. Rowling,1,1
+ISBN0768,El Túnel Vol.9,Vladimir Nabokov,1,0
+ISBN0769,Orgullo y Prejuicio Vol.10,Ernesto Sabato,2,0
+ISBN0770,Crónica de una Muerte Anunciada Vol.1,Julio Cortázar,1,1
+ISBN0771,Neuromante Vol.2,J.K. Rowling,4,0
+ISBN0772,Ulises Vol.3,George Orwell,1,0
+ISBN0773,Harry Potter Vol.4,Gabriel García Márquez,2,2
+ISBN0774,El Extranjero Vol.5,Virginia Woolf,4,0
+ISBN0775,Harry Potter Vol.6,Fiódor Dostoyevski,4,0
+ISBN0776,Pedro Páramo Vol.7,George Orwell,1,0
+ISBN0777,Ficciones Vol.8,George Orwell,2,0
+ISBN0778,Lolita Vol.9,Gabriel García Márquez,5,0
+ISBN0779,Neuromante Vol.10,Isaac Asimov,2,0
+ISBN0780,Crónica de una Muerte Anunciada Vol.1,James Joyce,2,0
+ISBN0781,Rayuela Vol.2,Julio Cortázar,5,0
+ISBN0782,Ulises Vol.3,Isabel Allende,3,0
+ISBN0783,Pedro Páramo Vol.4,J.K. Rowling,1,1
+ISBN0784,El Hobbit Vol.5,Gustave Flaubert,9,0
+ISBN0785,Guerra y Paz Vol.6,Frank Herbert,3,1
+ISBN0786,El Gran Gatsby Vol.7,Frank Herbert,3,1
+ISBN0787,Los Miserables Vol.8,William Shakespeare,3,1
+ISBN0788,El Señor de los Anillos Vol.9,Gustave Flaubert,1,0
+ISBN0789,Don Quijote de la Mancha Vol.10,Jorge Luis Borges,5,0
+ISBN0790,Hamlet Vol.1,Juan Rulfo,1,0
+ISBN0791,Guerra y Paz Vol.2,J.R.R. Tolkien,4,0
+ISBN0792,Crimen y Castigo Vol.3,Vladimir Nabokov,5,0
+ISBN0793,Los Miserables Vol.4,Frank Herbert,1,0
+ISBN0794,Madame Bovary Vol.5,Julio Cortázar,1,1
+ISBN0795,Crónica de una Muerte Anunciada Vol.6,Julio Cortázar,5,1
+ISBN0796,1984 Vol.7,William Gibson,3,0
+ISBN0797,Cien Años de Soledad Vol.8,Albert Camus,3,0
+ISBN0798,Hamlet Vol.9,J.R.R. Tolkien,5,0
+ISBN0799,Lolita Vol.10,George Orwell,5,0
 ISBN0800,Don Quijote de la Mancha Vol.1,Virginia Woolf,5,0
 ISBN0801,El Extranjero Vol.2,George Orwell,3,0
+ISBN0802,Ulises Vol.3,F. Scott Fitzgerald,1,0
+ISBN0803,Los Miserables Vol.4,Vladimir Nabokov,5,0
+ISBN0804,Cien Años de Soledad Vol.5,Homero,1,0
+ISBN0805,Mrs. Dalloway Vol.6,F. Scott Fitzgerald,1,1
+ISBN0806,Crónica de una Muerte Anunciada Vol.7,William Gibson,3,0
+ISBN0807,Harry Potter Vol.8,Victor Hugo,4,0
+ISBN0808,La Casa de los Espíritus Vol.9,Frank Herbert,2,0
+ISBN0809,Mrs. Dalloway Vol.10,Isabel Allende,4,0
+ISBN0810,Pedro Páramo Vol.1,William Shakespeare,1,0
+ISBN0811,Neuromante Vol.2,Ernesto Sabato,3,0
+ISBN0812,Fundación Vol.3,James Joyce,2,0
+ISBN0813,Hamlet Vol.4,Juan Rulfo,9,0
+ISBN0814,Lolita Vol.5,León Tolstói,2,0
+ISBN0815,El Hobbit Vol.6,Isaac Asimov,3,1
+ISBN0816,Dune Vol.7,Isaac Asimov,5,0
+ISBN0817,La Odisea Vol.8,Frank Herbert,5,0
+ISBN0818,Harry Potter Vol.9,Marcel Proust,4,0
+ISBN0819,Hamlet Vol.10,Miguel de Cervantes,5,0
+ISBN0820,El Hobbit Vol.1,Julio Cortázar,5,0
+ISBN0821,El Hobbit Vol.2,George Orwell,5,1
+ISBN0822,Pedro Páramo Vol.3,Fiódor Dostoyevski,4,0
+ISBN0823,Ulises Vol.4,Homero,6,0
+ISBN0824,Rayuela Vol.5,William Shakespeare,1,0
+ISBN0825,Lolita Vol.6,Gustave Flaubert,1,0
+ISBN0826,Don Quijote de la Mancha Vol.7,Isabel Allende,4,0
+ISBN0827,Dune Vol.8,Gustave Flaubert,5,0
+ISBN0828,El Túnel Vol.9,Miguel de Cervantes,4,1
+ISBN0829,Hamlet Vol.10,Albert Camus,2,1
+ISBN0830,Madame Bovary Vol.1,Ernesto Sabato,2,0
+ISBN0831,El Túnel Vol.2,James Joyce,2,0
+ISBN0832,La Casa de los Espíritus Vol.3,León Tolstói,4,0
+ISBN0833,Lolita Vol.4,Marcel Proust,9,0
+ISBN0834,En Busca del Tiempo Perdido Vol.5,William Gibson,4,0
+ISBN0835,1984 Vol.6,Gustave Flaubert,2,0
+ISBN0836,Ficciones Vol.7,Gabriel García Márquez,1,0
+ISBN0837,La Metamorfosis Vol.8,León Tolstói,2,0
+ISBN0838,Crimen y Castigo Vol.9,Juan Rulfo,8,0
+ISBN0839,Ulises Vol.10,Gabriel García Márquez,8,1
+ISBN0840,Orgullo y Prejuicio Vol.1,J.K. Rowling,1,0
+ISBN0841,En Busca del Tiempo Perdido Vol.2,William Shakespeare,4,0
+ISBN0842,Ficciones Vol.3,Isaac Asimov,1,0
+ISBN0843,El Señor de los Anillos Vol.4,George Orwell,5,0
+ISBN0844,Don Quijote de la Mancha Vol.5,James Joyce,1,1
+ISBN0845,La Odisea Vol.6,Juan Rulfo,5,0
+ISBN0846,El Gran Gatsby Vol.7,J.K. Rowling,2,0
+ISBN0847,Hamlet Vol.8,J.R.R. Tolkien,1,0
+ISBN0848,El Túnel Vol.9,Albert Camus,2,0
+ISBN0849,La Metamorfosis Vol.10,James Joyce,5,1
+ISBN0850,Fundación Vol.1,Jane Austen,2,0
+ISBN0851,Madame Bovary Vol.2,Jorge Luis Borges,4,0
+ISBN0852,Orgullo y Prejuicio Vol.3,Gustave Flaubert,1,0
+ISBN0853,Don Quijote de la Mancha Vol.4,Fiódor Dostoyevski,3,0
+ISBN0854,El Extranjero Vol.5,Frank Herbert,2,0
+ISBN0855,Ficciones Vol.6,Isaac Asimov,5,0
+ISBN0856,En Busca del Tiempo Perdido Vol.7,Virginia Woolf,5,0
+ISBN0857,El Hobbit Vol.8,J.K. Rowling,5,0
+ISBN0858,Crónica de una Muerte Anunciada Vol.9,William Gibson,2,0
+ISBN0859,El Aleph Vol.10,Fiódor Dostoyevski,2,0
+ISBN0860,Fundación Vol.1,Franz Kafka,10,0
+ISBN0861,Orgullo y Prejuicio Vol.2,George Orwell,5,0
+ISBN0862,Lolita Vol.3,Miguel de Cervantes,5,0
+ISBN0863,1984 Vol.4,Marcel Proust,3,1
+ISBN0864,Ficciones Vol.5,J.R.R. Tolkien,1,0
+ISBN0865,Fundación Vol.6,Jane Austen,3,1
+ISBN0866,El Aleph Vol.7,George Orwell,3,0
+ISBN0867,Guerra y Paz Vol.8,Isaac Asimov,1,0
+ISBN0868,Guerra y Paz Vol.9,Franz Kafka,8,1
+ISBN0869,Dune Vol.10,Isabel Allende,3,0
+ISBN0870,La Metamorfosis Vol.1,Virginia Woolf,2,0
+ISBN0871,El Túnel Vol.2,Isabel Allende,3,0
+ISBN0872,Cien Años de Soledad Vol.3,Gabriel García Márquez,4,0
+ISBN0873,1984 Vol.4,Virginia Woolf,5,0
+ISBN0874,1984 Vol.5,Virginia Woolf,2,0
+ISBN0875,Pedro Páramo Vol.6,J.R.R. Tolkien,2,0
+ISBN0876,El Señor de los Anillos Vol.7,William Gibson,1,0
+ISBN0877,En Busca del Tiempo Perdido Vol.8,Jorge Luis Borges,1,0
+ISBN0878,1984 Vol.9,James Joyce,2,0
+ISBN0879,Crónica de una Muerte Anunciada Vol.10,Jorge Luis Borges,3,0
+ISBN0880,Rayuela Vol.1,Ernesto Sabato,3,0
+ISBN0881,Ulises Vol.2,William Shakespeare,1,0
+ISBN0882,Los Miserables Vol.3,Ernesto Sabato,3,0
+ISBN0883,El Túnel Vol.4,Franz Kafka,4,0
+ISBN0884,Guerra y Paz Vol.5,Homero,2,0
+ISBN0885,Mrs. Dalloway Vol.6,Homero,4,0
+ISBN0886,Hamlet Vol.7,J.K. Rowling,3,0
+ISBN0887,El Señor de los Anillos Vol.8,Julio Cortázar,2,0
+ISBN0888,Guerra y Paz Vol.9,Isabel Allende,2,0
+ISBN0889,Dune Vol.10,Virginia Woolf,3,1
+ISBN0890,Pedro Páramo Vol.1,Juan Rulfo,1,0
+ISBN0891,Fundación Vol.2,Gabriel García Márquez,1,0
+ISBN0892,Neuromante Vol.3,George Orwell,5,0
+ISBN0893,Crónica de una Muerte Anunciada Vol.4,Marcel Proust,8,0
+ISBN0894,Ficciones Vol.5,William Shakespeare,9,0
+ISBN0895,Cien Años de Soledad Vol.6,Gustave Flaubert,2,0
+ISBN0896,La Casa de los Espíritus Vol.7,Gustave Flaubert,3,0
+ISBN0897,El Señor de los Anillos Vol.8,Juan Rulfo,5,0
+ISBN0898,Hamlet Vol.9,León Tolstói,6,0
+ISBN0899,1984 Vol.10,Julio Cortázar,3,0
+ISBN0900,Harry Potter Vol.1,George Orwell,4,0
+ISBN0901,Cien Años de Soledad Vol.2,Virginia Woolf,4,0
+ISBN0902,Madame Bovary Vol.3,George Orwell,5,0
+ISBN0903,El Túnel Vol.4,J.R.R. Tolkien,5,0
+ISBN0904,La Odisea Vol.5,William Gibson,4,0
+ISBN0905,Los Miserables Vol.6,Isabel Allende,2,0
+ISBN0906,Guerra y Paz Vol.7,Jorge Luis Borges,1,0
+ISBN0907,La Metamorfosis Vol.8,Julio Cortázar,4,1
+ISBN0908,Ficciones Vol.9,William Shakespeare,1,0
+ISBN0909,1984 Vol.10,Isaac Asimov,4,0
+ISBN0910,Orgullo y Prejuicio Vol.1,George Orwell,1,0
+ISBN0911,Fundación Vol.2,Victor Hugo,2,0
+ISBN0912,Guerra y Paz Vol.3,Jane Austen,4,0
+ISBN0913,El Hobbit Vol.4,Marcel Proust,5,0
+ISBN0914,El Extranjero Vol.5,Victor Hugo,5,0
+ISBN0915,El Extranjero Vol.6,William Shakespeare,3,2
+ISBN0916,Mrs. Dalloway Vol.7,J.R.R. Tolkien,3,0
+ISBN0917,Ficciones Vol.8,Franz Kafka,1,0
+ISBN0918,Hamlet Vol.9,Julio Cortázar,1,0
+ISBN0919,La Metamorfosis Vol.10,Gustave Flaubert,10,0
+ISBN0920,Don Quijote de la Mancha Vol.1,J.K. Rowling,3,0
+ISBN0921,Dune Vol.2,Miguel de Cervantes,2,0
+ISBN0922,La Odisea Vol.3,Octavio Paz,4,0
+ISBN0923,El Señor de los Anillos Vol.4,Albert Camus,1,1
+ISBN0924,El Túnel Vol.5,James Joyce,2,0
+ISBN0925,Guerra y Paz Vol.6,William Shakespeare,1,0
+ISBN0926,Crónica de una Muerte Anunciada Vol.7,Vladimir Nabokov,1,0
+ISBN0927,Cien Años de Soledad Vol.8,Marcel Proust,4,0
+ISBN0928,Orgullo y Prejuicio Vol.9,Isabel Allende,4,0
+ISBN0929,El Aleph Vol.10,Ernesto Sabato,1,0
+ISBN0930,Lolita Vol.1,Julio Cortázar,5,1
+ISBN0931,1984 Vol.2,Marcel Proust,7,0
+ISBN0932,Ulises Vol.3,Gabriel García Márquez,8,1
+ISBN0933,La Casa de los Espíritus Vol.4,Octavio Paz,2,0
+ISBN0934,El Túnel Vol.5,Vladimir Nabokov,5,0
+ISBN0935,En Busca del Tiempo Perdido Vol.6,Fiódor Dostoyevski,5,0
+ISBN0936,Don Quijote de la Mancha Vol.7,Victor Hugo,1,0
+ISBN0937,El Señor de los Anillos Vol.8,Franz Kafka,8,0
+ISBN0938,Guerra y Paz Vol.9,Jorge Luis Borges,2,0
+ISBN0939,Ficciones Vol.10,Isaac Asimov,1,0
+ISBN0940,Guerra y Paz Vol.1,Miguel de Cervantes,9,0
+ISBN0941,La Metamorfosis Vol.2,George Orwell,6,0
+ISBN0942,Ficciones Vol.3,Frank Herbert,1,0
+ISBN0943,Lolita Vol.4,León Tolstói,1,0
+ISBN0944,Mrs. Dalloway Vol.5,James Joyce,5,0
+ISBN0945,Cien Años de Soledad Vol.6,León Tolstói,1,0
+ISBN0946,El Gran Gatsby Vol.7,Gabriel García Márquez,1,0
+ISBN0947,Guerra y Paz Vol.8,Gustave Flaubert,2,0
+ISBN0948,Cien Años de Soledad Vol.9,Marcel Proust,4,0
+ISBN0949,Crónica de una Muerte Anunciada Vol.10,F. Scott Fitzgerald,1,1
+ISBN0950,Don Quijote de la Mancha Vol.1,Juan Rulfo,1,0
+ISBN0951,Cien Años de Soledad Vol.2,Isabel Allende,1,0
+ISBN0952,Crónica de una Muerte Anunciada Vol.3,J.R.R. Tolkien,5,0
+ISBN0953,Rayuela Vol.4,Albert Camus,8,0
+ISBN0954,Don Quijote de la Mancha Vol.5,Isaac Asimov,2,0
+ISBN0955,Ficciones Vol.6,William Shakespeare,1,0
+ISBN0956,La Casa de los Espíritus Vol.7,Ernesto Sabato,2,0
+ISBN0957,Los Miserables Vol.8,Jorge Luis Borges,2,0
+ISBN0958,Lolita Vol.9,William Gibson,1,0
+ISBN0959,Pedro Páramo Vol.10,Miguel de Cervantes,1,0
+ISBN0960,El Gran Gatsby Vol.1,Miguel de Cervantes,5,0
+ISBN0961,Orgullo y Prejuicio Vol.2,William Shakespeare,5,0
+ISBN0962,Pedro Páramo Vol.3,Isabel Allende,5,0
+ISBN0963,La Metamorfosis Vol.4,Jorge Luis Borges,2,0
+ISBN0964,El Aleph Vol.5,Isabel Allende,3,0
+ISBN0965,Don Quijote de la Mancha Vol.6,Gabriel García Márquez,4,1
+ISBN0966,Orgullo y Prejuicio Vol.7,Miguel de Cervantes,2,0
+ISBN0967,Mrs. Dalloway Vol.8,Octavio Paz,2,1
+ISBN0968,1984 Vol.9,Virginia Woolf,4,0
+ISBN0969,El Hobbit Vol.10,Octavio Paz,2,0
+ISBN0970,El Túnel Vol.1,William Shakespeare,5,1
+ISBN0971,Rayuela Vol.2,Gustave Flaubert,2,0
+ISBN0972,El Gran Gatsby Vol.3,Julio Cortázar,2,1
+ISBN0973,Crónica de una Muerte Anunciada Vol.4,James Joyce,4,0
+ISBN0974,Neuromante Vol.5,Franz Kafka,1,0
+ISBN0975,El Aleph Vol.6,León Tolstói,1,0
+ISBN0976,La Metamorfosis Vol.7,Ernesto Sabato,3,1
+ISBN0977,Ficciones Vol.8,Julio Cortázar,3,0
+ISBN0978,Fundación Vol.9,León Tolstói,4,0
+ISBN0979,En Busca del Tiempo Perdido Vol.10,Ernesto Sabato,4,0
+ISBN0980,El Extranjero Vol.1,Isaac Asimov,2,0
+ISBN0981,Don Quijote de la Mancha Vol.2,Gustave Flaubert,2,0
+ISBN0982,Mrs. Dalloway Vol.3,Juan Rulfo,2,0
+ISBN0983,La Metamorfosis Vol.4,George Orwell,2,0
+ISBN0984,Fundación Vol.5,James Joyce,5,0
+ISBN0985,Crimen y Castigo Vol.6,Gustave Flaubert,4,0
+ISBN0986,Harry Potter Vol.7,Isaac Asimov,1,0
+ISBN0987,La Casa de los Espíritus Vol.8,F. Scott Fitzgerald,1,0
+ISBN0988,Crimen y Castigo Vol.9,Juan Rulfo,7,0
+ISBN0989,El Extranjero Vol.10,James Joyce,1,0
+ISBN0990,Lolita Vol.1,Franz Kafka,7,0
+ISBN0991,Cien Años de Soledad Vol.2,Albert Camus,1,0
+ISBN0992,Orgullo y Prejuicio Vol.3,Juan Rulfo,10,0
+ISBN0993,Ulises Vol.4,León Tolstói,1,0
+ISBN0994,Pedro Páramo Vol.5,James Joyce,3,0
+ISBN0995,Ulises Vol.6,Gustave Flaubert,2,0
+ISBN0996,El Túnel Vol.7,Franz Kafka,1,0
+ISBN0997,La Metamorfosis Vol.8,Ernesto Sabato,1,0
+ISBN0998,Pedro Páramo Vol.9,Isaac Asimov,1,0
+ISBN0999,La Odisea Vol.10,Juan Rulfo,2,0
+ISBN1000,Madame Bovary Vol.1,Virginia Woolf,8,0

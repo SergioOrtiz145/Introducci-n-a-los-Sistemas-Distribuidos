@@ -5,7 +5,7 @@
  * Fecha: 2025-11-15
  * ============================================================
  * El Gestor de Carga (GC) es un componente central del sistema de gestión de bibliotecas
- * distribuido que actúa como intermediario entre el ProbarServicio (PS) y los actores
+ * distribuido que actúa como intermediario entre el Cliente PS y los actores
  * especializados (ActorPrestamo, ActorDevolver, ActorRenovar).
  * ============================================================
  */

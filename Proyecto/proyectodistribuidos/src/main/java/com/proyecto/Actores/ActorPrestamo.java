@@ -6,7 +6,7 @@
  * ============================================================
  * El ActorPrestamo es un componente especializado del sistema de gestión de bibliotecas
  * distribuido responsable de procesar solicitudes de préstamo de libros. Actúa como
- * intermediario entre el Gestor de Carga (GC) y el gestor de carga (GA) que
+ * intermediario entre el Gestor de Carga (GC) y el Gestor de Almacenamiento (GA) que
  * manejan los datos de libros disponibles en cada sede.
  * ============================================================
  */
