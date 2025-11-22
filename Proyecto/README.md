@@ -88,6 +88,10 @@ por esto:
 ```
 mvn exec:java -Dexec.mainClass=com.proyecto.Gestores.GC 
 ```
+* Opcional: si desea ejecutar el GC síncrono utiliza este comando:
+```
+mvn exec:java -Dexec.mainClass=com.proyecto.Gestores.GCSincrono 
+```
 6. ClientePS
 ```
 mvn exec:java \\
@@ -97,6 +101,12 @@ mvn exec:java \\
 * cliente\_sede1 es el nombre del Cliente
 * ./solicitudes.txt es el archivo de texto que contiene las solicitudes de préstamo, renovación y devolución. (mínimo 20 operaciones)
 * tcp://direccionIPSede:5565 es la dirección IP de la sede a enviar las solicitudes y el puerto que usa el GC para la comunicación con el PS.
+* Opcional: si desea ejecuta el cliente que realiza medidas de rendimiento solo es necesario cambiarlo por esto:
+```
+mvn exec:java \\
+-Dexec.mainClass=com.proyecto.ClientePSMetrica \\
+-Dexec.args="./solicitudes.txt tcp://direccionIPSede:5565"
+```
 
 ## Autores
 * Sergio Ortiz
