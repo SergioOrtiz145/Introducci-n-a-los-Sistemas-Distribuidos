@@ -1,3 +1,16 @@
+/**
+ * ============================================================
+ * Título: Libro 
+ * Autores: Sergio Ortiz, Isabella Palacio, Juan Sebastian Vargas, Ana Sofia Grass
+ * Fecha: 2025-11-19
+ * ============================================================
+ * La clase Libro representa un libro en el sistema, con atributos como 
+ * el ISBN, título, autor, número de ejemplares disponibles y el total 
+ * de ejemplares. Proporciona métodos para gestionar los préstamos 
+ * de libros, asegurando que los ejemplares disponibles se reduzcan 
+ * de forma segura mediante sincronización.
+ */
+
 package com.proyecto.Modelos;
 
 public class Libro {
@@ -6,7 +19,7 @@ public class Libro {
     private String autor;
     private int ejemplaresDisponibles;
     private int ejemplaresTotales;
-    
+
     public Libro(String isbn, String titulo, String autor, int ejemplares) {
         this.isbn = isbn;
         this.titulo = titulo;
@@ -14,7 +27,15 @@ public class Libro {
         this.ejemplaresTotales = ejemplares;
         this.ejemplaresDisponibles = ejemplares;
     }
-    
+
+    public Libro(String isbn, String titulo, String autor, int ejemplaresTotales, int ejemplaresPrestados) {
+        this.isbn = isbn;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.ejemplaresTotales = ejemplaresTotales;
+        this.ejemplaresDisponibles = ejemplaresTotales - ejemplaresPrestados;
+    }
+
     public synchronized boolean prestar() {
         if (ejemplaresDisponibles > 0) {
             ejemplaresDisponibles--;
@@ -22,19 +43,28 @@ public class Libro {
         }
         return false;
     }
-    
+
     public synchronized void devolver() {
         if (ejemplaresDisponibles < ejemplaresTotales) {
             ejemplaresDisponibles++;
         }
     }
-    
-    public String getIsbn() { return isbn; }
-    public String getTitulo() { return titulo; }
-    public int getEjemplaresDisponibles() { return ejemplaresDisponibles; }
-    
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public int getEjemplaresDisponibles() {
+        return ejemplaresDisponibles;
+    }
+
     public String toCSV() {
-        return String.format("%s,%s,%s,%d,%d", 
-            isbn, titulo, autor, ejemplaresTotales, ejemplaresDisponibles);
+        int ejemplaresPrestados = ejemplaresTotales - ejemplaresDisponibles;
+        return String.format("%s,%s,%s,%d,%d",
+                isbn, titulo, autor, ejemplaresTotales, ejemplaresPrestados);
     }
 }

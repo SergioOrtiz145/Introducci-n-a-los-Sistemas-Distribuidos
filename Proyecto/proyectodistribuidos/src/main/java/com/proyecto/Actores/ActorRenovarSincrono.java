@@ -1,33 +1,36 @@
 /**
  * ============================================================
- * Titulo: ActorRenovar
+ * Titulo: ActorRenovarSincrono
  * Autores: Ana Sofia Grass, Sergio Ortiz, Isabella Palacio, Sebastian Vargas
  * Fecha: 2025-11-15
  * ============================================================
- * El ActorRenovar es un componente especializado del sistema de gestión de bibliotecas
- * distribuido responsable de procesar solicitudes de renovación de libros prestados.
- * Se suscribe al tópico de publicación RENOVAR y coordina la extensión de plazos de
- * entrega con el Gestor de Almacenamiento (GA) de cada sede.
+ * El ActorRenovarSincrono es un componente especializado del sistema de gestión de
+ * bibliotecas distribuido responsable de procesar solicitudes de renovación de libros
+ * de forma sincrónica. Bloquea el GC hasta que se completa la renovación, asegurando que
+ * se realice o no la actualización de las fechas de entrega de los préstamos en el sistema.
  * ============================================================
  */
 
 package com.proyecto.Actores;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.zeromq.SocketType;
 import org.zeromq.ZContext;
-import org.zeromq.ZMQ;
 import org.zeromq.ZMQ.Socket;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import java.util.*;
 
-public class ActorRenovar {
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
+
+public class ActorRenovarSincrono {
     private static final Gson gson = new Gson();
 
     public static void main(String[] args) {
         if (args.length < 2) {
-            System.out.println("Uso: java ActorRenovar <direccionGA1> <direccionGA2>");
-            System.out.println("Ejemplo: java ActorRenovar tcp://localhost:5555 tcp://localhost:6555");
+            System.out.println("Uso: java ActorRenovarSincrono <direccionGA1> <direccionGA2>");
+            System.out.println("Ejemplo: java ActorRenovarSincrono tcp://localhost:5555 tcp://localhost:6555");
             return;
         }
 
@@ -35,59 +38,45 @@ public class ActorRenovar {
         String direccionGA2 = args[1];
 
         try (ZContext context = new ZContext()) {
-            Socket socketGC = context.createSocket(SocketType.SUB);
-            socketGC.connect("tcp://localhost:5558");
-            socketGC.subscribe("RENOVAR".getBytes(ZMQ.CHARSET));
-            System.out.println("Actor Renovar iniciado, escuchando topico RENOVAR, puerto 5558");
+            Socket socketGC = context.createSocket(SocketType.REP);
+            socketGC.bind("tcp://*:5561"); // Puerto diferente
+            
+            System.out.println("Actor Renovar SÍNCRONO iniciado en puerto 5561");
             System.out.println("  -> Conectado a GA1: " + direccionGA1);
             System.out.println("  -> Conectado a GA2: " + direccionGA2);
 
             while (!Thread.currentThread().isInterrupted()) {
-                String topico = socketGC.recvStr();
-                String solicitud = socketGC.recvStr();
-                System.out.println("\n[" + topico + "] Recibido: " + solicitud);
+                String solicitudGC = socketGC.recvStr();
+                System.out.println("\n[SOLICITUD] Recibida: " + solicitudGC);
 
-                // Parsear JSON recibido del GC
-                Map<String, Object> solicitudJSON = null;
+                Map<String, Object> solicitudJSON;
                 try {
-                    solicitudJSON = gson.fromJson(solicitud, 
+                    solicitudJSON = gson.fromJson(solicitudGC, 
                         new TypeToken<Map<String, Object>>(){}.getType());
-                } catch (Exception e) {
+                } catch (JsonSyntaxException e) {
                     System.err.println("ERROR: No se pudo parsear JSON: " + e.getMessage());
+                    socketGC.send("ERROR: Formato JSON invalido");
                     continue;
                 }
 
-                // ============================================
-                // CORRECCIÓN: Extraer los campos del JSON
-                // ============================================
                 String isbn = (String) solicitudJSON.get("isbn");
                 String usuario = (String) solicitudJSON.get("usuario");
                 String idPrestamo = (String) solicitudJSON.get("idPrestamo");
                 String fechaActual = (String) solicitudJSON.get("fechaActual");
                 String fechaNuevaEntrega = (String) solicitudJSON.get("fechaNuevaEntrega");
                 
-                // Validar campos obligatorios
                 if ((isbn == null || usuario == null) && idPrestamo == null) {
-                    System.err.println("ERROR: Faltan campos obligatorios (isbn+usuario) o (idPrestamo)");
+                    System.err.println("ERROR: Faltan campos obligatorios");
+                    socketGC.send("ERROR: Faltan campos obligatorios");
                     continue;
                 }
 
                 System.out.println("  ISBN: " + isbn);
                 System.out.println("  Usuario: " + usuario);
-                if (idPrestamo != null) {
-                    System.out.println("  ID Prestamo: " + idPrestamo);
-                }
-                if (fechaNuevaEntrega != null) {
-                    System.out.println("  Nueva fecha entrega: " + fechaNuevaEntrega);
-                }
 
-                // ============================================
-                // Construir solicitud JSON para el GA con los campos extraídos
-                // ============================================
+                // Construir solicitud para GA
                 Map<String, Object> solicitudGA = new HashMap<>();
                 solicitudGA.put("operacion", "RENOVACION");
-                
-                // Incluir todos los campos disponibles
                 if (idPrestamo != null) {
                     solicitudGA.put("idPrestamo", idPrestamo);
                 }
@@ -105,46 +94,53 @@ public class ActorRenovar {
                 }
 
                 String solicitudJson = gson.toJson(solicitudGA);
-                System.out.println("  Solicitud al GA: " + solicitudJson);
-
-                // Procesar con los GA
-                procesarConGA(context, direccionGA1, direccionGA2, solicitudJson);
+                String respuestaFinal = procesarConGA(context, direccionGA1, 
+                                                      direccionGA2, solicitudJson);
+                
+                // Enviar respuesta al GC
+                socketGC.send(respuestaFinal);
             }
 
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
-            e.printStackTrace();
         }
     }
 
-    private static void procesarConGA(ZContext context, String direccionGA1, 
-                                      String direccionGA2, String solicitudJson) {
-        boolean exitoGA1 = enviarAGA(context, direccionGA1, solicitudJson, "GA1");
-        if (exitoGA1) return;
+    private static String procesarConGA(ZContext context, String direccionGA1, 
+                                        String direccionGA2, String solicitudJson) {
+        String respuesta = enviarAGA(context, direccionGA1, solicitudJson, "GA1");
+        if (respuesta != null) {
+            return respuesta;
+        }
         
-        enviarAGA(context, direccionGA2, solicitudJson, "GA2");
+        respuesta = enviarAGA(context, direccionGA2, solicitudJson, "GA2");
+        if (respuesta != null) {
+            return respuesta;
+        }
+        
+        return "ERROR: Ambos GA no responden";
     }
 
-    private static boolean enviarAGA(ZContext context, String direccionGA, 
-                                      String solicitud, String nombreGA) {
+    private static String enviarAGA(ZContext context, String direccionGA, 
+                                     String solicitud, String nombreGA) {
         Socket socketGA = context.createSocket(SocketType.REQ);
         socketGA.setReceiveTimeOut(5000);
         socketGA.setSendTimeOut(5000);
 
         try {
             socketGA.connect(direccionGA);
-            System.out.println("[" + nombreGA + "] Enviando renovacion...");
+            System.out.println("[" + nombreGA + "] Enviando renovación...");
 
             boolean enviado = socketGA.send(solicitud);
             if (!enviado) {
                 System.err.println("[" + nombreGA + "] No se pudo enviar");
-                return false;
+                return null;
             }
 
             String respuestaJson = socketGA.recvStr();
             if (respuestaJson == null) {
                 System.err.println("[" + nombreGA + "] Timeout - no responde");
-                return false;
+                return null;
             }
 
             Map<String, Object> respuesta = gson.fromJson(respuestaJson, 
@@ -153,12 +149,17 @@ public class ActorRenovar {
             boolean exito = (boolean) respuesta.get("exito");
             String mensaje = (String) respuesta.get("mensaje");
 
-            System.out.println("[" + nombreGA + "] " + (exito ? "Exito" : "Fallo") + ": " + mensaje);
-            return exito;
+            if (exito) {
+                System.out.println("[" + nombreGA + "] Éxito: " + mensaje);
+                return "RENOVACION EXITOSA (" + nombreGA + "): " + mensaje;
+            } else {
+                System.out.println("[" + nombreGA + "] Fallo: " + mensaje);
+                return "ERROR: " + mensaje;
+            }
 
-        } catch (Exception e) {
+        } catch (JsonSyntaxException e) {
             System.err.println("[" + nombreGA + "] Error: " + e.getMessage());
-            return false;
+            return null;
         } finally {
             socketGA.close();
         }

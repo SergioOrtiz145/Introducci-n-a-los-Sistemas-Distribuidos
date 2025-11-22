@@ -1,3 +1,16 @@
+/**
+ * ============================================================
+ * Título: Prestamo 
+ * Autores: Sergio Ortiz,Juan Sebastian Vargas, Ana Sofia Grass, Isabella Palacio Fajardo
+ * Fecha: 2025-11-19
+ * ============================================================
+ * La clase Prestamo representa un préstamo de libro realizado por 
+ * un usuario, con información sobre el libro, fecha de préstamo, 
+ * fecha de devolución, número de renovaciones permitidas, y estado 
+ * del préstamo. Permite gestionar la renovación del préstamo hasta 
+ * un máximo de 2 renovaciones, y proporciona un método para exportar 
+ * los detalles del préstamo en formato CSV.
+ */
 package com.proyecto.Modelos;
 
 import java.time.LocalDateTime;
@@ -20,10 +33,22 @@ public class Prestamo {
         this.sede = sede;
     }
 
-    public String toCSV() {
-        return String.format("%s,%s,%s,%s,%s,%s",
-                idPrestamo, isbn, usuario, fechaPrestamo,
-                fechaDevolucion != null ? fechaDevolucion : "", sede);
+    // Constructor para cargar desde CSV
+    public Prestamo(String idPrestamo, String isbn, String usuario,
+            String fechaPrestamoStr, int numRenovaciones, boolean prestamoActivo, String sede) {
+        this.idPrestamo = idPrestamo;
+        this.isbn = isbn;
+        this.usuario = usuario;
+        this.sede = sede;
+        this.numRenovaciones = numRenovaciones;
+        this.prestamoActivo = prestamoActivo;
+
+        // Parsear fecha
+        try {
+            this.fechaPrestamo = LocalDateTime.parse(fechaPrestamoStr);
+        } catch (Exception e) {
+            this.fechaPrestamo = LocalDateTime.now();
+        }
     }
 
     public boolean puedeRenovarse() {
@@ -93,6 +118,16 @@ public class Prestamo {
     public void setNumRenovaciones(int numRenovaciones) {
         this.numRenovaciones = numRenovaciones;
     }
-    
+
+    public String toCSV() {
+        return String.format("%s,%s,%s,%s,%d,%s",
+                idPrestamo,
+                isbn,
+                usuario,
+                fechaPrestamo,
+                numRenovaciones,
+                prestamoActivo ? "true" : "false",
+                sede);
+    }
 
 }
