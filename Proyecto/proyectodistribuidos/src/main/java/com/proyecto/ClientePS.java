@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * Título: ClientePS (Proceso Solicitante) - Versión Mejorada
+ * Título: ClientePS
  * Autores: Ana Sofia Grass, Sergio Ortiz, Isabella Palacio, Sebastián Vargas
  * Fecha: 2025-11-15
  * ============================================================
@@ -254,9 +254,7 @@ public class ClientePS {
         String archivoSolicitudes = args.length > 1 ? args[1] : "solicitudes.txt";
         String direccionGC = args.length > 2 ? args[2] : "tcp://localhost:5565";
         
-        System.out.println("\n╔════════════════════════════════════════════════════╗");
-        System.out.println("║        CLIENTE PS - PROCESO SOLICITANTE           ║");
-        System.out.println("╚════════════════════════════════════════════════════╝");
+        System.out.println("CLIENTE PS - PROCESO SOLICITANTE");
         System.out.println("\nConfiguración:");
         System.out.println("  • Cliente: " + nombreCliente);
         System.out.println("  • Archivo: " + archivoSolicitudes);
